@@ -1,0 +1,144 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <omp.h>
+
+#include <algorithm>
+#include <random>
+#include <vector>
+
+#define ARRAY_SIZE ##ARRAY_SIZE##
+#define NREP ##NREP##
+
+#ifdef LIKWID_PERFMON
+#include "likwid.h"
+#else
+#define LIKWID_MARKER_INIT
+#define LIKWID_MARKER_THREADINIT
+#define LIKWID_MARKER_SWITCH
+#define LIKWID_MARKER_REGISTER(regionTag)
+#define LIKWID_MARKER_START(regionTag)
+#define LIKWID_MARKER_STOP(regionTag)
+#define LIKWID_MARKER_CLOSE
+#define LIKWID_MARKER_GET(regionTag, nevents, events, time, count)
+#endif
+
+int main() {
+
+    int tmp;
+    int i,j;
+
+    __declspec(align(64)) double * a;
+    __declspec(align(64)) double * b;
+    __declspec(align(64)) double * c;
+    __declspec(align(64)) double * d;
+    __declspec(align(64)) double * e;
+    __declspec(align(64)) double * f;
+    __declspec(align(64)) double * g;
+    __declspec(align(64)) double * h;
+    __declspec(align(64)) double * k;
+    __declspec(align(64)) double * l;
+    __declspec(align(64)) double * m;
+    __declspec(align(64)) double * n;
+    __declspec(align(64)) double * o;
+    __declspec(align(64)) double * p;
+    __declspec(align(64)) double * q;
+    __declspec(align(64)) double * r;
+    __declspec(align(64)) double * s;
+    __declspec(align(64)) double * t;
+
+    LIKWID_MARKER_INIT;
+
+#pragma omp parallel
+    {
+        LIKWID_MARKER_THREADINIT;
+    }
+
+
+#pragma omp parallel
+    {
+        if ( omp_get_thread_num() == 0 ) {
+            printf( "num omp=%d\n", omp_get_num_threads() );
+        }
+    }
+
+    a = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    b = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    c = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    d = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    e = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    f = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    g = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    h = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    k = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    l = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    m = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    n = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    o = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    p = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    q = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    r = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    s = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+    t = (double*)_mm_malloc( ARRAY_SIZE*sizeof(double), 64 );
+
+    double some_number = rand()/16384.;
+
+    for (i=ARRAY_SIZE-1; i>=0; --i){
+        a[i] = (double)(i+1.0*some_number)/ARRAY_SIZE;
+        b[i] = (double)(i+2.0*some_number)/ARRAY_SIZE;
+        c[i] = (double)(i+3.0*some_number)/ARRAY_SIZE;
+        d[i] = (double)(i+4.0*some_number)/ARRAY_SIZE;
+        e[i] = (double)(i+5.0*some_number)/ARRAY_SIZE;
+        f[i] = (double)(i+6.0*some_number)/ARRAY_SIZE;
+        g[i] = (double)(i+7.0*some_number)/ARRAY_SIZE;
+        h[i] = (double)(i+8.0*some_number)/ARRAY_SIZE;
+        k[i] = (double)(i+10.0*some_number)/ARRAY_SIZE;
+        l[i] = (double)(i+11.0*some_number)/ARRAY_SIZE;
+        m[i] = (double)(i+1.0*some_number)/ARRAY_SIZE;
+        n[i] = (double)(i+2.0*some_number)/ARRAY_SIZE;
+        o[i] = (double)(i+3.0*some_number)/ARRAY_SIZE;
+        p[i] = (double)(i+4.0*some_number)/ARRAY_SIZE;
+        q[i] = (double)(i+5.0*some_number)/ARRAY_SIZE;
+        r[i] = (double)(i+6.0*some_number)/ARRAY_SIZE;
+        s[i] = (double)(i+7.0*some_number)/ARRAY_SIZE;
+        t[i] = (double)(i+8.0*some_number)/ARRAY_SIZE;
+    }
+
+    i = 0;
+    std::vector<int> indices;
+    indices.resize(ARRAY_SIZE);
+
+    std::generate( indices.begin(), indices.end(), [&i] {return i++;} );
+
+    std::shuffle( indices.begin(), indices.end(), std::default_random_engine(42));
+
+    size_t index;
+
+    printf("Starting Benchmark!\n");
+
+    LIKWID_MARKER_START("loop");
+    for (j=0; j<NREP; ++j) {
+#pragma nounroll
+#pragma vector temporal
+#pragma omp simd simdlen(1)
+        for (i=0; i<ARRAY_SIZE; ++i){
+            index = indices[i];
+            a[index] = b[index];
+            c[index] = d[index];
+            e[index] = f[index];
+            g[index] = h[index];
+            k[index] = l[index];
+            m[index] = n[index];
+            o[index] = p[index];
+            q[index] = r[index];
+            s[index] = t[index];
+        }
+    }
+    LIKWID_MARKER_STOP("loop");
+
+    printf(":: Finished! %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f\n", a[42], b[42], c[42], d[42], e[42], f[42], g[42], h[42], k[42], l[42], m[42], n[42], o[42], p[42], q[42], r[42], s[42], t[42]);
+
+    LIKWID_MARKER_CLOSE;
+
+    return 0;
+}
+

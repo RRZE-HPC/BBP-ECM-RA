@@ -1,0 +1,3654 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz
+CPU type:	Intel Xeon IvyBridge EN/EP/EX processor
+CPU clock:	2.20 GHz
+--------------------------------------------------------------------------------
+ num_omp_thread=2
+
+ Memory (MBs) :            After MPI_Init : Max 16.0859, Min 16.0859, Avg 16.0859 
+ Memory (MBs) :             After mk_mech : Max 16.7422, Min 16.7422, Avg 16.7422 
+ Memory (MBs) :          Before nrn_setup : Max 16.7422, Min 16.7422, Avg 16.7422 
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_2.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_2.dat
+index=3 nodecount=456500 membfunc=capacitance
+index=4 nodecount=456500 membfunc=pas
+index=3 nodecount=456500 membfunc=capacitance
+index=15 nodecount=261000 membfunc=na_ion
+index=4 nodecount=456500 membfunc=pas
+index=15 nodecount=261000 membfunc=na_ion
+index=16 nodecount=261000 membfunc=k_ion
+index=16 nodecount=261000 membfunc=k_ion
+index=24 nodecount=1500 membfunc=ca_ion
+index=24 nodecount=1500 membfunc=ca_ion
+index=25 nodecount=1500 membfunc=CaDynamics_E2
+index=25 nodecount=1500 membfunc=CaDynamics_E2
+index=27 nodecount=1500 membfunc=Ca_HVA
+index=27 nodecount=1500 membfunc=Ca_HVA
+index=29 nodecount=1500 membfunc=Ca_LVAst
+index=29 nodecount=1500 membfunc=Ca_LVAst
+index=31 nodecount=1200000 membfunc=DetAMPANMDA
+index=31 nodecount=1200000 membfunc=DetAMPANMDA
+index=32 nodecount=300000 membfunc=DetGABAAB
+index=32 nodecount=300000 membfunc=DetGABAAB
+index=37 nodecount=455500 membfunc=Ih
+index=37 nodecount=455500 membfunc=Ih
+index=38 nodecount=259500 membfunc=Im
+index=38 nodecount=259500 membfunc=Im
+index=43 nodecount=1000 membfunc=K_Pst
+index=45 nodecount=1000 membfunc=K_Tst
+index=48 nodecount=1000 membfunc=Nap_Et2
+index=43 nodecount=1000 membfunc=K_Pst
+index=51 nodecount=1000 membfunc=NaTa_t
+index=52 nodecount=260000 membfunc=NaTs2_t
+index=45 nodecount=1000 membfunc=K_Tst
+index=59 nodecount=1500 membfunc=SK_E2
+index=48 nodecount=1000 membfunc=Nap_Et2
+index=61 nodecount=261000 membfunc=SKv3_1
+index=51 nodecount=1000 membfunc=NaTa_t
+index=18 nodecount=500 membfunc=NetStim
+index=52 nodecount=260000 membfunc=NaTs2_t
+index=59 nodecount=1500 membfunc=SK_E2
+index=61 nodecount=261000 membfunc=SKv3_1
+index=18 nodecount=500 membfunc=NetStim
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1200000 unpadded_size: 44400000 padded_size 44400000
+Point Process type: 32 index: 32 name: DetGABAAB count: 300000 unpadded_size: 10800000 padded_size 10800000
+Point Process type: 18 index: 18 name: NetStim count: 500 unpadded_size: 4500 padded_size 4500
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1200000 unpadded_size: 44400000 padded_size 44400000
+Point Process type: 32 index: 32 name: DetGABAAB count: 300000 unpadded_size: 10800000 padded_size 10800000
+Point Process type: 18 index: 18 name: NetStim count: 500 unpadded_size: 4500 padded_size 4500
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_2.dat
+index=3 nodecount=456500 membfunc=capacitance
+index=4 nodecount=456500 membfunc=pas
+index=15 nodecount=261000 membfunc=na_ion
+index=16 nodecount=261000 membfunc=k_ion
+index=24 nodecount=1500 membfunc=ca_ion
+index=25 nodecount=1500 membfunc=CaDynamics_E2
+index=27 nodecount=1500 membfunc=Ca_HVA
+index=29 nodecount=1500 membfunc=Ca_LVAst
+index=31 nodecount=1200000 membfunc=DetAMPANMDA
+index=32 nodecount=300000 membfunc=DetGABAAB
+index=37 nodecount=455500 membfunc=Ih
+index=38 nodecount=259500 membfunc=Im
+index=43 nodecount=1000 membfunc=K_Pst
+index=45 nodecount=1000 membfunc=K_Tst
+index=48 nodecount=1000 membfunc=Nap_Et2
+index=51 nodecount=1000 membfunc=NaTa_t
+index=52 nodecount=260000 membfunc=NaTs2_t
+index=59 nodecount=1500 membfunc=SK_E2
+index=61 nodecount=261000 membfunc=SKv3_1
+index=18 nodecount=500 membfunc=NetStim
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1200000 unpadded_size: 44400000 padded_size 44400000
+Point Process type: 32 index: 32 name: DetGABAAB count: 300000 unpadded_size: 10800000 padded_size 10800000
+Point Process type: 18 index: 18 name: NetStim count: 500 unpadded_size: 4500 padded_size 4500
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_2.dat
+index=3 nodecount=456500 membfunc=capacitance
+index=4 nodecount=456500 membfunc=pas
+index=15 nodecount=261000 membfunc=na_ion
+index=16 nodecount=261000 membfunc=k_ion
+index=24 nodecount=1500 membfunc=ca_ion
+index=25 nodecount=1500 membfunc=CaDynamics_E2
+index=27 nodecount=1500 membfunc=Ca_HVA
+index=29 nodecount=1500 membfunc=Ca_LVAst
+index=31 nodecount=1200000 membfunc=DetAMPANMDA
+index=32 nodecount=300000 membfunc=DetGABAAB
+index=37 nodecount=455500 membfunc=Ih
+index=38 nodecount=259500 membfunc=Im
+index=43 nodecount=1000 membfunc=K_Pst
+index=45 nodecount=1000 membfunc=K_Tst
+index=48 nodecount=1000 membfunc=Nap_Et2
+index=51 nodecount=1000 membfunc=NaTa_t
+index=52 nodecount=260000 membfunc=NaTs2_t
+index=59 nodecount=1500 membfunc=SK_E2
+index=61 nodecount=261000 membfunc=SKv3_1
+index=18 nodecount=500 membfunc=NetStim
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1200000 unpadded_size: 44400000 padded_size 44400000
+Point Process type: 32 index: 32 name: DetGABAAB count: 300000 unpadded_size: 10800000 padded_size 10800000
+Point Process type: 18 index: 18 name: NetStim count: 500 unpadded_size: 4500 padded_size 4500
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_2.dat
+index=3 nodecount=456500 membfunc=capacitance
+index=4 nodecount=456500 membfunc=pas
+index=15 nodecount=261000 membfunc=na_ion
+index=16 nodecount=261000 membfunc=k_ion
+index=24 nodecount=1500 membfunc=ca_ion
+index=25 nodecount=1500 membfunc=CaDynamics_E2
+index=27 nodecount=1500 membfunc=Ca_HVA
+index=29 nodecount=1500 membfunc=Ca_LVAst
+index=31 nodecount=1200000 membfunc=DetAMPANMDA
+index=32 nodecount=300000 membfunc=DetGABAAB
+index=37 nodecount=455500 membfunc=Ih
+index=38 nodecount=259500 membfunc=Im
+index=43 nodecount=1000 membfunc=K_Pst
+index=45 nodecount=1000 membfunc=K_Tst
+index=48 nodecount=1000 membfunc=Nap_Et2
+index=51 nodecount=1000 membfunc=NaTa_t
+index=52 nodecount=260000 membfunc=NaTs2_t
+index=59 nodecount=1500 membfunc=SK_E2
+index=61 nodecount=261000 membfunc=SKv3_1
+index=18 nodecount=500 membfunc=NetStim
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_2.dat
+index=3 nodecount=456500 membfunc=capacitance
+index=4 nodecount=456500 membfunc=pas
+index=15 nodecount=261000 membfunc=na_ion
+index=16 nodecount=261000 membfunc=k_ion
+index=24 nodecount=1500 membfunc=ca_ion
+index=25 nodecount=1500 membfunc=CaDynamics_E2
+index=27 nodecount=1500 membfunc=Ca_HVA
+index=29 nodecount=1500 membfunc=Ca_LVAst
+index=31 nodecount=1200000 membfunc=DetAMPANMDA
+index=32 nodecount=300000 membfunc=DetGABAAB
+index=37 nodecount=455500 membfunc=Ih
+index=38 nodecount=259500 membfunc=Im
+index=43 nodecount=1000 membfunc=K_Pst
+index=45 nodecount=1000 membfunc=K_Tst
+index=48 nodecount=1000 membfunc=Nap_Et2
+index=51 nodecount=1000 membfunc=NaTa_t
+index=52 nodecount=260000 membfunc=NaTs2_t
+index=59 nodecount=1500 membfunc=SK_E2
+index=61 nodecount=261000 membfunc=SKv3_1
+index=18 nodecount=500 membfunc=NetStim
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1200000 unpadded_size: 44400000 padded_size 44400000
+Point Process type: 32 index: 32 name: DetGABAAB count: 300000 unpadded_size: 10800000 padded_size 10800000
+Point Process type: 18 index: 18 name: NetStim count: 500 unpadded_size: 4500 padded_size 4500
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1200000 unpadded_size: 44400000 padded_size 44400000
+Point Process type: 32 index: 32 name: DetGABAAB count: 300000 unpadded_size: 10800000 padded_size 10800000
+Point Process type: 18 index: 18 name: NetStim count: 500 unpadded_size: 4500 padded_size 4500
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_2.dat
+index=3 nodecount=456500 membfunc=capacitance
+index=4 nodecount=456500 membfunc=pas
+index=15 nodecount=261000 membfunc=na_ion
+index=16 nodecount=261000 membfunc=k_ion
+index=24 nodecount=1500 membfunc=ca_ion
+index=25 nodecount=1500 membfunc=CaDynamics_E2
+index=27 nodecount=1500 membfunc=Ca_HVA
+index=29 nodecount=1500 membfunc=Ca_LVAst
+index=31 nodecount=1200000 membfunc=DetAMPANMDA
+index=32 nodecount=300000 membfunc=DetGABAAB
+index=37 nodecount=455500 membfunc=Ih
+index=38 nodecount=259500 membfunc=Im
+index=43 nodecount=1000 membfunc=K_Pst
+index=45 nodecount=1000 membfunc=K_Tst
+index=48 nodecount=1000 membfunc=Nap_Et2
+index=51 nodecount=1000 membfunc=NaTa_t
+index=52 nodecount=260000 membfunc=NaTs2_t
+index=59 nodecount=1500 membfunc=SK_E2
+index=61 nodecount=261000 membfunc=SKv3_1
+index=18 nodecount=500 membfunc=NetStim
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1200000 unpadded_size: 44400000 padded_size 44400000
+Point Process type: 32 index: 32 name: DetGABAAB count: 300000 unpadded_size: 10800000 padded_size 10800000
+Point Process type: 18 index: 18 name: NetStim count: 500 unpadded_size: 4500 padded_size 4500
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz//1_2.dat
+index=3 nodecount=456500 membfunc=capacitance
+index=4 nodecount=456500 membfunc=pas
+index=15 nodecount=261000 membfunc=na_ion
+index=16 nodecount=261000 membfunc=k_ion
+index=24 nodecount=1500 membfunc=ca_ion
+index=25 nodecount=1500 membfunc=CaDynamics_E2
+index=27 nodecount=1500 membfunc=Ca_HVA
+index=29 nodecount=1500 membfunc=Ca_LVAst
+index=31 nodecount=1200000 membfunc=DetAMPANMDA
+index=32 nodecount=300000 membfunc=DetGABAAB
+index=37 nodecount=455500 membfunc=Ih
+index=38 nodecount=259500 membfunc=Im
+index=43 nodecount=1000 membfunc=K_Pst
+index=45 nodecount=1000 membfunc=K_Tst
+index=48 nodecount=1000 membfunc=Nap_Et2
+index=51 nodecount=1000 membfunc=NaTa_t
+index=52 nodecount=260000 membfunc=NaTs2_t
+index=59 nodecount=1500 membfunc=SK_E2
+index=61 nodecount=261000 membfunc=SKv3_1
+index=18 nodecount=500 membfunc=NetStim
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1200000 unpadded_size: 44400000 padded_size 44400000
+Point Process type: 32 index: 32 name: DetGABAAB count: 300000 unpadded_size: 10800000 padded_size 10800000
+Point Process type: 18 index: 18 name: NetStim count: 500 unpadded_size: 4500 padded_size 4500
+ncell=500 end=576500 nmech=20
+ndata=80031500 nidata=0 nvdata=1501500
+nbyte so far 694898464
+n_presyn = 1000 sz=64 nbyte=64000
+n_input_presyn = 1 sz=24 nbyte=24
+n_pntproc=1500500 sz=8 nbyte=12004000
+n_netcon=3000001 sz=40 nbyte=120000040
+n_weight = 3000001
+0 thread 0 total bytes 850966536
+ncell=500 end=576500 nmech=20
+ndata=80031500 nidata=0 nvdata=1501500
+nbyte so far 694898464
+n_presyn = 1000 sz=64 nbyte=64000
+n_input_presyn = 1 sz=24 nbyte=24
+n_pntproc=1500500 sz=8 nbyte=12004000
+n_netcon=3000001 sz=40 nbyte=120000040
+n_weight = 3000001
+0 thread 1 total bytes 850966536
+ncell=500 end=576500 nmech=20
+ndata=80031500 nidata=0 nvdata=1501500
+nbyte so far 694898464
+n_presyn = 1000 sz=64 nbyte=64000
+n_input_presyn = 1 sz=24 nbyte=24
+n_pntproc=1500500 sz=8 nbyte=12004000
+n_netcon=3000001 sz=40 nbyte=120000040
+n_weight = 3000001
+0 thread 2 total bytes 850966536
+ncell=500 end=576500 nmech=20
+ndata=80031500 nidata=0 nvdata=1501500
+nbyte so far 694898464
+n_presyn = 1000 sz=64 nbyte=64000
+n_input_presyn = 1 sz=24 nbyte=24
+n_pntproc=1500500 sz=8 nbyte=12004000
+n_netcon=3000001 sz=40 nbyte=120000040
+n_weight = 3000001
+0 thread 3 total bytes 850966536
+ncell=500 end=576500 nmech=20
+ndata=80031500 nidata=0 nvdata=1501500
+nbyte so far 694898464
+n_presyn = 1000 sz=64 nbyte=64000
+n_input_presyn = 1 sz=24 nbyte=24
+n_pntproc=1500500 sz=8 nbyte=12004000
+n_netcon=3000001 sz=40 nbyte=120000040
+n_weight = 3000001
+0 thread 4 total bytes 850966536
+ncell=500 end=576500 nmech=20
+ndata=80031500 nidata=0 nvdata=1501500
+nbyte so far 694898464
+n_presyn = 1000 sz=64 nbyte=64000
+n_input_presyn = 1 sz=24 nbyte=24
+n_pntproc=1500500 sz=8 nbyte=12004000
+n_netcon=3000001 sz=40 nbyte=120000040
+n_weight = 3000001
+0 thread 5 total bytes 850966536
+ncell=500 end=576500 nmech=20
+ndata=80031500 nidata=0 nvdata=1501500
+nbyte so far 694898464
+n_presyn = 1000 sz=64 nbyte=64000
+n_input_presyn = 1 sz=24 nbyte=24
+n_pntproc=1500500 sz=8 nbyte=12004000
+n_netcon=3000001 sz=40 nbyte=120000040
+n_weight = 3000001
+0 thread 6 total bytes 850966536
+ncell=500 end=576500 nmech=20
+ndata=80031500 nidata=0 nvdata=1501500
+nbyte so far 694898464
+n_presyn = 1000 sz=64 nbyte=64000
+n_input_presyn = 1 sz=24 nbyte=24
+n_pntproc=1500500 sz=8 nbyte=12004000
+n_netcon=3000001 sz=40 nbyte=120000040
+n_weight = 3000001
+0 thread 7 total bytes 850966536
+0 netcon pointers 24000008  nbyte=192000064
+nrnran123 size=36 cnt=0 nbyte=0
+0 total bytes 6999780544
+ Nrn Setup Done (time: 9.7316)
+ Memory (MBs) :          After nrn_setup  : Max 7105.6875, Min 7105.6875, Avg 7105.6875 
+
+--spikebuf = 100000      --spkcompress = 0        --prcellgid = -1
+--cell-permute = 0       --nwarp = 0              --ms-subintervals = 2
+--ms-phases = 2          --report = 0             --multiple = 8
+--extracon = 0           --pattern = not set      --datpath = /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_500cells_500cellspergroup_f1000Hz/
+--filesdat = files.dat   --outpath = .            --write-config = not set
+--read-config = not set  --tstart = 0             --tstop = 5.0
+--dt = 0.025             --dt_io = 0.1            --voltage = -65
+--celsius = 34           --forwardskip = 0        --dt_report = 0.1
+--mindelay = 0.1         --help = not set         --threading = not set
+--gpu = not set          -mpi = not set           --show = not set
+--multisend = not set    --binqueue = set         --dumpthread = not set
+
+ Memory (MBs) :  After mk_spikevec_buffer : Max 7105.6875, Min 7105.6875, Avg 7105.6875 
+
+ WARNING: nrn_nrn_wrote_conc support on GPU need to validate!
+ Memory (MBs) :     After nrn_finitialize : Max 7105.9336, Min 7105.9336, Avg 7105.9336 
+ Completed 2.00, t = 0.100000 Completed 3.50, t = 0.175000 Completed 4.50, t = 0.225000 Completed 6.00, t = 0.300000 Completed 7.50, t = 0.375000 Completed 9.00, t = 0.450000 Completed 10.50, t = 0.525000 Completed 12.50, t = 0.625000 Completed 14.00, t = 0.700000 Completed 15.50, t = 0.775000 Completed 17.00, t = 0.850000 Completed 18.50, t = 0.925000 Completed 20.00, t = 1.000000 Completed 21.50, t = 1.075000 Completed 23.00, t = 1.150000 Completed 24.50, t = 1.225000 Completed 26.00, t = 1.300000 Completed 27.50, t = 1.375000 Completed 29.00, t = 1.450000 Completed 30.50, t = 1.525000 Completed 32.00, t = 1.600000 Completed 33.50, t = 1.675000 Completed 35.00, t = 1.750000 Completed 36.50, t = 1.825000 Completed 38.00, t = 1.900000 Completed 39.50, t = 1.975000 Completed 41.00, t = 2.050000 Completed 42.50, t = 2.125000 Completed 44.00, t = 2.200000 Completed 45.50, t = 2.275000 Completed 47.00, t = 2.350000 Completed 48.00, t = 2.400000 Completed 49.50, t = 2.475000 Completed 51.00, t = 2.550000 Completed 52.50, t = 2.625000 Completed 54.00, t = 2.700000 Completed 55.50, t = 2.775000 Completed 57.00, t = 2.850000 Completed 58.50, t = 2.925000 Completed 60.00, t = 3.000000 Completed 61.50, t = 3.075000 Completed 63.00, t = 3.150000 Completed 64.50, t = 3.225000 Completed 66.00, t = 3.300000 Completed 67.50, t = 3.375000 Completed 69.00, t = 3.450000 Completed 70.50, t = 3.525000 Completed 72.00, t = 3.600000 Completed 73.50, t = 3.675000 Completed 75.00, t = 3.750000 Completed 76.50, t = 3.825000 Completed 78.00, t = 3.900000 Completed 79.50, t = 3.975000 Completed 81.00, t = 4.050000 Completed 82.50, t = 4.125000 Completed 84.00, t = 4.200000 Completed 85.50, t = 4.275000 Completed 87.00, t = 4.350000 Completed 88.50, t = 4.425000 Completed 90.00, t = 4.500000 Completed 91.50, t = 4.575000 Completed 93.00, t = 4.650000 Completed 94.50, t = 4.725000 Completed 96.00, t = 4.800000 Completed 97.50, t = 4.875000 Completed 99.00, t = 4.950000 Completed 100.00, t = 5.000000
+Solver Time : 254.574
+
+
+ Simulation Statistics
+ Number of cells: 4000
+ Number of compartments: 4612000
+ Number of presyns: 8000
+ Number of input presyns: 8
+ Number of synapses: 24000008
+ Number of point processes: 12004000
+ Number of transfer (gap) targets: 0
+ Number of spikes: 7968
+ Number of spikes with non negative gid-s: 7968
+
+
+--------------------------------------------------------------------------------
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region CaDynamics_E2_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.000284,0.000464,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,8010997,8007955,,
+CPU_CLK_UNHALTED_CORE,FIXC1,22647080,27350800,,
+CPU_CLK_UNHALTED_REF,FIXC2,22646870,27350600,,
+PWR_PKG_ENERGY,PWR0,29.1045,0,,
+PWR_DRAM_ENERGY,PWR3,16.2627,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,49033,48783,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,0,0,,
+CAS_COUNT_RD,MBOX0C0,96500,0,,
+CAS_COUNT_WR,MBOX0C1,101876,0,,
+CAS_COUNT_RD,MBOX1C0,42440,0,,
+CAS_COUNT_WR,MBOX1C1,47470,0,,
+CAS_COUNT_RD,MBOX2C0,41884,0,,
+CAS_COUNT_WR,MBOX2C1,42587,0,,
+CAS_COUNT_RD,MBOX3C0,45758,0,,
+CAS_COUNT_WR,MBOX3C1,47287,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region CaDynamics_E2_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,16018952,8007955,8010997,8009476
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,49997880,22647080,27350800,24998940
+CPU_CLK_UNHALTED_REF STAT,FIXC2,49997470,22646870,27350600,24998735
+PWR_PKG_ENERGY STAT,PWR0,29.1045,0,29.1045,14.5523
+PWR_DRAM_ENERGY STAT,PWR3,16.2627,0,16.2627,8.1313
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,97816,48783,49033,48908
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,0,0,0,0
+CAS_COUNT_RD STAT,MBOX0C0,96500,0,96500,48250
+CAS_COUNT_WR STAT,MBOX0C1,101876,0,101876,50938
+CAS_COUNT_RD STAT,MBOX1C0,42440,0,42440,21220
+CAS_COUNT_WR STAT,MBOX1C1,47470,0,47470,23735
+CAS_COUNT_RD STAT,MBOX2C0,41884,0,41884,20942
+CAS_COUNT_WR STAT,MBOX2C1,42587,0,42587,21293.5000
+CAS_COUNT_RD STAT,MBOX3C0,45758,0,45758,22879
+CAS_COUNT_WR STAT,MBOX3C1,47287,0,47287,23643.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region CaDynamics_E2_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0003,0.0005,,,
+Runtime unhalted [s],0.0103,0.0124,,,
+Clock [MHz],2200.0703,2200.0660,,,
+CPI,2.8270,3.4155,,,
+Energy [J],29.1045,0,,,
+Power [W],102533.2371,0,,,
+Energy DRAM [J],16.2627,0,,,
+Power DRAM [W],57292.3001,0,,,
+MFLOP/s,172.7401,105.0561,,,
+AVX MFLOP/s,0,0,,,
+Packed MUOPS/s,0,0,,,
+Scalar MUOPS/s,172.7401,105.0561,,,
+Memory read bandwidth [MBytes/s],51086.9594,0,,,
+Memory read data volume [GBytes],0.0145,0,,,
+Memory write bandwidth [MBytes/s],53936.4223,0,,,
+Memory write data volume [GBytes],0.0153,0,,,
+Memory bandwidth [MBytes/s],105023.3817,0,,,
+Memory data volume [GBytes],0.0298,0,,,
+Operational intensity,0.0016,0.0016,,,
+TABLE,Region CaDynamics_E2_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0008,0.0003,0.0005,0.0004,
+Runtime unhalted [s] STAT,0.0227,0.0103,0.0124,0.0113,
+Clock [MHz] STAT,4400.1363,2200.0660,2200.0703,2200.0682,
+CPI STAT,6.2425,2.8270,3.4155,3.1212,
+Energy [J] STAT,29.1045,0,29.1045,14.5523,
+Power [W] STAT,102533.2371,0,102533.2371,51266.6185,
+Energy DRAM [J] STAT,16.2627,0,16.2627,8.1313,
+Power DRAM [W] STAT,57292.3001,0,57292.3001,28646.1501,
+MFLOP/s STAT,277.7962,105.0561,172.7401,138.8981,
+AVX MFLOP/s STAT,0,0,0,0,
+Packed MUOPS/s STAT,0,0,0,0,
+Scalar MUOPS/s STAT,277.7962,105.0561,172.7401,138.8981,
+Memory read bandwidth [MBytes/s] STAT,51086.9594,0,51086.9594,25543.4797,
+Memory read data volume [GBytes] STAT,0.0145,0,0.0145,0.0073,
+Memory write bandwidth [MBytes/s] STAT,53936.4223,0,53936.4223,26968.2111,
+Memory write data volume [GBytes] STAT,0.0153,0,0.0153,0.0076,
+Memory bandwidth [MBytes/s] STAT,105023.3817,0,105023.3817,52511.6908,
+Memory data volume [GBytes] STAT,0.0298,0,0.0298,0.0149,
+Operational intensity STAT,0.0032,0.0016,0.0016,0.0016,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Ca_HVA_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.047691,0.049947,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,42632500,42622480,,
+CPU_CLK_UNHALTED_CORE,FIXC1,128646900,137717800,,
+CPU_CLK_UNHALTED_REF,FIXC2,128647200,137719800,,
+PWR_PKG_ENERGY,PWR0,29.7716,0,,
+PWR_DRAM_ENERGY,PWR3,16.6441,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1819531,1829048,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,574673,573811,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,1411198,1411255,,
+CAS_COUNT_RD,MBOX0C0,1396469,0,,
+CAS_COUNT_WR,MBOX0C1,875348,0,,
+CAS_COUNT_RD,MBOX1C0,1324326,0,,
+CAS_COUNT_WR,MBOX1C1,807335,0,,
+CAS_COUNT_RD,MBOX2C0,1318059,0,,
+CAS_COUNT_WR,MBOX2C1,787880,0,,
+CAS_COUNT_RD,MBOX3C0,1333975,0,,
+CAS_COUNT_WR,MBOX3C1,790704,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Ca_HVA_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,85254980,42622480,42632500,42627490
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,266364700,128646900,137717800,133182350
+CPU_CLK_UNHALTED_REF STAT,FIXC2,266367000,128647200,137719800,133183500
+PWR_PKG_ENERGY STAT,PWR0,29.7716,0,29.7716,14.8858
+PWR_DRAM_ENERGY STAT,PWR3,16.6441,0,16.6441,8.3221
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,3648579,1819531,1829048,1.824290e+06
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,1148484,573811,574673,574242
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,2822453,1411198,1411255,1.411226e+06
+CAS_COUNT_RD STAT,MBOX0C0,1396469,0,1396469,698234.5000
+CAS_COUNT_WR STAT,MBOX0C1,875348,0,875348,437674
+CAS_COUNT_RD STAT,MBOX1C0,1324326,0,1324326,662163
+CAS_COUNT_WR STAT,MBOX1C1,807335,0,807335,403667.5000
+CAS_COUNT_RD STAT,MBOX2C0,1318059,0,1318059,659029.5000
+CAS_COUNT_WR STAT,MBOX2C1,787880,0,787880,393940
+CAS_COUNT_RD STAT,MBOX3C0,1333975,0,1333975,666987.5000
+CAS_COUNT_WR STAT,MBOX3C1,790704,0,790704,395352
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Ca_HVA_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0477,0.0499,,,
+Runtime unhalted [s],0.0585,0.0626,,,
+Clock [MHz],2200.0448,2200.0180,,,
+CPI,3.0176,3.2311,,,
+Energy [J],29.7716,0,,,
+Power [W],624.2581,0,,,
+Energy DRAM [J],16.6441,0,,,
+Power DRAM [W],348.9990,0,,,
+MFLOP/s,206.7162,197.7470,,,
+AVX MFLOP/s,118.3615,113.0196,,,
+Packed MUOPS/s,67.7428,64.8745,,,
+Scalar MUOPS/s,12.0499,11.4883,,,
+Memory read bandwidth [MBytes/s],7210.1710,0,,,
+Memory read data volume [GBytes],0.3439,0,,,
+Memory write bandwidth [MBytes/s],4376.5198,0,,,
+Memory write data volume [GBytes],0.2087,0,,,
+Memory bandwidth [MBytes/s],11586.6908,0,,,
+Memory data volume [GBytes],0.5526,0,,,
+Operational intensity,0.0178,0.0179,,,
+TABLE,Region Ca_HVA_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0976,0.0477,0.0499,0.0488,
+Runtime unhalted [s] STAT,0.1211,0.0585,0.0626,0.0606,
+Clock [MHz] STAT,4400.0628,2200.0180,2200.0448,2200.0314,
+CPI STAT,6.2487,3.0176,3.2311,3.1243,
+Energy [J] STAT,29.7716,0,29.7716,14.8858,
+Power [W] STAT,624.2581,0,624.2581,312.1291,
+Energy DRAM [J] STAT,16.6441,0,16.6441,8.3221,
+Power DRAM [W] STAT,348.9990,0,348.9990,174.4995,
+MFLOP/s STAT,404.4632,197.7470,206.7162,202.2316,
+AVX MFLOP/s STAT,231.3811,113.0196,118.3615,115.6906,
+Packed MUOPS/s STAT,132.6173,64.8745,67.7428,66.3087,
+Scalar MUOPS/s STAT,23.5382,11.4883,12.0499,11.7691,
+Memory read bandwidth [MBytes/s] STAT,7210.1710,0,7210.1710,3605.0855,
+Memory read data volume [GBytes] STAT,0.3439,0,0.3439,0.1719,
+Memory write bandwidth [MBytes/s] STAT,4376.5198,0,4376.5198,2188.2599,
+Memory write data volume [GBytes] STAT,0.2087,0,0.2087,0.1043,
+Memory bandwidth [MBytes/s] STAT,11586.6908,0,11586.6908,5793.3454,
+Memory data volume [GBytes] STAT,0.5526,0,0.5526,0.2763,
+Operational intensity STAT,0.0357,0.0178,0.0179,0.0178,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Ca_LVAst_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.025889,0.026498,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,40856250,40855250,,
+CPU_CLK_UNHALTED_CORE,FIXC1,79479250,80316080,,
+CPU_CLK_UNHALTED_REF,FIXC2,79478410,80315660,,
+PWR_PKG_ENERGY,PWR0,28.6187,0,,
+PWR_DRAM_ENERGY,PWR3,15.8590,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1817809,1822102,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,48824,48477,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,1507561,1507717,,
+CAS_COUNT_RD,MBOX0C0,472552,0,,
+CAS_COUNT_WR,MBOX0C1,322169,0,,
+CAS_COUNT_RD,MBOX1C0,414143,0,,
+CAS_COUNT_WR,MBOX1C1,264691,0,,
+CAS_COUNT_RD,MBOX2C0,408840,0,,
+CAS_COUNT_WR,MBOX2C1,251986,0,,
+CAS_COUNT_RD,MBOX3C0,411611,0,,
+CAS_COUNT_WR,MBOX3C1,257249,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Ca_LVAst_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,81711500,40855250,40856250,40855750
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,159795330,79479250,80316080,79897665
+CPU_CLK_UNHALTED_REF STAT,FIXC2,159794070,79478410,80315660,79897035
+PWR_PKG_ENERGY STAT,PWR0,28.6187,0,28.6187,14.3094
+PWR_DRAM_ENERGY STAT,PWR3,15.8590,0,15.8590,7.9295
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,3639911,1817809,1822102,1.819956e+06
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,97301,48477,48824,48650.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,3015278,1507561,1507717,1507639
+CAS_COUNT_RD STAT,MBOX0C0,472552,0,472552,236276
+CAS_COUNT_WR STAT,MBOX0C1,322169,0,322169,161084.5000
+CAS_COUNT_RD STAT,MBOX1C0,414143,0,414143,207071.5000
+CAS_COUNT_WR STAT,MBOX1C1,264691,0,264691,132345.5000
+CAS_COUNT_RD STAT,MBOX2C0,408840,0,408840,204420
+CAS_COUNT_WR STAT,MBOX2C1,251986,0,251986,125993
+CAS_COUNT_RD STAT,MBOX3C0,411611,0,411611,205805.5000
+CAS_COUNT_WR STAT,MBOX3C1,257249,0,257249,128624.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Ca_LVAst_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0259,0.0265,,,
+Runtime unhalted [s],0.0361,0.0365,,,
+Clock [MHz],2200.0732,2200.0614,,,
+CPI,1.9453,1.9659,,,
+Energy [J],28.6187,0,,,
+Power [W],1105.4184,0,,,
+Energy DRAM [J],15.8590,0,,,
+Power DRAM [W],612.5669,0,,,
+MFLOP/s,375.2365,366.9506,,,
+AVX MFLOP/s,232.9224,227.5950,,,
+Packed MUOPS/s,128.4447,125.6618,,,
+Scalar MUOPS/s,1.8859,1.8294,,,
+Memory read bandwidth [MBytes/s],4220.1411,0,,,
+Memory read data volume [GBytes],0.1093,0,,,
+Memory write bandwidth [MBytes/s],2709.5958,0,,,
+Memory write data volume [GBytes],0.0702,0,,,
+Memory bandwidth [MBytes/s],6929.7369,0,,,
+Memory data volume [GBytes],0.1794,0,,,
+Operational intensity,0.0541,0.0542,,,
+TABLE,Region Ca_LVAst_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0524,0.0259,0.0265,0.0262,
+Runtime unhalted [s] STAT,0.0726,0.0361,0.0365,0.0363,
+Clock [MHz] STAT,4400.1346,2200.0614,2200.0732,2200.0673,
+CPI STAT,3.9112,1.9453,1.9659,1.9556,
+Energy [J] STAT,28.6187,0,28.6187,14.3094,
+Power [W] STAT,1105.4184,0,1105.4184,552.7092,
+Energy DRAM [J] STAT,15.8590,0,15.8590,7.9295,
+Power DRAM [W] STAT,612.5669,0,612.5669,306.2835,
+MFLOP/s STAT,742.1871,366.9506,375.2365,371.0935,
+AVX MFLOP/s STAT,460.5174,227.5950,232.9224,230.2587,
+Packed MUOPS/s STAT,254.1065,125.6618,128.4447,127.0533,
+Scalar MUOPS/s STAT,3.7153,1.8294,1.8859,1.8577,
+Memory read bandwidth [MBytes/s] STAT,4220.1411,0,4220.1411,2110.0705,
+Memory read data volume [GBytes] STAT,0.1093,0,0.1093,0.0546,
+Memory write bandwidth [MBytes/s] STAT,2709.5958,0,2709.5958,1354.7979,
+Memory write data volume [GBytes] STAT,0.0702,0,0.0702,0.0351,
+Memory bandwidth [MBytes/s] STAT,6929.7369,0,6929.7369,3464.8684,
+Memory data volume [GBytes] STAT,0.1794,0,0.1794,0.0897,
+Operational intensity STAT,0.1083,0.0541,0.0542,0.0542,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region DetAMPANMDA_EMS_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],16.223260,16.337220,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,36670860000,36670520000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,35338530000,35652630000,,
+CPU_CLK_UNHALTED_REF,FIXC2,35338520000,35652610000,,
+PWR_PKG_ENERGY,PWR0,600.9597,0,,
+PWR_DRAM_ENERGY,PWR3,320.4101,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,724455400,724421300,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,180245,179760,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,8687408000,8680552000,,
+CAS_COUNT_RD,MBOX0C0,987416100,0,,
+CAS_COUNT_WR,MBOX0C1,553723100,0,,
+CAS_COUNT_RD,MBOX1C0,986503500,0,,
+CAS_COUNT_WR,MBOX1C1,553375600,0,,
+CAS_COUNT_RD,MBOX2C0,986845300,0,,
+CAS_COUNT_WR,MBOX2C1,553833000,0,,
+CAS_COUNT_RD,MBOX3C0,986589400,0,,
+CAS_COUNT_WR,MBOX3C1,553553000,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region DetAMPANMDA_EMS_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,73341380000,36670520000,36670860000,36670690000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,70991160000,35338530000,35652630000,35495580000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,70991130000,35338520000,35652610000,35495565000
+PWR_PKG_ENERGY STAT,PWR0,600.9597,0,600.9597,300.4798
+PWR_DRAM_ENERGY STAT,PWR3,320.4101,0,320.4101,160.2050
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,1448876700,724421300,724455400,724438350
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,360005,179760,180245,180002.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,17367960000,8680552000,8687408000,8683980000
+CAS_COUNT_RD STAT,MBOX0C0,987416100,0,987416100,493708050
+CAS_COUNT_WR STAT,MBOX0C1,553723100,0,553723100,276861550
+CAS_COUNT_RD STAT,MBOX1C0,986503500,0,986503500,493251750
+CAS_COUNT_WR STAT,MBOX1C1,553375600,0,553375600,276687800
+CAS_COUNT_RD STAT,MBOX2C0,986845300,0,986845300,493422650
+CAS_COUNT_WR STAT,MBOX2C1,553833000,0,553833000,276916500
+CAS_COUNT_RD STAT,MBOX3C0,986589400,0,986589400,493294700
+CAS_COUNT_WR STAT,MBOX3C1,553553000,0,553553000,276776500
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region DetAMPANMDA_EMS_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],16.2233,16.3372,,,
+Runtime unhalted [s],16.0626,16.2054,,,
+Clock [MHz],2200.0506,2200.0512,,,
+CPI,0.9637,0.9722,,,
+Energy [J],600.9597,0,,,
+Power [W],37.0431,0,,,
+Energy DRAM [J],320.4101,0,,,
+Power DRAM [W],19.7500,0,,,
+MFLOP/s,2231.2854,2214.0383,,,
+AVX MFLOP/s,2141.9636,2125.3437,,,
+Packed MUOPS/s,580.1462,575.6777,,,
+Scalar MUOPS/s,0.0111,0.0110,,,
+Memory read bandwidth [MBytes/s],15572.1276,0,,,
+Memory read data volume [GBytes],252.6307,0,,,
+Memory write bandwidth [MBytes/s],8736.0383,0,,,
+Memory write data volume [GBytes],141.7270,0,,,
+Memory bandwidth [MBytes/s],24308.1659,0,,,
+Memory data volume [GBytes],394.3577,0,,,
+Operational intensity,0.0918,0.0917,,,
+TABLE,Region DetAMPANMDA_EMS_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,32.5605,16.2233,16.3372,16.2802,
+Runtime unhalted [s] STAT,32.2680,16.0626,16.2054,16.1340,
+Clock [MHz] STAT,4400.1018,2200.0506,2200.0512,2200.0509,
+CPI STAT,1.9359,0.9637,0.9722,0.9679,
+Energy [J] STAT,600.9597,0,600.9597,300.4798,
+Power [W] STAT,37.0431,0,37.0431,18.5216,
+Energy DRAM [J] STAT,320.4101,0,320.4101,160.2050,
+Power DRAM [W] STAT,19.7500,0,19.7500,9.8750,
+MFLOP/s STAT,4445.3237,2214.0383,2231.2854,2222.6619,
+AVX MFLOP/s STAT,4267.3073,2125.3437,2141.9636,2133.6537,
+Packed MUOPS/s STAT,1155.8239,575.6777,580.1462,577.9119,
+Scalar MUOPS/s STAT,0.0221,0.0110,0.0111,0.0111,
+Memory read bandwidth [MBytes/s] STAT,15572.1276,0,15572.1276,7786.0638,
+Memory read data volume [GBytes] STAT,252.6307,0,252.6307,126.3153,
+Memory write bandwidth [MBytes/s] STAT,8736.0383,0,8736.0383,4368.0192,
+Memory write data volume [GBytes] STAT,141.7270,0,141.7270,70.8635,
+Memory bandwidth [MBytes/s] STAT,24308.1659,0,24308.1659,12154.0829,
+Memory data volume [GBytes] STAT,394.3577,0,394.3577,197.1789,
+Operational intensity STAT,0.1835,0.0917,0.0918,0.0917,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region DetAMPANMDA_EMS_reduction_cur,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],2.330244,2.368196,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,10017900000,10017890000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,5126661000,5209285000,,
+CPU_CLK_UNHALTED_REF,FIXC2,5126658000,5209283000,,
+PWR_PKG_ENERGY,PWR0,109.4464,0,,
+PWR_DRAM_ENERGY,PWR3,76.8515,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,73796,75051,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,487482600,488146900,,
+CAS_COUNT_RD,MBOX0C0,113371300,0,,
+CAS_COUNT_WR,MBOX0C1,25526110,0,,
+CAS_COUNT_RD,MBOX1C0,112854500,0,,
+CAS_COUNT_WR,MBOX1C1,25532380,0,,
+CAS_COUNT_RD,MBOX2C0,112935000,0,,
+CAS_COUNT_WR,MBOX2C1,25428940,0,,
+CAS_COUNT_RD,MBOX3C0,112939100,0,,
+CAS_COUNT_WR,MBOX3C1,25099880,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region DetAMPANMDA_EMS_reduction_cur,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,20035790000,10017890000,10017900000,10017895000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,10335946000,5126661000,5209285000,5167973000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,10335941000,5126658000,5209283000,5167970500
+PWR_PKG_ENERGY STAT,PWR0,109.4464,0,109.4464,54.7232
+PWR_DRAM_ENERGY STAT,PWR3,76.8515,0,76.8515,38.4258
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,148847,73796,75051,74423.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,975629500,487482600,488146900,487814750
+CAS_COUNT_RD STAT,MBOX0C0,113371300,0,113371300,56685650
+CAS_COUNT_WR STAT,MBOX0C1,25526110,0,25526110,12763055
+CAS_COUNT_RD STAT,MBOX1C0,112854500,0,112854500,56427250
+CAS_COUNT_WR STAT,MBOX1C1,25532380,0,25532380,12766190
+CAS_COUNT_RD STAT,MBOX2C0,112935000,0,112935000,56467500
+CAS_COUNT_WR STAT,MBOX2C1,25428940,0,25428940,12714470
+CAS_COUNT_RD STAT,MBOX3C0,112939100,0,112939100,56469550
+CAS_COUNT_WR STAT,MBOX3C1,25099880,0,25099880,12549940
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region DetAMPANMDA_EMS_reduction_cur,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],2.3302,2.3682,,,
+Runtime unhalted [s],2.3302,2.3678,,,
+Clock [MHz],2200.0512,2200.0508,,,
+CPI,0.5118,0.5200,,,
+Energy [J],109.4464,0,,,
+Power [W],46.9678,0,,,
+Energy DRAM [J],76.8515,0,,,
+Power DRAM [W],32.9800,0,,,
+MFLOP/s,836.8240,824.5359,,,
+AVX MFLOP/s,836.7924,824.5042,,,
+Packed MUOPS/s,209.1981,206.1261,,,
+Scalar MUOPS/s,0.0317,0.0317,,,
+Memory read bandwidth [MBytes/s],12416.8944,0,,,
+Memory read data volume [GBytes],28.9344,0,,,
+Memory write bandwidth [MBytes/s],2790.0889,0,,,
+Memory write data volume [GBytes],6.5016,0,,,
+Memory bandwidth [MBytes/s],15206.9832,0,,,
+Memory data volume [GBytes],35.4360,0,,,
+Operational intensity,0.0550,0.0551,,,
+TABLE,Region DetAMPANMDA_EMS_reduction_cur,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,4.6984,2.3302,2.3682,2.3492,
+Runtime unhalted [s] STAT,4.6980,2.3302,2.3678,2.3490,
+Clock [MHz] STAT,4400.1020,2200.0508,2200.0512,2200.0510,
+CPI STAT,1.0318,0.5118,0.5200,0.5159,
+Energy [J] STAT,109.4464,0,109.4464,54.7232,
+Power [W] STAT,46.9678,0,46.9678,23.4839,
+Energy DRAM [J] STAT,76.8515,0,76.8515,38.4258,
+Power DRAM [W] STAT,32.9800,0,32.9800,16.4900,
+MFLOP/s STAT,1661.3599,824.5359,836.8240,830.6799,
+AVX MFLOP/s STAT,1661.2966,824.5042,836.7924,830.6483,
+Packed MUOPS/s STAT,415.3242,206.1261,209.1981,207.6621,
+Scalar MUOPS/s STAT,0.0634,0.0317,0.0317,0.0317,
+Memory read bandwidth [MBytes/s] STAT,12416.8944,0,12416.8944,6208.4472,
+Memory read data volume [GBytes] STAT,28.9344,0,28.9344,14.4672,
+Memory write bandwidth [MBytes/s] STAT,2790.0889,0,2790.0889,1395.0445,
+Memory write data volume [GBytes] STAT,6.5016,0,6.5016,3.2508,
+Memory bandwidth [MBytes/s] STAT,15206.9832,0,15206.9832,7603.4916,
+Memory data volume [GBytes] STAT,35.4360,0,35.4360,17.7180,
+Operational intensity STAT,0.1101,0.0550,0.0551,0.0551,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region DetGABAAB_EMS_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],3.826520,3.795241,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,4530705000,4530697000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,8372793000,8338912000,,
+CPU_CLK_UNHALTED_REF,FIXC2,8372791000,8338905000,,
+PWR_PKG_ENERGY,PWR0,159.8952,0,,
+PWR_DRAM_ENERGY,PWR3,109.7212,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,60388380,60497860,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,152310,160331,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,868821700,869830300,,
+CAS_COUNT_RD,MBOX0C0,245436100,0,,
+CAS_COUNT_WR,MBOX0C1,94326900,0,,
+CAS_COUNT_RD,MBOX1C0,244941700,0,,
+CAS_COUNT_WR,MBOX1C1,95139470,0,,
+CAS_COUNT_RD,MBOX2C0,245202400,0,,
+CAS_COUNT_WR,MBOX2C1,95492550,0,,
+CAS_COUNT_RD,MBOX3C0,245239800,0,,
+CAS_COUNT_WR,MBOX3C1,94256060,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region DetGABAAB_EMS_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,9061402000,4530697000,4530705000,4530701000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,16711705000,8338912000,8372793000,8355852500
+CPU_CLK_UNHALTED_REF STAT,FIXC2,16711696000,8338905000,8372791000,8355848000
+PWR_PKG_ENERGY STAT,PWR0,159.8952,0,159.8952,79.9476
+PWR_DRAM_ENERGY STAT,PWR3,109.7212,0,109.7212,54.8606
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,120886240,60388380,60497860,60443120
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,312641,152310,160331,156320.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,1738652000,868821700,869830300,869326000
+CAS_COUNT_RD STAT,MBOX0C0,245436100,0,245436100,122718050
+CAS_COUNT_WR STAT,MBOX0C1,94326900,0,94326900,47163450
+CAS_COUNT_RD STAT,MBOX1C0,244941700,0,244941700,122470850
+CAS_COUNT_WR STAT,MBOX1C1,95139470,0,95139470,47569735
+CAS_COUNT_RD STAT,MBOX2C0,245202400,0,245202400,122601200
+CAS_COUNT_WR STAT,MBOX2C1,95492550,0,95492550,47746275
+CAS_COUNT_RD STAT,MBOX3C0,245239800,0,245239800,122619900
+CAS_COUNT_WR STAT,MBOX3C1,94256060,0,94256060,47128030
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region DetGABAAB_EMS_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],3.8265,3.7952,,,
+Runtime unhalted [s],3.8057,3.7903,,,
+Clock [MHz],2200.0505,2200.0518,,,
+CPI,1.8480,1.8405,,,
+Energy [J],159.8952,0,,,
+Power [W],41.7861,0,,,
+Energy DRAM [J],109.7212,0,,,
+Power DRAM [W],28.6739,0,,,
+MFLOP/s,939.8137,948.6821,,,
+AVX MFLOP/s,908.2108,916.7590,,,
+Packed MUOPS/s,242.8342,245.1302,,,
+Scalar MUOPS/s,0.0398,0.0422,,,
+Memory read bandwidth [MBytes/s],16404.5869,0,,,
+Memory read data volume [GBytes],62.7725,0,,,
+Memory write bandwidth [MBytes/s],6342.5145,0,,,
+Memory write data volume [GBytes],24.2698,0,,,
+Memory bandwidth [MBytes/s],22747.1015,0,,,
+Memory data volume [GBytes],87.0422,0,,,
+Operational intensity,0.0413,0.0414,,,
+TABLE,Region DetGABAAB_EMS_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,7.6217,3.7952,3.8265,3.8108,
+Runtime unhalted [s] STAT,7.5960,3.7903,3.8057,3.7980,
+Clock [MHz] STAT,4400.1023,2200.0505,2200.0518,2200.0512,
+CPI STAT,3.6885,1.8405,1.8480,1.8443,
+Energy [J] STAT,159.8952,0,159.8952,79.9476,
+Power [W] STAT,41.7861,0,41.7861,20.8930,
+Energy DRAM [J] STAT,109.7212,0,109.7212,54.8606,
+Power DRAM [W] STAT,28.6739,0,28.6739,14.3369,
+MFLOP/s STAT,1888.4958,939.8137,948.6821,944.2479,
+AVX MFLOP/s STAT,1824.9698,908.2108,916.7590,912.4849,
+Packed MUOPS/s STAT,487.9644,242.8342,245.1302,243.9822,
+Scalar MUOPS/s STAT,0.0820,0.0398,0.0422,0.0410,
+Memory read bandwidth [MBytes/s] STAT,16404.5869,0,16404.5869,8202.2934,
+Memory read data volume [GBytes] STAT,62.7725,0,62.7725,31.3863,
+Memory write bandwidth [MBytes/s] STAT,6342.5145,0,6342.5145,3171.2573,
+Memory write data volume [GBytes] STAT,24.2698,0,24.2698,12.1349,
+Memory bandwidth [MBytes/s] STAT,22747.1015,0,22747.1015,11373.5508,
+Memory data volume [GBytes] STAT,87.0422,0,87.0422,43.5211,
+Operational intensity STAT,0.0827,0.0413,0.0414,0.0413,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region DetGABAAB_EMS_reduction_cur,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.855124,0.884787,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,2510530000,2510533000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,1889238000,1955249000,,
+CPU_CLK_UNHALTED_REF,FIXC2,1889238000,1955250000,,
+PWR_PKG_ENERGY,PWR0,56.0727,0,,
+PWR_DRAM_ENERGY,PWR3,43.7884,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,77727,77836,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,122695500,122914100,,
+CAS_COUNT_RD,MBOX0C0,32363700,0,,
+CAS_COUNT_WR,MBOX0C1,14297150,0,,
+CAS_COUNT_RD,MBOX1C0,32103380,0,,
+CAS_COUNT_WR,MBOX1C1,14118370,0,,
+CAS_COUNT_RD,MBOX2C0,32198660,0,,
+CAS_COUNT_WR,MBOX2C1,14190900,0,,
+CAS_COUNT_RD,MBOX3C0,32166470,0,,
+CAS_COUNT_WR,MBOX3C1,14099960,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region DetGABAAB_EMS_reduction_cur,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,5021063000,2510530000,2510533000,2510531500
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,3844487000,1889238000,1955249000,1922243500
+CPU_CLK_UNHALTED_REF STAT,FIXC2,3844488000,1889238000,1955250000,1922244000
+PWR_PKG_ENERGY STAT,PWR0,56.0727,0,56.0727,28.0363
+PWR_DRAM_ENERGY STAT,PWR3,43.7884,0,43.7884,21.8942
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,155563,77727,77836,77781.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,245609600,122695500,122914100,122804800
+CAS_COUNT_RD STAT,MBOX0C0,32363700,0,32363700,16181850
+CAS_COUNT_WR STAT,MBOX0C1,14297150,0,14297150,7148575
+CAS_COUNT_RD STAT,MBOX1C0,32103380,0,32103380,16051690
+CAS_COUNT_WR STAT,MBOX1C1,14118370,0,14118370,7059185
+CAS_COUNT_RD STAT,MBOX2C0,32198660,0,32198660,16099330
+CAS_COUNT_WR STAT,MBOX2C1,14190900,0,14190900,7095450
+CAS_COUNT_RD STAT,MBOX3C0,32166470,0,32166470,16083235
+CAS_COUNT_WR STAT,MBOX3C1,14099960,0,14099960,7049980
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region DetGABAAB_EMS_reduction_cur,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.8551,0.8848,,,
+Runtime unhalted [s],0.8587,0.8887,,,
+Clock [MHz],2200.0499,2200.0488,,,
+CPI,0.7525,0.7788,,,
+Energy [J],56.0727,0,,,
+Power [W],65.5726,0,,,
+Energy DRAM [J],43.7884,0,,,
+Power DRAM [W],51.2071,0,,,
+MFLOP/s,574.0217,555.7656,,,
+AVX MFLOP/s,573.9308,555.6776,,,
+Packed MUOPS/s,143.4827,138.9194,,,
+Scalar MUOPS/s,0.0909,0.0880,,,
+Memory read bandwidth [MBytes/s],9642.1822,0,,,
+Memory read data volume [GBytes],8.2453,0,,,
+Memory write bandwidth [MBytes/s],4244.0726,0,,,
+Memory write data volume [GBytes],3.6292,0,,,
+Memory bandwidth [MBytes/s],13886.2548,0,,,
+Memory data volume [GBytes],11.8745,0,,,
+Operational intensity,0.0413,0.0414,,,
+TABLE,Region DetGABAAB_EMS_reduction_cur,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,1.7399,0.8551,0.8848,0.8700,
+Runtime unhalted [s] STAT,1.7474,0.8587,0.8887,0.8737,
+Clock [MHz] STAT,4400.0987,2200.0488,2200.0499,2200.0494,
+CPI STAT,1.5313,0.7525,0.7788,0.7656,
+Energy [J] STAT,56.0727,0,56.0727,28.0363,
+Power [W] STAT,65.5726,0,65.5726,32.7863,
+Energy DRAM [J] STAT,43.7884,0,43.7884,21.8942,
+Power DRAM [W] STAT,51.2071,0,51.2071,25.6035,
+MFLOP/s STAT,1129.7873,555.7656,574.0217,564.8936,
+AVX MFLOP/s STAT,1129.6084,555.6776,573.9308,564.8042,
+Packed MUOPS/s STAT,282.4021,138.9194,143.4827,141.2011,
+Scalar MUOPS/s STAT,0.1789,0.0880,0.0909,0.0895,
+Memory read bandwidth [MBytes/s] STAT,9642.1822,0,9642.1822,4821.0911,
+Memory read data volume [GBytes] STAT,8.2453,0,8.2453,4.1227,
+Memory write bandwidth [MBytes/s] STAT,4244.0726,0,4244.0726,2122.0363,
+Memory write data volume [GBytes] STAT,3.6292,0,3.6292,1.8146,
+Memory bandwidth [MBytes/s] STAT,13886.2548,0,13886.2548,6943.1274,
+Memory data volume [GBytes] STAT,11.8745,0,11.8745,5.9372,
+Operational intensity STAT,0.0827,0.0413,0.0414,0.0413,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Ih_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],2.728299,2.714835,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,5501288000,5501312000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,5984988000,5987662000,,
+CPU_CLK_UNHALTED_REF,FIXC2,5984989000,5987657000,,
+PWR_PKG_ENERGY,PWR0,122.9730,0,,
+PWR_DRAM_ENERGY,PWR3,85.3791,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,80980,78955,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,458800800,458692700,,
+CAS_COUNT_RD,MBOX0C0,155159000,0,,
+CAS_COUNT_WR,MBOX0C1,71428150,0,,
+CAS_COUNT_RD,MBOX1C0,154499700,0,,
+CAS_COUNT_WR,MBOX1C1,72045410,0,,
+CAS_COUNT_RD,MBOX2C0,154918600,0,,
+CAS_COUNT_WR,MBOX2C1,72310360,0,,
+CAS_COUNT_RD,MBOX3C0,154870800,0,,
+CAS_COUNT_WR,MBOX3C1,70935000,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Ih_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,11002600000,5501288000,5501312000,5501300000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,11972650000,5984988000,5987662000,5986325000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,11972646000,5984989000,5987657000,5986323000
+PWR_PKG_ENERGY STAT,PWR0,122.9730,0,122.9730,61.4865
+PWR_DRAM_ENERGY STAT,PWR3,85.3791,0,85.3791,42.6895
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,159935,78955,80980,79967.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,917493500,458692700,458800800,458746750
+CAS_COUNT_RD STAT,MBOX0C0,155159000,0,155159000,77579500
+CAS_COUNT_WR STAT,MBOX0C1,71428150,0,71428150,35714075
+CAS_COUNT_RD STAT,MBOX1C0,154499700,0,154499700,77249850
+CAS_COUNT_WR STAT,MBOX1C1,72045410,0,72045410,36022705
+CAS_COUNT_RD STAT,MBOX2C0,154918600,0,154918600,77459300
+CAS_COUNT_WR STAT,MBOX2C1,72310360,0,72310360,36155180
+CAS_COUNT_RD STAT,MBOX3C0,154870800,0,154870800,77435400
+CAS_COUNT_WR STAT,MBOX3C1,70935000,0,70935000,35467500
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Ih_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],2.7283,2.7148,,,
+Runtime unhalted [s],2.7204,2.7216,,,
+Clock [MHz],2200.0496,2200.0518,,,
+CPI,1.0879,1.0884,,,
+Energy [J],122.9730,0,,,
+Power [W],45.0731,0,,,
+Energy DRAM [J],85.3791,0,,,
+Power DRAM [W],31.2939,0,,,
+MFLOP/s,672.6844,675.8605,,,
+AVX MFLOP/s,672.6547,675.8314,,,
+Packed MUOPS/s,168.1637,168.9579,,,
+Scalar MUOPS/s,0.0297,0.0291,,,
+Memory read bandwidth [MBytes/s],14530.9141,0,,,
+Memory read data volume [GBytes],39.6447,0,,,
+Memory write bandwidth [MBytes/s],6725.8064,0,,,
+Memory write data volume [GBytes],18.3500,0,,,
+Memory bandwidth [MBytes/s],21256.7205,0,,,
+Memory data volume [GBytes],57.9947,0,,,
+Operational intensity,0.0316,0.0316,,,
+TABLE,Region Ih_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,5.4431,2.7148,2.7283,2.7215,
+Runtime unhalted [s] STAT,5.4420,2.7204,2.7216,2.7210,
+Clock [MHz] STAT,4400.1014,2200.0496,2200.0518,2200.0507,
+CPI STAT,2.1763,1.0879,1.0884,1.0882,
+Energy [J] STAT,122.9730,0,122.9730,61.4865,
+Power [W] STAT,45.0731,0,45.0731,22.5365,
+Energy DRAM [J] STAT,85.3791,0,85.3791,42.6895,
+Power DRAM [W] STAT,31.2939,0,31.2939,15.6470,
+MFLOP/s STAT,1348.5449,672.6844,675.8605,674.2724,
+AVX MFLOP/s STAT,1348.4861,672.6547,675.8314,674.2431,
+Packed MUOPS/s STAT,337.1216,168.1637,168.9579,168.5608,
+Scalar MUOPS/s STAT,0.0588,0.0291,0.0297,0.0294,
+Memory read bandwidth [MBytes/s] STAT,14530.9141,0,14530.9141,7265.4570,
+Memory read data volume [GBytes] STAT,39.6447,0,39.6447,19.8224,
+Memory write bandwidth [MBytes/s] STAT,6725.8064,0,6725.8064,3362.9032,
+Memory write data volume [GBytes] STAT,18.3500,0,18.3500,9.1750,
+Memory bandwidth [MBytes/s] STAT,21256.7205,0,21256.7205,10628.3602,
+Memory data volume [GBytes] STAT,57.9947,0,57.9947,28.9974,
+Operational intensity STAT,0.0632,0.0316,0.0316,0.0316,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Im_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],2.687849,2.710664,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,4858818000,4858826000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,5892649000,5975532000,,
+CPU_CLK_UNHALTED_REF,FIXC2,5892647000,5975527000,,
+PWR_PKG_ENERGY,PWR0,120.4991,0,,
+PWR_DRAM_ENERGY,PWR3,84.0885,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,102943,100935,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,313656700,313434800,,
+CAS_COUNT_RD,MBOX0C0,155181000,0,,
+CAS_COUNT_WR,MBOX0C1,75067540,0,,
+CAS_COUNT_RD,MBOX1C0,154226800,0,,
+CAS_COUNT_WR,MBOX1C1,72841950,0,,
+CAS_COUNT_RD,MBOX2C0,154150300,0,,
+CAS_COUNT_WR,MBOX2C1,73001450,0,,
+CAS_COUNT_RD,MBOX3C0,154691500,0,,
+CAS_COUNT_WR,MBOX3C1,74952700,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Im_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,9717644000,4858818000,4858826000,4858822000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,11868181000,5892649000,5975532000,5934090500
+CPU_CLK_UNHALTED_REF STAT,FIXC2,11868174000,5892647000,5975527000,5934087000
+PWR_PKG_ENERGY STAT,PWR0,120.4991,0,120.4991,60.2495
+PWR_DRAM_ENERGY STAT,PWR3,84.0885,0,84.0885,42.0442
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,203878,100935,102943,101939
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,627091500,313434800,313656700,313545750
+CAS_COUNT_RD STAT,MBOX0C0,155181000,0,155181000,77590500
+CAS_COUNT_WR STAT,MBOX0C1,75067540,0,75067540,37533770
+CAS_COUNT_RD STAT,MBOX1C0,154226800,0,154226800,77113400
+CAS_COUNT_WR STAT,MBOX1C1,72841950,0,72841950,36420975
+CAS_COUNT_RD STAT,MBOX2C0,154150300,0,154150300,77075150
+CAS_COUNT_WR STAT,MBOX2C1,73001450,0,73001450,36500725
+CAS_COUNT_RD STAT,MBOX3C0,154691500,0,154691500,77345750
+CAS_COUNT_WR STAT,MBOX3C1,74952700,0,74952700,37476350
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Im_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],2.6878,2.7107,,,
+Runtime unhalted [s],2.6784,2.7161,,,
+Clock [MHz],2200.0507,2200.0518,,,
+CPI,1.2128,1.2298,,,
+Energy [J],120.4991,0,,,
+Power [W],44.8311,0,,,
+Energy DRAM [J],84.0885,0,,,
+Power DRAM [W],31.2847,0,,,
+MFLOP/s,466.8156,462.5583,,,
+AVX MFLOP/s,466.7773,462.5211,,,
+Packed MUOPS/s,116.6943,115.6303,,,
+Scalar MUOPS/s,0.0383,0.0372,,,
+Memory read bandwidth [MBytes/s],14721.0555,0,,,
+Memory read data volume [GBytes],39.5680,0,,,
+Memory write bandwidth [MBytes/s],7044.7681,0,,,
+Memory write data volume [GBytes],18.9353,0,,,
+Memory bandwidth [MBytes/s],21765.8237,0,,,
+Memory data volume [GBytes],58.5032,0,,,
+Operational intensity,0.0214,0.0214,,,
+TABLE,Region Im_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,5.3985,2.6878,2.7107,2.6993,
+Runtime unhalted [s] STAT,5.3945,2.6784,2.7161,2.6972,
+Clock [MHz] STAT,4400.1025,2200.0507,2200.0518,2200.0512,
+CPI STAT,2.4426,1.2128,1.2298,1.2213,
+Energy [J] STAT,120.4991,0,120.4991,60.2495,
+Power [W] STAT,44.8311,0,44.8311,22.4155,
+Energy DRAM [J] STAT,84.0885,0,84.0885,42.0442,
+Power DRAM [W] STAT,31.2847,0,31.2847,15.6424,
+MFLOP/s STAT,929.3739,462.5583,466.8156,464.6870,
+AVX MFLOP/s STAT,929.2984,462.5211,466.7773,464.6492,
+Packed MUOPS/s STAT,232.3246,115.6303,116.6943,116.1623,
+Scalar MUOPS/s STAT,0.0755,0.0372,0.0383,0.0377,
+Memory read bandwidth [MBytes/s] STAT,14721.0555,0,14721.0555,7360.5278,
+Memory read data volume [GBytes] STAT,39.5680,0,39.5680,19.7840,
+Memory write bandwidth [MBytes/s] STAT,7044.7681,0,7044.7681,3522.3841,
+Memory write data volume [GBytes] STAT,18.9353,0,18.9353,9.4677,
+Memory bandwidth [MBytes/s] STAT,21765.8237,0,21765.8237,10882.9119,
+Memory data volume [GBytes] STAT,58.5032,0,58.5032,29.2516,
+Operational intensity STAT,0.0428,0.0214,0.0214,0.0214,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region K_Pst_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.042764,0.044341,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,29840920,29848030,,
+CPU_CLK_UNHALTED_CORE,FIXC1,116319200,119703400,,
+CPU_CLK_UNHALTED_REF,FIXC2,116317700,119706100,,
+PWR_PKG_ENERGY,PWR0,29.8662,0,,
+PWR_DRAM_ENERGY,PWR3,24.1010,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1210407,1221699,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,48773,48112,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,1005219,1005448,,
+CAS_COUNT_RD,MBOX0C0,1307647,0,,
+CAS_COUNT_WR,MBOX0C1,727259,0,,
+CAS_COUNT_RD,MBOX1C0,1235345,0,,
+CAS_COUNT_WR,MBOX1C1,659328,0,,
+CAS_COUNT_RD,MBOX2C0,1234055,0,,
+CAS_COUNT_WR,MBOX2C1,652981,0,,
+CAS_COUNT_RD,MBOX3C0,1246380,0,,
+CAS_COUNT_WR,MBOX3C1,667153,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region K_Pst_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,59688950,29840920,29848030,29844475
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,236022600,116319200,119703400,118011300
+CPU_CLK_UNHALTED_REF STAT,FIXC2,236023800,116317700,119706100,118011900
+PWR_PKG_ENERGY STAT,PWR0,29.8662,0,29.8662,14.9331
+PWR_DRAM_ENERGY STAT,PWR3,24.1010,0,24.1010,12.0505
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,2432106,1210407,1221699,1216053
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,96885,48112,48773,48442.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,2010667,1005219,1005448,1.005334e+06
+CAS_COUNT_RD STAT,MBOX0C0,1307647,0,1307647,653823.5000
+CAS_COUNT_WR STAT,MBOX0C1,727259,0,727259,363629.5000
+CAS_COUNT_RD STAT,MBOX1C0,1235345,0,1235345,617672.5000
+CAS_COUNT_WR STAT,MBOX1C1,659328,0,659328,329664
+CAS_COUNT_RD STAT,MBOX2C0,1234055,0,1234055,617027.5000
+CAS_COUNT_WR STAT,MBOX2C1,652981,0,652981,326490.5000
+CAS_COUNT_RD STAT,MBOX3C0,1246380,0,1246380,623190
+CAS_COUNT_WR STAT,MBOX3C1,667153,0,667153,333576.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region K_Pst_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0428,0.0443,,,
+Runtime unhalted [s],0.0529,0.0544,,,
+Clock [MHz],2200.0783,2200.0003,,,
+CPI,3.8980,4.0104,,,
+Energy [J],29.8662,0,,,
+Power [W],698.3992,0,,,
+Energy DRAM [J],24.1010,0,,,
+Power DRAM [W],563.5855,0,,,
+MFLOP/s,151.7749,146.8922,,,
+AVX MFLOP/s,94.0253,90.7021,,,
+Packed MUOPS/s,51.8108,50.2281,,,
+Scalar MUOPS/s,1.1405,1.0851,,,
+Memory read bandwidth [MBytes/s],7518.0340,0,,,
+Memory read data volume [GBytes],0.3215,0,,,
+Memory write bandwidth [MBytes/s],4050.8642,0,,,
+Memory write data volume [GBytes],0.1732,0,,,
+Memory bandwidth [MBytes/s],11568.8982,0,,,
+Memory data volume [GBytes],0.4947,0,,,
+Operational intensity,0.0131,0.0132,,,
+TABLE,Region K_Pst_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0871,0.0428,0.0443,0.0435,
+Runtime unhalted [s] STAT,0.1073,0.0529,0.0544,0.0537,
+Clock [MHz] STAT,4400.0786,2200.0003,2200.0783,2200.0393,
+CPI STAT,7.9084,3.8980,4.0104,3.9542,
+Energy [J] STAT,29.8662,0,29.8662,14.9331,
+Power [W] STAT,698.3992,0,698.3992,349.1996,
+Energy DRAM [J] STAT,24.1010,0,24.1010,12.0505,
+Power DRAM [W] STAT,563.5855,0,563.5855,281.7928,
+MFLOP/s STAT,298.6671,146.8922,151.7749,149.3336,
+AVX MFLOP/s STAT,184.7274,90.7021,94.0253,92.3637,
+Packed MUOPS/s STAT,102.0389,50.2281,51.8108,51.0194,
+Scalar MUOPS/s STAT,2.2256,1.0851,1.1405,1.1128,
+Memory read bandwidth [MBytes/s] STAT,7518.0340,0,7518.0340,3759.0170,
+Memory read data volume [GBytes] STAT,0.3215,0,0.3215,0.1608,
+Memory write bandwidth [MBytes/s] STAT,4050.8642,0,4050.8642,2025.4321,
+Memory write data volume [GBytes] STAT,0.1732,0,0.1732,0.0866,
+Memory bandwidth [MBytes/s] STAT,11568.8982,0,11568.8982,5784.4491,
+Memory data volume [GBytes] STAT,0.4947,0,0.4947,0.2473,
+Operational intensity STAT,0.0263,0.0131,0.0132,0.0132,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region K_Tst_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.020091,0.020348,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,27652790,27660370,,
+CPU_CLK_UNHALTED_CORE,FIXC1,66761940,66709010,,
+CPU_CLK_UNHALTED_REF,FIXC2,66760780,66710950,,
+PWR_PKG_ENERGY,PWR0,29.0940,0,,
+PWR_DRAM_ENERGY,PWR3,23.0229,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,3859702,3855236,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,48888,48022,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,0,0,,
+CAS_COUNT_RD,MBOX0C0,370037,0,,
+CAS_COUNT_WR,MBOX0C1,221730,0,,
+CAS_COUNT_RD,MBOX1C0,315456,0,,
+CAS_COUNT_WR,MBOX1C1,165526,0,,
+CAS_COUNT_RD,MBOX2C0,301740,0,,
+CAS_COUNT_WR,MBOX2C1,155947,0,,
+CAS_COUNT_RD,MBOX3C0,310050,0,,
+CAS_COUNT_WR,MBOX3C1,162590,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region K_Tst_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,55313160,27652790,27660370,27656580
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,133470950,66709010,66761940,66735475
+CPU_CLK_UNHALTED_REF STAT,FIXC2,133471730,66710950,66760780,66735865
+PWR_PKG_ENERGY STAT,PWR0,29.0940,0,29.0940,14.5470
+PWR_DRAM_ENERGY STAT,PWR3,23.0229,0,23.0229,11.5114
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,7714938,3855236,3859702,3857469
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,96910,48022,48888,48455
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,0,0,0,0
+CAS_COUNT_RD STAT,MBOX0C0,370037,0,370037,185018.5000
+CAS_COUNT_WR STAT,MBOX0C1,221730,0,221730,110865
+CAS_COUNT_RD STAT,MBOX1C0,315456,0,315456,157728
+CAS_COUNT_WR STAT,MBOX1C1,165526,0,165526,82763
+CAS_COUNT_RD STAT,MBOX2C0,301740,0,301740,150870
+CAS_COUNT_WR STAT,MBOX2C1,155947,0,155947,77973.5000
+CAS_COUNT_RD STAT,MBOX3C0,310050,0,310050,155025
+CAS_COUNT_WR STAT,MBOX3C1,162590,0,162590,81295
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region K_Tst_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0201,0.0203,,,
+Runtime unhalted [s],0.0303,0.0303,,,
+Clock [MHz],2200.0882,2199.9860,,,
+CPI,2.4143,2.4117,,,
+Energy [J],29.0940,0,,,
+Power [W],1448.1106,0,,,
+Energy DRAM [J],23.0229,0,,,
+Power DRAM [W],1145.9299,0,,,
+MFLOP/s,386.6549,381.2882,,,
+AVX MFLOP/s,0,0,,,
+Packed MUOPS/s,192.1108,189.4641,,,
+Scalar MUOPS/s,2.4333,2.3600,,,
+Memory read bandwidth [MBytes/s],4132.4986,0,,,
+Memory read data volume [GBytes],0.0830,0,,,
+Memory write bandwidth [MBytes/s],2248.3056,0,,,
+Memory write data volume [GBytes],0.0452,0,,,
+Memory bandwidth [MBytes/s],6380.8042,0,,,
+Memory data volume [GBytes],0.1282,0,,,
+Operational intensity,0.0606,0.0605,,,
+TABLE,Region K_Tst_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0404,0.0201,0.0203,0.0202,
+Runtime unhalted [s] STAT,0.0606,0.0303,0.0303,0.0303,
+Clock [MHz] STAT,4400.0742,2199.9860,2200.0882,2200.0371,
+CPI STAT,4.8260,2.4117,2.4143,2.4130,
+Energy [J] STAT,29.0940,0,29.0940,14.5470,
+Power [W] STAT,1448.1106,0,1448.1106,724.0553,
+Energy DRAM [J] STAT,23.0229,0,23.0229,11.5114,
+Power DRAM [W] STAT,1145.9299,0,1145.9299,572.9650,
+MFLOP/s STAT,767.9431,381.2882,386.6549,383.9715,
+AVX MFLOP/s STAT,0,0,0,0,
+Packed MUOPS/s STAT,381.5749,189.4641,192.1108,190.7875,
+Scalar MUOPS/s STAT,4.7933,2.3600,2.4333,2.3967,
+Memory read bandwidth [MBytes/s] STAT,4132.4986,0,4132.4986,2066.2493,
+Memory read data volume [GBytes] STAT,0.0830,0,0.0830,0.0415,
+Memory write bandwidth [MBytes/s] STAT,2248.3056,0,2248.3056,1124.1528,
+Memory write data volume [GBytes] STAT,0.0452,0,0.0452,0.0226,
+Memory bandwidth [MBytes/s] STAT,6380.8042,0,6380.8042,3190.4021,
+Memory data volume [GBytes] STAT,0.1282,0,0.1282,0.0641,
+Operational intensity STAT,0.1211,0.0605,0.0606,0.0605,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Nap_Et2_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.023547,0.024499,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,30085100,30084310,,
+CPU_CLK_UNHALTED_CORE,FIXC1,74363080,76051670,,
+CPU_CLK_UNHALTED_REF,FIXC2,74363370,76052570,,
+PWR_PKG_ENERGY,PWR0,28.8803,0,,
+PWR_DRAM_ENERGY,PWR3,21.9383,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1212869,1217439,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,48669,48104,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,1206144,1206408,,
+CAS_COUNT_RD,MBOX0C0,490239,0,,
+CAS_COUNT_WR,MBOX0C1,295362,0,,
+CAS_COUNT_RD,MBOX1C0,433306,0,,
+CAS_COUNT_WR,MBOX1C1,235786,0,,
+CAS_COUNT_RD,MBOX2C0,420116,0,,
+CAS_COUNT_WR,MBOX2C1,229090,0,,
+CAS_COUNT_RD,MBOX3C0,425908,0,,
+CAS_COUNT_WR,MBOX3C1,232355,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Nap_Et2_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,60169410,30084310,30085100,30084705
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,150414750,74363080,76051670,75207375
+CPU_CLK_UNHALTED_REF STAT,FIXC2,150415940,74363370,76052570,75207970
+PWR_PKG_ENERGY STAT,PWR0,28.8803,0,28.8803,14.4401
+PWR_DRAM_ENERGY STAT,PWR3,21.9383,0,21.9383,10.9692
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,2430308,1212869,1217439,1215154
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,96773,48104,48669,48386.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,2412552,1206144,1206408,1206276
+CAS_COUNT_RD STAT,MBOX0C0,490239,0,490239,245119.5000
+CAS_COUNT_WR STAT,MBOX0C1,295362,0,295362,147681
+CAS_COUNT_RD STAT,MBOX1C0,433306,0,433306,216653
+CAS_COUNT_WR STAT,MBOX1C1,235786,0,235786,117893
+CAS_COUNT_RD STAT,MBOX2C0,420116,0,420116,210058
+CAS_COUNT_WR STAT,MBOX2C1,229090,0,229090,114545
+CAS_COUNT_RD STAT,MBOX3C0,425908,0,425908,212954
+CAS_COUNT_WR STAT,MBOX3C1,232355,0,232355,116177.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Nap_Et2_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0235,0.0245,,,
+Runtime unhalted [s],0.0338,0.0346,,,
+Clock [MHz],2200.0414,2200.0239,,,
+CPI,2.4718,2.5280,,,
+Energy [J],28.8803,0,,,
+Power [W],1226.5135,0,,,
+Energy DRAM [J],21.9383,0,,,
+Power DRAM [W],931.6968,0,,,
+MFLOP/s,309.9799,298.3193,,,
+AVX MFLOP/s,204.8945,196.9702,,,
+Packed MUOPS/s,102.7329,98.9354,,,
+Scalar MUOPS/s,2.0669,1.9635,,,
+Memory read bandwidth [MBytes/s],4809.7081,0,,,
+Memory read data volume [GBytes],0.1133,0,,,
+Memory write bandwidth [MBytes/s],2697.8787,0,,,
+Memory write data volume [GBytes],0.0635,0,,,
+Memory bandwidth [MBytes/s],7507.5868,0,,,
+Memory data volume [GBytes],0.1768,0,,,
+Operational intensity,0.0413,0.0413,,,
+TABLE,Region Nap_Et2_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0480,0.0235,0.0245,0.0240,
+Runtime unhalted [s] STAT,0.0684,0.0338,0.0346,0.0342,
+Clock [MHz] STAT,4400.0653,2200.0239,2200.0414,2200.0327,
+CPI STAT,4.9998,2.4718,2.5280,2.4999,
+Energy [J] STAT,28.8803,0,28.8803,14.4401,
+Power [W] STAT,1226.5135,0,1226.5135,613.2568,
+Energy DRAM [J] STAT,21.9383,0,21.9383,10.9692,
+Power DRAM [W] STAT,931.6968,0,931.6968,465.8484,
+MFLOP/s STAT,608.2992,298.3193,309.9799,304.1496,
+AVX MFLOP/s STAT,401.8647,196.9702,204.8945,200.9323,
+Packed MUOPS/s STAT,201.6683,98.9354,102.7329,100.8341,
+Scalar MUOPS/s STAT,4.0304,1.9635,2.0669,2.0152,
+Memory read bandwidth [MBytes/s] STAT,4809.7081,0,4809.7081,2404.8540,
+Memory read data volume [GBytes] STAT,0.1133,0,0.1133,0.0566,
+Memory write bandwidth [MBytes/s] STAT,2697.8787,0,2697.8787,1348.9394,
+Memory write data volume [GBytes] STAT,0.0635,0,0.0635,0.0318,
+Memory bandwidth [MBytes/s] STAT,7507.5868,0,7507.5868,3753.7934,
+Memory data volume [GBytes] STAT,0.1768,0,0.1768,0.0884,
+Operational intensity STAT,0.0826,0.0413,0.0413,0.0413,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region NaTa_t_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.021631,0.021819,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,30415680,30402900,,
+CPU_CLK_UNHALTED_CORE,FIXC1,71427980,75410280,,
+CPU_CLK_UNHALTED_REF,FIXC2,71426540,75408650,,
+PWR_PKG_ENERGY,PWR0,29.2609,0,,
+PWR_DRAM_ENERGY,PWR3,21.4330,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1216777,1222333,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,48621,48894,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,1206133,1206257,,
+CAS_COUNT_RD,MBOX0C0,331085,0,,
+CAS_COUNT_WR,MBOX0C1,211877,0,,
+CAS_COUNT_RD,MBOX1C0,275829,0,,
+CAS_COUNT_WR,MBOX1C1,155746,0,,
+CAS_COUNT_RD,MBOX2C0,265626,0,,
+CAS_COUNT_WR,MBOX2C1,148539,0,,
+CAS_COUNT_RD,MBOX3C0,271197,0,,
+CAS_COUNT_WR,MBOX3C1,150031,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region NaTa_t_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,60818580,30402900,30415680,30409290
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,146838260,71427980,75410280,73419130
+CPU_CLK_UNHALTED_REF STAT,FIXC2,146835190,71426540,75408650,73417595
+PWR_PKG_ENERGY STAT,PWR0,29.2609,0,29.2609,14.6304
+PWR_DRAM_ENERGY STAT,PWR3,21.4330,0,21.4330,10.7165
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,2439110,1216777,1222333,1219555
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,97515,48621,48894,48757.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,2412390,1206133,1206257,1206195
+CAS_COUNT_RD STAT,MBOX0C0,331085,0,331085,165542.5000
+CAS_COUNT_WR STAT,MBOX0C1,211877,0,211877,105938.5000
+CAS_COUNT_RD STAT,MBOX1C0,275829,0,275829,137914.5000
+CAS_COUNT_WR STAT,MBOX1C1,155746,0,155746,77873
+CAS_COUNT_RD STAT,MBOX2C0,265626,0,265626,132813
+CAS_COUNT_WR STAT,MBOX2C1,148539,0,148539,74269.5000
+CAS_COUNT_RD STAT,MBOX3C0,271197,0,271197,135598.5000
+CAS_COUNT_WR STAT,MBOX3C1,150031,0,150031,75015.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region NaTa_t_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0216,0.0218,,,
+Runtime unhalted [s],0.0325,0.0343,,,
+Clock [MHz],2200.0943,2200.0975,,,
+CPI,2.3484,2.4804,,,
+Energy [J],29.2609,0,,,
+Power [W],1352.7044,0,,,
+Energy DRAM [J],21.4330,0,,,
+Power DRAM [W],990.8258,0,,,
+MFLOP/s,337.7820,335.4273,,,
+AVX MFLOP/s,223.0334,221.1419,,,
+Packed MUOPS/s,112.0088,111.3077,,,
+Scalar MUOPS/s,2.2477,2.2409,,,
+Memory read bandwidth [MBytes/s],3383.9264,0,,,
+Memory read data volume [GBytes],0.0732,0,,,
+Memory write bandwidth [MBytes/s],1971.0371,0,,,
+Memory write data volume [GBytes],0.0426,0,,,
+Memory bandwidth [MBytes/s],5354.9636,0,,,
+Memory data volume [GBytes],0.1158,0,,,
+Operational intensity,0.0631,0.0632,,,
+TABLE,Region NaTa_t_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0434,0.0216,0.0218,0.0217,
+Runtime unhalted [s] STAT,0.0668,0.0325,0.0343,0.0334,
+Clock [MHz] STAT,4400.1918,2200.0943,2200.0975,2200.0959,
+CPI STAT,4.8288,2.3484,2.4804,2.4144,
+Energy [J] STAT,29.2609,0,29.2609,14.6304,
+Power [W] STAT,1352.7044,0,1352.7044,676.3522,
+Energy DRAM [J] STAT,21.4330,0,21.4330,10.7165,
+Power DRAM [W] STAT,990.8258,0,990.8258,495.4129,
+MFLOP/s STAT,673.2093,335.4273,337.7820,336.6046,
+AVX MFLOP/s STAT,444.1753,221.1419,223.0334,222.0876,
+Packed MUOPS/s STAT,223.3165,111.3077,112.0088,111.6582,
+Scalar MUOPS/s STAT,4.4886,2.2409,2.2477,2.2443,
+Memory read bandwidth [MBytes/s] STAT,3383.9264,0,3383.9264,1691.9632,
+Memory read data volume [GBytes] STAT,0.0732,0,0.0732,0.0366,
+Memory write bandwidth [MBytes/s] STAT,1971.0371,0,1971.0371,985.5186,
+Memory write data volume [GBytes] STAT,0.0426,0,0.0426,0.0213,
+Memory bandwidth [MBytes/s] STAT,5354.9636,0,5354.9636,2677.4818,
+Memory data volume [GBytes] STAT,0.1158,0,0.1158,0.0579,
+Operational intensity STAT,0.1263,0.0631,0.0632,0.0632,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region NaTs2_t_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],2.896306,2.886068,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,5025015000,5025007000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,6327556000,6351573000,,
+CPU_CLK_UNHALTED_REF,FIXC2,6327557000,6351567000,,
+PWR_PKG_ENERGY,PWR0,127.9656,0,,
+PWR_DRAM_ENERGY,PWR3,79.3200,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,109781,106264,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,485766800,485212800,,
+CAS_COUNT_RD,MBOX0C0,167236600,0,,
+CAS_COUNT_WR,MBOX0C1,78194220,0,,
+CAS_COUNT_RD,MBOX1C0,166409000,0,,
+CAS_COUNT_WR,MBOX1C1,75925290,0,,
+CAS_COUNT_RD,MBOX2C0,166254500,0,,
+CAS_COUNT_WR,MBOX2C1,76227360,0,,
+CAS_COUNT_RD,MBOX3C0,166711300,0,,
+CAS_COUNT_WR,MBOX3C1,78301360,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region NaTs2_t_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,10050022000,5025007000,5025015000,5025011000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,12679129000,6327556000,6351573000,6339564500
+CPU_CLK_UNHALTED_REF STAT,FIXC2,12679124000,6327557000,6351567000,6339562000
+PWR_PKG_ENERGY STAT,PWR0,127.9656,0,127.9656,63.9828
+PWR_DRAM_ENERGY STAT,PWR3,79.3200,0,79.3200,39.6600
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,216045,106264,109781,108022.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,970979600,485212800,485766800,485489800
+CAS_COUNT_RD STAT,MBOX0C0,167236600,0,167236600,83618300
+CAS_COUNT_WR STAT,MBOX0C1,78194220,0,78194220,39097110
+CAS_COUNT_RD STAT,MBOX1C0,166409000,0,166409000,83204500
+CAS_COUNT_WR STAT,MBOX1C1,75925290,0,75925290,37962645
+CAS_COUNT_RD STAT,MBOX2C0,166254500,0,166254500,83127250
+CAS_COUNT_WR STAT,MBOX2C1,76227360,0,76227360,38113680
+CAS_COUNT_RD STAT,MBOX3C0,166711300,0,166711300,83355650
+CAS_COUNT_WR STAT,MBOX3C1,78301360,0,78301360,39150680
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region NaTs2_t_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],2.8963,2.8861,,,
+Runtime unhalted [s],2.8761,2.8870,,,
+Clock [MHz],2200.0496,2200.0520,,,
+CPI,1.2592,1.2640,,,
+Energy [J],127.9656,0,,,
+Power [W],44.1823,0,,,
+Energy DRAM [J],79.3200,0,,,
+Power DRAM [W],27.3866,0,,,
+MFLOP/s,670.9156,672.5266,,,
+AVX MFLOP/s,670.8777,672.4898,,,
+Packed MUOPS/s,167.7194,168.1224,,,
+Scalar MUOPS/s,0.0379,0.0368,,,
+Memory read bandwidth [MBytes/s],14730.1872,0,,,
+Memory read data volume [GBytes],42.6631,0,,,
+Memory write bandwidth [MBytes/s],6820.2347,0,,,
+Memory write data volume [GBytes],19.7535,0,,,
+Memory bandwidth [MBytes/s],21550.4219,0,,,
+Memory data volume [GBytes],62.4166,0,,,
+Operational intensity,0.0311,0.0311,,,
+TABLE,Region NaTs2_t_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,5.7824,2.8861,2.8963,2.8912,
+Runtime unhalted [s] STAT,5.7631,2.8761,2.8870,2.8815,
+Clock [MHz] STAT,4400.1016,2200.0496,2200.0520,2200.0508,
+CPI STAT,2.5232,1.2592,1.2640,1.2616,
+Energy [J] STAT,127.9656,0,127.9656,63.9828,
+Power [W] STAT,44.1823,0,44.1823,22.0911,
+Energy DRAM [J] STAT,79.3200,0,79.3200,39.6600,
+Power DRAM [W] STAT,27.3866,0,27.3866,13.6933,
+MFLOP/s STAT,1343.4422,670.9156,672.5266,671.7211,
+AVX MFLOP/s STAT,1343.3675,670.8777,672.4898,671.6837,
+Packed MUOPS/s STAT,335.8418,167.7194,168.1224,167.9209,
+Scalar MUOPS/s STAT,0.0747,0.0368,0.0379,0.0374,
+Memory read bandwidth [MBytes/s] STAT,14730.1872,0,14730.1872,7365.0936,
+Memory read data volume [GBytes] STAT,42.6631,0,42.6631,21.3316,
+Memory write bandwidth [MBytes/s] STAT,6820.2347,0,6820.2347,3410.1173,
+Memory write data volume [GBytes] STAT,19.7535,0,19.7535,9.8767,
+Memory bandwidth [MBytes/s] STAT,21550.4219,0,21550.4219,10775.2110,
+Memory data volume [GBytes] STAT,62.4166,0,62.4166,31.2083,
+Operational intensity STAT,0.0622,0.0311,0.0311,0.0311,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region SK_E2_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.052347,0.053116,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,42743870,42765780,,
+CPU_CLK_UNHALTED_CORE,FIXC1,136904100,139892100,,
+CPU_CLK_UNHALTED_REF,FIXC2,136904400,139894000,,
+PWR_PKG_ENERGY,PWR0,30.2111,0,,
+PWR_DRAM_ENERGY,PWR3,22.0168,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1817191,1826823,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,48631,47978,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,904635,905152,,
+CAS_COUNT_RD,MBOX0C0,1565643,0,,
+CAS_COUNT_WR,MBOX0C1,794938,0,,
+CAS_COUNT_RD,MBOX1C0,1495483,0,,
+CAS_COUNT_WR,MBOX1C1,731868,0,,
+CAS_COUNT_RD,MBOX2C0,1487555,0,,
+CAS_COUNT_WR,MBOX2C1,723353,0,,
+CAS_COUNT_RD,MBOX3C0,1507248,0,,
+CAS_COUNT_WR,MBOX3C1,734633,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region SK_E2_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,85509650,42743870,42765780,42754825
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,276796200,136904100,139892100,138398100
+CPU_CLK_UNHALTED_REF STAT,FIXC2,276798400,136904400,139894000,138399200
+PWR_PKG_ENERGY STAT,PWR0,30.2111,0,30.2111,15.1055
+PWR_DRAM_ENERGY STAT,PWR3,22.0168,0,22.0168,11.0084
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,3644014,1817191,1826823,1822007
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,96609,47978,48631,48304.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,1809787,904635,905152,904893.5000
+CAS_COUNT_RD STAT,MBOX0C0,1565643,0,1565643,782821.5000
+CAS_COUNT_WR STAT,MBOX0C1,794938,0,794938,397469
+CAS_COUNT_RD STAT,MBOX1C0,1495483,0,1495483,747741.5000
+CAS_COUNT_WR STAT,MBOX1C1,731868,0,731868,365934
+CAS_COUNT_RD STAT,MBOX2C0,1487555,0,1487555,743777.5000
+CAS_COUNT_WR STAT,MBOX2C1,723353,0,723353,361676.5000
+CAS_COUNT_RD STAT,MBOX3C0,1507248,0,1507248,753624
+CAS_COUNT_WR STAT,MBOX3C1,734633,0,734633,367316.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region SK_E2_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0523,0.0531,,,
+Runtime unhalted [s],0.0622,0.0636,,,
+Clock [MHz],2200.0451,2200.0201,,,
+CPI,3.2029,3.2711,,,
+Energy [J],30.2111,0,,,
+Power [W],577.1275,0,,,
+Energy DRAM [J],22.0168,0,,,
+Power DRAM [W],420.5904,0,,,
+MFLOP/s,139.4829,137.8536,,,
+AVX MFLOP/s,69.1256,68.1642,,,
+Packed MUOPS/s,51.9955,51.4341,,,
+Scalar MUOPS/s,0.9290,0.9033,,,
+Memory read bandwidth [MBytes/s],7404.0023,0,,,
+Memory read data volume [GBytes],0.3876,0,,,
+Memory write bandwidth [MBytes/s],3649.2183,0,,,
+Memory write data volume [GBytes],0.1910,0,,,
+Memory bandwidth [MBytes/s],11053.2206,0,,,
+Memory data volume [GBytes],0.5786,0,,,
+Operational intensity,0.0126,0.0127,,,
+TABLE,Region SK_E2_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.1054,0.0523,0.0531,0.0527,
+Runtime unhalted [s] STAT,0.1258,0.0622,0.0636,0.0629,
+Clock [MHz] STAT,4400.0652,2200.0201,2200.0451,2200.0326,
+CPI STAT,6.4740,3.2029,3.2711,3.2370,
+Energy [J] STAT,30.2111,0,30.2111,15.1055,
+Power [W] STAT,577.1275,0,577.1275,288.5638,
+Energy DRAM [J] STAT,22.0168,0,22.0168,11.0084,
+Power DRAM [W] STAT,420.5904,0,420.5904,210.2952,
+MFLOP/s STAT,277.3365,137.8536,139.4829,138.6683,
+AVX MFLOP/s STAT,137.2898,68.1642,69.1256,68.6449,
+Packed MUOPS/s STAT,103.4296,51.4341,51.9955,51.7148,
+Scalar MUOPS/s STAT,1.8323,0.9033,0.9290,0.9162,
+Memory read bandwidth [MBytes/s] STAT,7404.0023,0,7404.0023,3702.0012,
+Memory read data volume [GBytes] STAT,0.3876,0,0.3876,0.1938,
+Memory write bandwidth [MBytes/s] STAT,3649.2183,0,3649.2183,1824.6091,
+Memory write data volume [GBytes] STAT,0.1910,0,0.1910,0.0955,
+Memory bandwidth [MBytes/s] STAT,11053.2206,0,11053.2206,5526.6103,
+Memory data volume [GBytes] STAT,0.5786,0,0.5786,0.2893,
+Operational intensity STAT,0.0253,0.0126,0.0127,0.0126,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region SKv3_1_current,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],2.729032,2.732218,,,
+call count,804,804,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,4887256000,4887235000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,5972591000,6027141000,,
+CPU_CLK_UNHALTED_REF,FIXC2,5972589000,6027136000,,
+PWR_PKG_ENERGY,PWR0,122.7215,0,,
+PWR_DRAM_ENERGY,PWR3,75.9716,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,95106,89676,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,315341600,315258300,,
+CAS_COUNT_RD,MBOX0C0,155045300,0,,
+CAS_COUNT_WR,MBOX0C1,73761850,0,,
+CAS_COUNT_RD,MBOX1C0,154075800,0,,
+CAS_COUNT_WR,MBOX1C1,71433090,0,,
+CAS_COUNT_RD,MBOX2C0,153985000,0,,
+CAS_COUNT_WR,MBOX2C1,71680380,0,,
+CAS_COUNT_RD,MBOX3C0,154534600,0,,
+CAS_COUNT_WR,MBOX3C1,73763760,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region SKv3_1_current,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,9774491000,4887235000,4887256000,4887245500
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,11999732000,5972591000,6027141000,5999866000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,11999725000,5972589000,6027136000,5999862500
+PWR_PKG_ENERGY STAT,PWR0,122.7215,0,122.7215,61.3608
+PWR_DRAM_ENERGY STAT,PWR3,75.9716,0,75.9716,37.9858
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,184782,89676,95106,92391
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,630599900,315258300,315341600,315299950
+CAS_COUNT_RD STAT,MBOX0C0,155045300,0,155045300,77522650
+CAS_COUNT_WR STAT,MBOX0C1,73761850,0,73761850,36880925
+CAS_COUNT_RD STAT,MBOX1C0,154075800,0,154075800,77037900
+CAS_COUNT_WR STAT,MBOX1C1,71433090,0,71433090,35716545
+CAS_COUNT_RD STAT,MBOX2C0,153985000,0,153985000,76992500
+CAS_COUNT_WR STAT,MBOX2C1,71680380,0,71680380,35840190
+CAS_COUNT_RD STAT,MBOX3C0,154534600,0,154534600,77267300
+CAS_COUNT_WR STAT,MBOX3C1,73763760,0,73763760,36881880
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region SKv3_1_current,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],2.7290,2.7322,,,
+Runtime unhalted [s],2.7148,2.7395,,,
+Clock [MHz],2200.0507,2200.0518,,,
+CPI,1.2221,1.2332,,,
+Energy [J],122.7215,0,,,
+Power [W],44.9689,0,,,
+Energy DRAM [J],75.9716,0,,,
+Power DRAM [W],27.8383,0,,,
+MFLOP/s,462.2377,461.5748,,,
+AVX MFLOP/s,462.2029,461.5419,,,
+Packed MUOPS/s,115.5507,115.3855,,,
+Scalar MUOPS/s,0.0348,0.0328,,,
+Memory read bandwidth [MBytes/s],14484.6249,0,,,
+Memory read data volume [GBytes],39.5290,0,,,
+Memory write bandwidth [MBytes/s],6815.9337,0,,,
+Memory write data volume [GBytes],18.6009,0,,,
+Memory bandwidth [MBytes/s],21300.5586,0,,,
+Memory data volume [GBytes],58.1299,0,,,
+Operational intensity,0.0217,0.0217,,,
+TABLE,Region SKv3_1_current,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,5.4612,2.7290,2.7322,2.7306,
+Runtime unhalted [s] STAT,5.4543,2.7148,2.7395,2.7271,
+Clock [MHz] STAT,4400.1025,2200.0507,2200.0518,2200.0512,
+CPI STAT,2.4553,1.2221,1.2332,1.2277,
+Energy [J] STAT,122.7215,0,122.7215,61.3608,
+Power [W] STAT,44.9689,0,44.9689,22.4844,
+Energy DRAM [J] STAT,75.9716,0,75.9716,37.9858,
+Power DRAM [W] STAT,27.8383,0,27.8383,13.9192,
+MFLOP/s STAT,923.8125,461.5748,462.2377,461.9062,
+AVX MFLOP/s STAT,923.7448,461.5419,462.2029,461.8724,
+Packed MUOPS/s STAT,230.9362,115.3855,115.5507,115.4681,
+Scalar MUOPS/s STAT,0.0676,0.0328,0.0348,0.0338,
+Memory read bandwidth [MBytes/s] STAT,14484.6249,0,14484.6249,7242.3125,
+Memory read data volume [GBytes] STAT,39.5290,0,39.5290,19.7645,
+Memory write bandwidth [MBytes/s] STAT,6815.9337,0,6815.9337,3407.9668,
+Memory write data volume [GBytes] STAT,18.6009,0,18.6009,9.3004,
+Memory bandwidth [MBytes/s] STAT,21300.5586,0,21300.5586,10650.2793,
+Memory data volume [GBytes] STAT,58.1299,0,58.1299,29.0649,
+Operational intensity STAT,0.0434,0.0217,0.0217,0.0217,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region linalg,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],7.821557,7.786002,,,
+call count,1600,1600,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,11536760000,11536790000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,17151860000,17109420000,,
+CPU_CLK_UNHALTED_REF,FIXC2,17151860000,17109410000,,
+PWR_PKG_ENERGY,PWR0,296.9741,0,,
+PWR_DRAM_ENERGY,PWR3,211.0410,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,99200,99200,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,4134903000,4132002000,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,99201,99201,,
+CAS_COUNT_RD,MBOX0C0,145978300,0,,
+CAS_COUNT_WR,MBOX0C1,47511870,0,,
+CAS_COUNT_RD,MBOX1C0,143411900,0,,
+CAS_COUNT_WR,MBOX1C1,44698880,0,,
+CAS_COUNT_RD,MBOX2C0,143579700,0,,
+CAS_COUNT_WR,MBOX2C1,44843330,0,,
+CAS_COUNT_RD,MBOX3C0,143145500,0,,
+CAS_COUNT_WR,MBOX3C1,44561940,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region linalg,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,23073550000,11536760000,11536790000,11536775000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,34261280000,17109420000,17151860000,17130640000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,34261270000,17109410000,17151860000,17130635000
+PWR_PKG_ENERGY STAT,PWR0,296.9741,0,296.9741,148.4871
+PWR_DRAM_ENERGY STAT,PWR3,211.0410,0,211.0410,105.5205
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,198400,99200,99200,99200
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,8266905000,4132002000,4134903000,4133452500
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,198402,99201,99201,99201
+CAS_COUNT_RD STAT,MBOX0C0,145978300,0,145978300,72989150
+CAS_COUNT_WR STAT,MBOX0C1,47511870,0,47511870,23755935
+CAS_COUNT_RD STAT,MBOX1C0,143411900,0,143411900,71705950
+CAS_COUNT_WR STAT,MBOX1C1,44698880,0,44698880,22349440
+CAS_COUNT_RD STAT,MBOX2C0,143579700,0,143579700,71789850
+CAS_COUNT_WR STAT,MBOX2C1,44843330,0,44843330,22421665
+CAS_COUNT_RD STAT,MBOX3C0,143145500,0,143145500,71572750
+CAS_COUNT_WR STAT,MBOX3C1,44561940,0,44561940,22280970
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region linalg,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],7.8216,7.7860,,,
+Runtime unhalted [s],7.7961,7.7768,,,
+Clock [MHz],2200.0499,2200.0512,,,
+CPI,1.4867,1.4830,,,
+Energy [J],296.9741,0,,,
+Power [W],37.9687,0,,,
+Energy DRAM [J],211.0410,0,,,
+Power DRAM [W],26.9820,0,,,
+MFLOP/s,528.7308,530.7727,,,
+AVX MFLOP/s,0.0507,0.0510,,,
+Packed MUOPS/s,0.0254,0.0255,,,
+Scalar MUOPS/s,528.6547,530.6962,,,
+Memory read bandwidth [MBytes/s],4714.0724,0,,,
+Memory read data volume [GBytes],36.8714,0,,,
+Memory write bandwidth [MBytes/s],1486.0756,0,,,
+Memory write data volume [GBytes],11.6234,0,,,
+Memory bandwidth [MBytes/s],6200.1480,0,,,
+Memory data volume [GBytes],48.4948,0,,,
+Operational intensity,0.0853,0.0852,,,
+TABLE,Region linalg,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,15.6076,7.7860,7.8216,7.8038,
+Runtime unhalted [s] STAT,15.5729,7.7768,7.7961,7.7865,
+Clock [MHz] STAT,4400.1011,2200.0499,2200.0512,2200.0505,
+CPI STAT,2.9697,1.4830,1.4867,1.4849,
+Energy [J] STAT,296.9741,0,296.9741,148.4871,
+Power [W] STAT,37.9687,0,37.9687,18.9843,
+Energy DRAM [J] STAT,211.0410,0,211.0410,105.5205,
+Power DRAM [W] STAT,26.9820,0,26.9820,13.4910,
+MFLOP/s STAT,1059.5035,528.7308,530.7727,529.7518,
+AVX MFLOP/s STAT,0.1017,0.0507,0.0510,0.0508,
+Packed MUOPS/s STAT,0.0509,0.0254,0.0255,0.0255,
+Scalar MUOPS/s STAT,1059.3509,528.6547,530.6962,529.6754,
+Memory read bandwidth [MBytes/s] STAT,4714.0724,0,4714.0724,2357.0362,
+Memory read data volume [GBytes] STAT,36.8714,0,36.8714,18.4357,
+Memory write bandwidth [MBytes/s] STAT,1486.0756,0,1486.0756,743.0378,
+Memory write data volume [GBytes] STAT,11.6234,0,11.6234,5.8117,
+Memory bandwidth [MBytes/s] STAT,6200.1480,0,6200.1480,3100.0740,
+Memory data volume [GBytes] STAT,48.4948,0,48.4948,24.2474,
+Operational intensity STAT,0.1705,0.0852,0.0853,0.0852,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region CaDynamics_E2_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.023874,0.024249,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,46962280,46961260,,
+CPU_CLK_UNHALTED_CORE,FIXC1,74669980,77147000,,
+CPU_CLK_UNHALTED_REF,FIXC2,74667890,77148020,,
+PWR_PKG_ENERGY,PWR0,29.5481,0,,
+PWR_DRAM_ENERGY,PWR3,20.2477,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1197897,1198187,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,109445,125064,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,8430191,8429318,,
+CAS_COUNT_RD,MBOX0C0,444800,0,,
+CAS_COUNT_WR,MBOX0C1,308466,0,,
+CAS_COUNT_RD,MBOX1C0,382529,0,,
+CAS_COUNT_WR,MBOX1C1,246744,0,,
+CAS_COUNT_RD,MBOX2C0,379949,0,,
+CAS_COUNT_WR,MBOX2C1,238334,0,,
+CAS_COUNT_RD,MBOX3C0,379700,0,,
+CAS_COUNT_WR,MBOX3C1,242808,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region CaDynamics_E2_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,93923540,46961260,46962280,46961770
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,151816980,74669980,77147000,75908490
+CPU_CLK_UNHALTED_REF STAT,FIXC2,151815910,74667890,77148020,75907955
+PWR_PKG_ENERGY STAT,PWR0,29.5481,0,29.5481,14.7741
+PWR_DRAM_ENERGY STAT,PWR3,20.2477,0,20.2477,10.1238
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,2396084,1197897,1198187,1198042
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,234509,109445,125064,117254.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,16859509,8429318,8430191,8.429754e+06
+CAS_COUNT_RD STAT,MBOX0C0,444800,0,444800,222400
+CAS_COUNT_WR STAT,MBOX0C1,308466,0,308466,154233
+CAS_COUNT_RD STAT,MBOX1C0,382529,0,382529,191264.5000
+CAS_COUNT_WR STAT,MBOX1C1,246744,0,246744,123372
+CAS_COUNT_RD STAT,MBOX2C0,379949,0,379949,189974.5000
+CAS_COUNT_WR STAT,MBOX2C1,238334,0,238334,119167
+CAS_COUNT_RD STAT,MBOX3C0,379700,0,379700,189850
+CAS_COUNT_WR STAT,MBOX3C1,242808,0,242808,121404
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region CaDynamics_E2_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0239,0.0242,,,
+Runtime unhalted [s],0.0339,0.0351,,,
+Clock [MHz],2200.1115,2200.0209,,,
+CPI,1.5900,1.6428,,,
+Energy [J],29.5481,0,,,
+Power [W],1237.6838,0,,,
+Energy DRAM [J],20.2477,0,,,
+Power DRAM [W],848.1190,0,,,
+MFLOP/s,1517.4028,1494.4587,,,
+AVX MFLOP/s,1412.4655,1390.4764,,,
+Packed MUOPS/s,403.2928,397.0315,,,
+Scalar MUOPS/s,4.5843,5.1576,,,
+Memory read bandwidth [MBytes/s],4254.3315,0,,,
+Memory read data volume [GBytes],0.1016,0,,,
+Memory write bandwidth [MBytes/s],2778.2269,0,,,
+Memory write data volume [GBytes],0.0663,0,,,
+Memory bandwidth [MBytes/s],7032.5584,0,,,
+Memory data volume [GBytes],0.1679,0,,,
+Operational intensity,0.2158,0.2158,,,
+TABLE,Region CaDynamics_E2_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0481,0.0239,0.0242,0.0241,
+Runtime unhalted [s] STAT,0.0690,0.0339,0.0351,0.0345,
+Clock [MHz] STAT,4400.1324,2200.0209,2200.1115,2200.0662,
+CPI STAT,3.2328,1.5900,1.6428,1.6164,
+Energy [J] STAT,29.5481,0,29.5481,14.7741,
+Power [W] STAT,1237.6838,0,1237.6838,618.8419,
+Energy DRAM [J] STAT,20.2477,0,20.2477,10.1238,
+Power DRAM [W] STAT,848.1190,0,848.1190,424.0595,
+MFLOP/s STAT,3011.8615,1494.4587,1517.4028,1505.9307,
+AVX MFLOP/s STAT,2802.9419,1390.4764,1412.4655,1401.4709,
+Packed MUOPS/s STAT,800.3243,397.0315,403.2928,400.1621,
+Scalar MUOPS/s STAT,9.7419,4.5843,5.1576,4.8710,
+Memory read bandwidth [MBytes/s] STAT,4254.3315,0,4254.3315,2127.1658,
+Memory read data volume [GBytes] STAT,0.1016,0,0.1016,0.0508,
+Memory write bandwidth [MBytes/s] STAT,2778.2269,0,2778.2269,1389.1135,
+Memory write data volume [GBytes] STAT,0.0663,0,0.0663,0.0331,
+Memory bandwidth [MBytes/s] STAT,7032.5584,0,7032.5584,3516.2792,
+Memory data volume [GBytes] STAT,0.1679,0,0.1679,0.0839,
+Operational intensity STAT,0.4316,0.2158,0.2158,0.2158,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Ca_HVA_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.089593,0.100290,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,150662600,150669800,,
+CPU_CLK_UNHALTED_CORE,FIXC1,218581900,241903500,,
+CPU_CLK_UNHALTED_REF,FIXC2,218578400,241905300,,
+PWR_PKG_ENERGY,PWR0,30.7325,0,,
+PWR_DRAM_ENERGY,PWR3,21.1130,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,4790029,4790951,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,188574,188677,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,37842520,37857260,,
+CAS_COUNT_RD,MBOX0C0,709543,0,,
+CAS_COUNT_WR,MBOX0C1,470555,0,,
+CAS_COUNT_RD,MBOX1C0,618447,0,,
+CAS_COUNT_WR,MBOX1C1,384620,0,,
+CAS_COUNT_RD,MBOX2C0,618705,0,,
+CAS_COUNT_WR,MBOX2C1,371661,0,,
+CAS_COUNT_RD,MBOX3C0,624258,0,,
+CAS_COUNT_WR,MBOX3C1,383423,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Ca_HVA_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,301332400,150662600,150669800,150666200
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,460485400,218581900,241903500,230242700
+CPU_CLK_UNHALTED_REF STAT,FIXC2,460483700,218578400,241905300,230241850
+PWR_PKG_ENERGY STAT,PWR0,30.7325,0,30.7325,15.3663
+PWR_DRAM_ENERGY STAT,PWR3,21.1130,0,21.1130,10.5565
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,9580980,4790029,4790951,4790490
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,377251,188574,188677,188625.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,75699780,37842520,37857260,37849890
+CAS_COUNT_RD STAT,MBOX0C0,709543,0,709543,354771.5000
+CAS_COUNT_WR STAT,MBOX0C1,470555,0,470555,235277.5000
+CAS_COUNT_RD STAT,MBOX1C0,618447,0,618447,309223.5000
+CAS_COUNT_WR STAT,MBOX1C1,384620,0,384620,192310
+CAS_COUNT_RD STAT,MBOX2C0,618705,0,618705,309352.5000
+CAS_COUNT_WR STAT,MBOX2C1,371661,0,371661,185830.5000
+CAS_COUNT_RD STAT,MBOX3C0,624258,0,624258,312129
+CAS_COUNT_WR STAT,MBOX3C1,383423,0,383423,191711.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Ca_HVA_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0896,0.1003,,,
+Runtime unhalted [s],0.0994,0.1100,,,
+Clock [MHz],2200.0852,2200.0336,,,
+CPI,1.4508,1.6055,,,
+Energy [J],30.7325,0,,,
+Power [W],343.0241,0,,,
+Energy DRAM [J],21.1130,0,,,
+Power DRAM [W],235.6550,0,,,
+MFLOP/s,1798.5683,1607.3365,,,
+AVX MFLOP/s,1689.5345,1509.9132,,,
+Packed MUOPS/s,475.8481,425.2493,,,
+Scalar MUOPS/s,2.1048,1.8813,,,
+Memory read bandwidth [MBytes/s],1836.5432,0,,,
+Memory read data volume [GBytes],0.1645,0,,,
+Memory write bandwidth [MBytes/s],1150.2778,0,,,
+Memory write data volume [GBytes],0.1031,0,,,
+Memory bandwidth [MBytes/s],2986.8210,0,,,
+Memory data volume [GBytes],0.2676,0,,,
+Operational intensity,0.6022,0.6024,,,
+TABLE,Region Ca_HVA_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.1899,0.0896,0.1003,0.0950,
+Runtime unhalted [s] STAT,0.2094,0.0994,0.1100,0.1047,
+Clock [MHz] STAT,4400.1188,2200.0336,2200.0852,2200.0594,
+CPI STAT,3.0563,1.4508,1.6055,1.5282,
+Energy [J] STAT,30.7325,0,30.7325,15.3663,
+Power [W] STAT,343.0241,0,343.0241,171.5120,
+Energy DRAM [J] STAT,21.1130,0,21.1130,10.5565,
+Power DRAM [W] STAT,235.6550,0,235.6550,117.8275,
+MFLOP/s STAT,3405.9048,1607.3365,1798.5683,1702.9524,
+AVX MFLOP/s STAT,3199.4477,1509.9132,1689.5345,1599.7238,
+Packed MUOPS/s STAT,901.0974,425.2493,475.8481,450.5487,
+Scalar MUOPS/s STAT,3.9861,1.8813,2.1048,1.9930,
+Memory read bandwidth [MBytes/s] STAT,1836.5432,0,1836.5432,918.2716,
+Memory read data volume [GBytes] STAT,0.1645,0,0.1645,0.0823,
+Memory write bandwidth [MBytes/s] STAT,1150.2778,0,1150.2778,575.1389,
+Memory write data volume [GBytes] STAT,0.1031,0,0.1031,0.0515,
+Memory bandwidth [MBytes/s] STAT,2986.8210,0,2986.8210,1493.4105,
+Memory data volume [GBytes] STAT,0.2676,0,0.2676,0.1338,
+Operational intensity STAT,1.2046,0.6022,0.6024,0.6023,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Ca_LVAst_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.082052,0.082875,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,141374200,141362000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,203052500,206828800,,
+CPU_CLK_UNHALTED_REF,FIXC2,203049500,206829900,,
+PWR_PKG_ENERGY,PWR0,30.4634,0,,
+PWR_DRAM_ENERGY,PWR3,20.3031,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,4795289,4795753,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,179635,180082,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,36576680,36578860,,
+CAS_COUNT_RD,MBOX0C0,426736,0,,
+CAS_COUNT_WR,MBOX0C1,293523,0,,
+CAS_COUNT_RD,MBOX1C0,344934,0,,
+CAS_COUNT_WR,MBOX1C1,212520,0,,
+CAS_COUNT_RD,MBOX2C0,338881,0,,
+CAS_COUNT_WR,MBOX2C1,204292,0,,
+CAS_COUNT_RD,MBOX3C0,337650,0,,
+CAS_COUNT_WR,MBOX3C1,204462,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Ca_LVAst_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,282736200,141362000,141374200,141368100
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,409881300,203052500,206828800,204940650
+CPU_CLK_UNHALTED_REF STAT,FIXC2,409879400,203049500,206829900,204939700
+PWR_PKG_ENERGY STAT,PWR0,30.4634,0,30.4634,15.2317
+PWR_DRAM_ENERGY STAT,PWR3,20.3031,0,20.3031,10.1516
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,9591042,4795289,4795753,4795521
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,359717,179635,180082,179858.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,73155540,36576680,36578860,36577770
+CAS_COUNT_RD STAT,MBOX0C0,426736,0,426736,213368
+CAS_COUNT_WR STAT,MBOX0C1,293523,0,293523,146761.5000
+CAS_COUNT_RD STAT,MBOX1C0,344934,0,344934,172467
+CAS_COUNT_WR STAT,MBOX1C1,212520,0,212520,106260
+CAS_COUNT_RD STAT,MBOX2C0,338881,0,338881,169440.5000
+CAS_COUNT_WR STAT,MBOX2C1,204292,0,204292,102146
+CAS_COUNT_RD STAT,MBOX3C0,337650,0,337650,168825
+CAS_COUNT_WR STAT,MBOX3C1,204462,0,204462,102231
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Ca_LVAst_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0821,0.0829,,,
+Runtime unhalted [s],0.0923,0.0940,,,
+Clock [MHz],2200.0825,2200.0382,,,
+CPI,1.4363,1.4631,,,
+Energy [J],30.4634,0,,,
+Power [W],371.2712,0,,,
+Energy DRAM [J],20.3031,0,,,
+Power DRAM [W],247.4429,0,,,
+MFLOP/s,1902.1796,1883.4115,,,
+AVX MFLOP/s,1783.1056,1765.5034,,,
+Packed MUOPS/s,504.2187,499.2434,,,
+Scalar MUOPS/s,2.1893,2.1729,,,
+Memory read bandwidth [MBytes/s],1129.5920,0,,,
+Memory read data volume [GBytes],0.0927,0,,,
+Memory write bandwidth [MBytes/s],713.5386,0,,,
+Memory write data volume [GBytes],0.0585,0,,,
+Memory bandwidth [MBytes/s],1843.1306,0,,,
+Memory data volume [GBytes],0.1512,0,,,
+Operational intensity,1.0320,1.0321,,,
+TABLE,Region Ca_LVAst_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.1650,0.0821,0.0829,0.0825,
+Runtime unhalted [s] STAT,0.1863,0.0923,0.0940,0.0931,
+Clock [MHz] STAT,4400.1207,2200.0382,2200.0825,2200.0603,
+CPI STAT,2.8994,1.4363,1.4631,1.4497,
+Energy [J] STAT,30.4634,0,30.4634,15.2317,
+Power [W] STAT,371.2712,0,371.2712,185.6356,
+Energy DRAM [J] STAT,20.3031,0,20.3031,10.1516,
+Power DRAM [W] STAT,247.4429,0,247.4429,123.7215,
+MFLOP/s STAT,3785.5911,1883.4115,1902.1796,1892.7955,
+AVX MFLOP/s STAT,3548.6090,1765.5034,1783.1056,1774.3045,
+Packed MUOPS/s STAT,1003.4621,499.2434,504.2187,501.7310,
+Scalar MUOPS/s STAT,4.3622,2.1729,2.1893,2.1811,
+Memory read bandwidth [MBytes/s] STAT,1129.5920,0,1129.5920,564.7960,
+Memory read data volume [GBytes] STAT,0.0927,0,0.0927,0.0464,
+Memory write bandwidth [MBytes/s] STAT,713.5386,0,713.5386,356.7693,
+Memory write data volume [GBytes] STAT,0.0585,0,0.0585,0.0293,
+Memory bandwidth [MBytes/s] STAT,1843.1306,0,1843.1306,921.5653,
+Memory data volume [GBytes] STAT,0.1512,0,0.1512,0.0756,
+Operational intensity STAT,2.0641,1.0320,1.0321,1.0320,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region DetAMPANMDA_EMS_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],30.645730,30.618880,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,69368700000,69367140000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,67110620000,67126690000,,
+CPU_CLK_UNHALTED_REF,FIXC2,67110610000,67126680000,,
+PWR_PKG_ENERGY,PWR0,974.4243,0,,
+PWR_DRAM_ENERGY,PWR3,594.4095,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1021437000,1021539000,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,126347,126230,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,18355280000,18355070000,,
+CAS_COUNT_RD,MBOX0C0,487656000,0,,
+CAS_COUNT_WR,MBOX0C1,251812500,0,,
+CAS_COUNT_RD,MBOX1C0,478450700,0,,
+CAS_COUNT_WR,MBOX1C1,242411600,0,,
+CAS_COUNT_RD,MBOX2C0,477355600,0,,
+CAS_COUNT_WR,MBOX2C1,240343500,0,,
+CAS_COUNT_RD,MBOX3C0,477238900,0,,
+CAS_COUNT_WR,MBOX3C1,240211600,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region DetAMPANMDA_EMS_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,138735840000,69367140000,69368700000,69367920000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,134237310000,67110620000,67126690000,67118655000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,134237290000,67110610000,67126680000,67118645000
+PWR_PKG_ENERGY STAT,PWR0,974.4243,0,974.4243,487.2122
+PWR_DRAM_ENERGY STAT,PWR3,594.4095,0,594.4095,297.2047
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,2042976000,1021437000,1021539000,1021488000
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,252577,126230,126347,126288.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,36710350000,18355070000,18355280000,18355175000
+CAS_COUNT_RD STAT,MBOX0C0,487656000,0,487656000,243828000
+CAS_COUNT_WR STAT,MBOX0C1,251812500,0,251812500,125906250
+CAS_COUNT_RD STAT,MBOX1C0,478450700,0,478450700,239225350
+CAS_COUNT_WR STAT,MBOX1C1,242411600,0,242411600,121205800
+CAS_COUNT_RD STAT,MBOX2C0,477355600,0,477355600,238677800
+CAS_COUNT_WR STAT,MBOX2C1,240343500,0,240343500,120171750
+CAS_COUNT_RD STAT,MBOX3C0,477238900,0,477238900,238619450
+CAS_COUNT_WR STAT,MBOX3C1,240211600,0,240211600,120105800
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region DetAMPANMDA_EMS_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],30.6457,30.6189,,,
+Runtime unhalted [s],30.5041,30.5114,,,
+Clock [MHz],2200.0503,2200.0503,,,
+CPI,0.9674,0.9677,,,
+Energy [J],974.4243,0,,,
+Power [W],31.7964,0,,,
+Energy DRAM [J],594.4095,0,,,
+Power DRAM [W],19.3962,0,,,
+MFLOP/s,2462.4677,2464.6063,,,
+AVX MFLOP/s,2395.8026,2397.8761,,,
+Packed MUOPS/s,632.2811,632.8321,,,
+Scalar MUOPS/s,0.0041,0.0041,,,
+Memory read bandwidth [MBytes/s],4011.1584,0,,,
+Memory read data volume [GBytes],122.9249,0,,,
+Memory write bandwidth [MBytes/s],2035.7116,0,,,
+Memory write data volume [GBytes],62.3859,0,,,
+Memory bandwidth [MBytes/s],6046.8700,0,,,
+Memory data volume [GBytes],185.3107,0,,,
+Operational intensity,0.4072,0.4072,,,
+TABLE,Region DetAMPANMDA_EMS_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,61.2646,30.6189,30.6457,30.6323,
+Runtime unhalted [s] STAT,61.0155,30.5041,30.5114,30.5078,
+Clock [MHz] STAT,4400.1006,2200.0503,2200.0503,2200.0503,
+CPI STAT,1.9351,0.9674,0.9677,0.9676,
+Energy [J] STAT,974.4243,0,974.4243,487.2122,
+Power [W] STAT,31.7964,0,31.7964,15.8982,
+Energy DRAM [J] STAT,594.4095,0,594.4095,297.2047,
+Power DRAM [W] STAT,19.3962,0,19.3962,9.6981,
+MFLOP/s STAT,4927.0740,2462.4677,2464.6063,2463.5370,
+AVX MFLOP/s STAT,4793.6787,2395.8026,2397.8761,2396.8394,
+Packed MUOPS/s STAT,1265.1132,632.2811,632.8321,632.5566,
+Scalar MUOPS/s STAT,0.0082,0.0041,0.0041,0.0041,
+Memory read bandwidth [MBytes/s] STAT,4011.1584,0,4011.1584,2005.5792,
+Memory read data volume [GBytes] STAT,122.9249,0,122.9249,61.4624,
+Memory write bandwidth [MBytes/s] STAT,2035.7116,0,2035.7116,1017.8558,
+Memory write data volume [GBytes] STAT,62.3859,0,62.3859,31.1929,
+Memory bandwidth [MBytes/s] STAT,6046.8700,0,6046.8700,3023.4350,
+Memory data volume [GBytes] STAT,185.3107,0,185.3107,92.6553,
+Operational intensity STAT,0.8144,0.4072,0.4072,0.4072,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region DetGABAAB_EMS_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],7.080217,7.075487,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,17348710000,17348280000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,15521270000,15532640000,,
+CPU_CLK_UNHALTED_REF,FIXC2,15521270000,15532640000,,
+PWR_PKG_ENERGY,PWR0,248.5681,0,,
+PWR_DRAM_ENERGY,PWR3,146.9566,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,242169400,242168500,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,129117,131546,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,4570250000,4570331000,,
+CAS_COUNT_RD,MBOX0C0,117596400,0,,
+CAS_COUNT_WR,MBOX0C1,60619740,0,,
+CAS_COUNT_RD,MBOX1C0,115485800,0,,
+CAS_COUNT_WR,MBOX1C1,59102240,0,,
+CAS_COUNT_RD,MBOX2C0,115282900,0,,
+CAS_COUNT_WR,MBOX2C1,58673450,0,,
+CAS_COUNT_RD,MBOX3C0,115242500,0,,
+CAS_COUNT_WR,MBOX3C1,58495570,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region DetGABAAB_EMS_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,34696990000,17348280000,17348710000,17348495000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,31053910000,15521270000,15532640000,15526955000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,31053910000,15521270000,15532640000,15526955000
+PWR_PKG_ENERGY STAT,PWR0,248.5681,0,248.5681,124.2840
+PWR_DRAM_ENERGY STAT,PWR3,146.9566,0,146.9566,73.4783
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,484337900,242168500,242169400,242168950
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,260663,129117,131546,130331.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,9140581000,4570250000,4570331000,4570290500
+CAS_COUNT_RD STAT,MBOX0C0,117596400,0,117596400,58798200
+CAS_COUNT_WR STAT,MBOX0C1,60619740,0,60619740,30309870
+CAS_COUNT_RD STAT,MBOX1C0,115485800,0,115485800,57742900
+CAS_COUNT_WR STAT,MBOX1C1,59102240,0,59102240,29551120
+CAS_COUNT_RD STAT,MBOX2C0,115282900,0,115282900,57641450
+CAS_COUNT_WR STAT,MBOX2C1,58673450,0,58673450,29336725
+CAS_COUNT_RD STAT,MBOX3C0,115242500,0,115242500,57621250
+CAS_COUNT_WR STAT,MBOX3C1,58495570,0,58495570,29247785
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region DetGABAAB_EMS_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],7.0802,7.0755,,,
+Runtime unhalted [s],7.0550,7.0601,,,
+Clock [MHz],2200.0499,2200.0499,,,
+CPI,0.8947,0.8953,,,
+Energy [J],248.5681,0,,,
+Power [W],35.1074,0,,,
+Energy DRAM [J],146.9566,0,,,
+Power DRAM [W],20.7559,0,,,
+MFLOP/s,2650.4086,2652.2263,,,
+AVX MFLOP/s,2581.9830,2583.7549,,,
+Packed MUOPS/s,679.6994,680.1651,,,
+Scalar MUOPS/s,0.0182,0.0186,,,
+Memory read bandwidth [MBytes/s],4190.6747,0,,,
+Memory read data volume [GBytes],29.6709,0,,,
+Memory write bandwidth [MBytes/s],2141.3219,0,,,
+Memory write data volume [GBytes],15.1610,0,,,
+Memory bandwidth [MBytes/s],6331.9967,0,,,
+Memory data volume [GBytes],44.8319,0,,,
+Operational intensity,0.4186,0.4186,,,
+TABLE,Region DetGABAAB_EMS_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,14.1557,7.0755,7.0802,7.0778,
+Runtime unhalted [s] STAT,14.1151,7.0550,7.0601,7.0575,
+Clock [MHz] STAT,4400.0998,2200.0499,2200.0499,2200.0499,
+CPI STAT,1.7900,0.8947,0.8953,0.8950,
+Energy [J] STAT,248.5681,0,248.5681,124.2840,
+Power [W] STAT,35.1074,0,35.1074,17.5537,
+Energy DRAM [J] STAT,146.9566,0,146.9566,73.4783,
+Power DRAM [W] STAT,20.7559,0,20.7559,10.3780,
+MFLOP/s STAT,5302.6349,2650.4086,2652.2263,2651.3175,
+AVX MFLOP/s STAT,5165.7379,2581.9830,2583.7549,2582.8690,
+Packed MUOPS/s STAT,1359.8645,679.6994,680.1651,679.9323,
+Scalar MUOPS/s STAT,0.0368,0.0182,0.0186,0.0184,
+Memory read bandwidth [MBytes/s] STAT,4190.6747,0,4190.6747,2095.3373,
+Memory read data volume [GBytes] STAT,29.6709,0,29.6709,14.8354,
+Memory write bandwidth [MBytes/s] STAT,2141.3219,0,2141.3219,1070.6609,
+Memory write data volume [GBytes] STAT,15.1610,0,15.1610,7.5805,
+Memory bandwidth [MBytes/s] STAT,6331.9967,0,6331.9967,3165.9983,
+Memory data volume [GBytes] STAT,44.8319,0,44.8319,22.4159,
+Operational intensity STAT,0.8372,0.4186,0.4186,0.4186,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Ih_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],13.625280,13.626470,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,20870410000,20870430000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,29863480000,29898220000,,
+CPU_CLK_UNHALTED_REF,FIXC2,29863470000,29898200000,,
+PWR_PKG_ENERGY,PWR0,441.5647,0,,
+PWR_DRAM_ENERGY,PWR3,258.9328,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,729046600,729042000,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,119331,120584,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,5748650000,5748622000,,
+CAS_COUNT_RD,MBOX0C0,156348700,0,,
+CAS_COUNT_WR,MBOX0C1,101622100,0,,
+CAS_COUNT_RD,MBOX1C0,151937400,0,,
+CAS_COUNT_WR,MBOX1C1,97214620,0,,
+CAS_COUNT_RD,MBOX2C0,151439500,0,,
+CAS_COUNT_WR,MBOX2C1,97557080,0,,
+CAS_COUNT_RD,MBOX3C0,151379700,0,,
+CAS_COUNT_WR,MBOX3C1,97821070,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Ih_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,41740840000,20870410000,20870430000,20870420000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,59761700000,29863480000,29898220000,29880850000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,59761670000,29863470000,29898200000,29880835000
+PWR_PKG_ENERGY STAT,PWR0,441.5647,0,441.5647,220.7824
+PWR_DRAM_ENERGY STAT,PWR3,258.9328,0,258.9328,129.4664
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,1458088600,729042000,729046600,729044300
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,239915,119331,120584,119957.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,11497272000,5748622000,5748650000,5748636000
+CAS_COUNT_RD STAT,MBOX0C0,156348700,0,156348700,78174350
+CAS_COUNT_WR STAT,MBOX0C1,101622100,0,101622100,50811050
+CAS_COUNT_RD STAT,MBOX1C0,151937400,0,151937400,75968700
+CAS_COUNT_WR STAT,MBOX1C1,97214620,0,97214620,48607310
+CAS_COUNT_RD STAT,MBOX2C0,151439500,0,151439500,75719750
+CAS_COUNT_WR STAT,MBOX2C1,97557080,0,97557080,48778540
+CAS_COUNT_RD STAT,MBOX3C0,151379700,0,151379700,75689850
+CAS_COUNT_WR STAT,MBOX3C1,97821070,0,97821070,48910535
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Ih_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],13.6253,13.6265,,,
+Runtime unhalted [s],13.5740,13.5898,,,
+Clock [MHz],2200.0507,2200.0514,,,
+CPI,1.4309,1.4326,,,
+Energy [J],441.5647,0,,,
+Power [W],32.4078,0,,,
+Energy DRAM [J],258.9328,0,,,
+Power DRAM [W],19.0039,0,,,
+MFLOP/s,1794.6650,1794.4994,,,
+AVX MFLOP/s,1687.6424,1687.4868,,,
+Packed MUOPS/s,475.4175,475.3736,,,
+Scalar MUOPS/s,0.0088,0.0088,,,
+Memory read bandwidth [MBytes/s],2870.4540,0,,,
+Memory read data volume [GBytes],39.1107,0,,,
+Memory write bandwidth [MBytes/s],1851.6868,0,,,
+Memory write data volume [GBytes],25.2298,0,,,
+Memory bandwidth [MBytes/s],4722.1408,0,,,
+Memory data volume [GBytes],64.3405,0,,,
+Operational intensity,0.3801,0.3801,,,
+TABLE,Region Ih_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,27.2518,13.6253,13.6265,13.6259,
+Runtime unhalted [s] STAT,27.1638,13.5740,13.5898,13.5819,
+Clock [MHz] STAT,4400.1021,2200.0507,2200.0514,2200.0511,
+CPI STAT,2.8635,1.4309,1.4326,1.4318,
+Energy [J] STAT,441.5647,0,441.5647,220.7824,
+Power [W] STAT,32.4078,0,32.4078,16.2039,
+Energy DRAM [J] STAT,258.9328,0,258.9328,129.4664,
+Power DRAM [W] STAT,19.0039,0,19.0039,9.5020,
+MFLOP/s STAT,3589.1644,1794.4994,1794.6650,1794.5822,
+AVX MFLOP/s STAT,3375.1292,1687.4868,1687.6424,1687.5646,
+Packed MUOPS/s STAT,950.7911,475.3736,475.4175,475.3956,
+Scalar MUOPS/s STAT,0.0176,0.0088,0.0088,0.0088,
+Memory read bandwidth [MBytes/s] STAT,2870.4540,0,2870.4540,1435.2270,
+Memory read data volume [GBytes] STAT,39.1107,0,39.1107,19.5554,
+Memory write bandwidth [MBytes/s] STAT,1851.6868,0,1851.6868,925.8434,
+Memory write data volume [GBytes] STAT,25.2298,0,25.2298,12.6149,
+Memory bandwidth [MBytes/s] STAT,4722.1408,0,4722.1408,2361.0704,
+Memory data volume [GBytes] STAT,64.3405,0,64.3405,32.1703,
+Operational intensity STAT,0.7602,0.3801,0.3801,0.3801,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Im_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],7.130102,7.161608,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,12308830000,12308840000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,15634760000,15727100000,,
+CPU_CLK_UNHALTED_REF,FIXC2,15634760000,15727100000,,
+PWR_PKG_ENERGY,PWR0,249.2036,0,,
+PWR_DRAM_ENERGY,PWR3,140.2202,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,311410500,311408800,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,119570,119358,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,3122413000,3122752000,,
+CAS_COUNT_RD,MBOX0C0,123063700,0,,
+CAS_COUNT_WR,MBOX0C1,80061580,0,,
+CAS_COUNT_RD,MBOX1C0,120805000,0,,
+CAS_COUNT_WR,MBOX1C1,78049820,0,,
+CAS_COUNT_RD,MBOX2C0,120724600,0,,
+CAS_COUNT_WR,MBOX2C1,77566360,0,,
+CAS_COUNT_RD,MBOX3C0,120767400,0,,
+CAS_COUNT_WR,MBOX3C1,77077690,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Im_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,24617670000,12308830000,12308840000,12308835000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,31361860000,15634760000,15727100000,15680930000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,31361860000,15634760000,15727100000,15680930000
+PWR_PKG_ENERGY STAT,PWR0,249.2036,0,249.2036,124.6018
+PWR_DRAM_ENERGY STAT,PWR3,140.2202,0,140.2202,70.1101
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,622819300,311408800,311410500,311409650
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,238928,119358,119570,119464
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,6245165000,3122413000,3122752000,3122582500
+CAS_COUNT_RD STAT,MBOX0C0,123063700,0,123063700,61531850
+CAS_COUNT_WR STAT,MBOX0C1,80061580,0,80061580,40030790
+CAS_COUNT_RD STAT,MBOX1C0,120805000,0,120805000,60402500
+CAS_COUNT_WR STAT,MBOX1C1,78049820,0,78049820,39024910
+CAS_COUNT_RD STAT,MBOX2C0,120724600,0,120724600,60362300
+CAS_COUNT_WR STAT,MBOX2C1,77566360,0,77566360,38783180
+CAS_COUNT_RD STAT,MBOX3C0,120767400,0,120767400,60383700
+CAS_COUNT_WR STAT,MBOX3C1,77077690,0,77077690,38538845
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Im_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],7.1301,7.1616,,,
+Runtime unhalted [s],7.1065,7.1485,,,
+Clock [MHz],2200.0499,2200.0499,,,
+CPI,1.2702,1.2777,,,
+Energy [J],249.2036,0,,,
+Power [W],34.9509,0,,,
+Energy DRAM [J],140.2202,0,,,
+Power DRAM [W],19.6659,0,,,
+MFLOP/s,1839.0470,1831.1453,,,
+AVX MFLOP/s,1751.6793,1744.1625,,,
+Packed MUOPS/s,481.5953,479.5237,,,
+Scalar MUOPS/s,0.0168,0.0167,,,
+Memory read bandwidth [MBytes/s],4356.6116,0,,,
+Memory read data volume [GBytes],31.0631,0,,,
+Memory write bandwidth [MBytes/s],2807.3019,0,,,
+Memory write data volume [GBytes],20.0163,0,,,
+Memory bandwidth [MBytes/s],7163.9134,0,,,
+Memory data volume [GBytes],51.0794,0,,,
+Operational intensity,0.2567,0.2567,,,
+TABLE,Region Im_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,14.2917,7.1301,7.1616,7.1458,
+Runtime unhalted [s] STAT,14.2550,7.1065,7.1485,7.1275,
+Clock [MHz] STAT,4400.0998,2200.0499,2200.0499,2200.0499,
+CPI STAT,2.5479,1.2702,1.2777,1.2740,
+Energy [J] STAT,249.2036,0,249.2036,124.6018,
+Power [W] STAT,34.9509,0,34.9509,17.4754,
+Energy DRAM [J] STAT,140.2202,0,140.2202,70.1101,
+Power DRAM [W] STAT,19.6659,0,19.6659,9.8330,
+MFLOP/s STAT,3670.1923,1831.1453,1839.0470,1835.0961,
+AVX MFLOP/s STAT,3495.8418,1744.1625,1751.6793,1747.9209,
+Packed MUOPS/s STAT,961.1190,479.5237,481.5953,480.5595,
+Scalar MUOPS/s STAT,0.0335,0.0167,0.0168,0.0168,
+Memory read bandwidth [MBytes/s] STAT,4356.6116,0,4356.6116,2178.3058,
+Memory read data volume [GBytes] STAT,31.0631,0,31.0631,15.5315,
+Memory write bandwidth [MBytes/s] STAT,2807.3019,0,2807.3019,1403.6509,
+Memory write data volume [GBytes] STAT,20.0163,0,20.0163,10.0082,
+Memory bandwidth [MBytes/s] STAT,7163.9134,0,7163.9134,3581.9567,
+Memory data volume [GBytes] STAT,51.0794,0,51.0794,25.5397,
+Operational intensity STAT,0.5134,0.2567,0.2567,0.2567,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region K_Pst_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.064609,0.067916,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,102125100,102131900,,
+CPU_CLK_UNHALTED_CORE,FIXC1,163535300,171493300,,
+CPU_CLK_UNHALTED_REF,FIXC2,163535300,171493300,,
+PWR_PKG_ENERGY,PWR0,30.1155,0,,
+PWR_DRAM_ENERGY,PWR3,17.7510,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,2600218,2599399,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,180532,181171,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,25024080,25281470,,
+CAS_COUNT_RD,MBOX0C0,871801,0,,
+CAS_COUNT_WR,MBOX0C1,624718,0,,
+CAS_COUNT_RD,MBOX1C0,797684,0,,
+CAS_COUNT_WR,MBOX1C1,554138,0,,
+CAS_COUNT_RD,MBOX2C0,791399,0,,
+CAS_COUNT_WR,MBOX2C1,545198,0,,
+CAS_COUNT_RD,MBOX3C0,800023,0,,
+CAS_COUNT_WR,MBOX3C1,551217,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region K_Pst_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,204257000,102125100,102131900,102128500
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,335028600,163535300,171493300,167514300
+CPU_CLK_UNHALTED_REF STAT,FIXC2,335028600,163535300,171493300,167514300
+PWR_PKG_ENERGY STAT,PWR0,30.1155,0,30.1155,15.0578
+PWR_DRAM_ENERGY STAT,PWR3,17.7510,0,17.7510,8.8755
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,5199617,2599399,2600218,2.599808e+06
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,361703,180532,181171,180851.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,50305550,25024080,25281470,25152775
+CAS_COUNT_RD STAT,MBOX0C0,871801,0,871801,435900.5000
+CAS_COUNT_WR STAT,MBOX0C1,624718,0,624718,312359
+CAS_COUNT_RD STAT,MBOX1C0,797684,0,797684,398842
+CAS_COUNT_WR STAT,MBOX1C1,554138,0,554138,277069
+CAS_COUNT_RD STAT,MBOX2C0,791399,0,791399,395699.5000
+CAS_COUNT_WR STAT,MBOX2C1,545198,0,545198,272599
+CAS_COUNT_RD STAT,MBOX3C0,800023,0,800023,400011.5000
+CAS_COUNT_WR STAT,MBOX3C1,551217,0,551217,275608.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region K_Pst_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0646,0.0679,,,
+Runtime unhalted [s],0.0743,0.0779,,,
+Clock [MHz],2200.0499,2200.0499,,,
+CPI,1.6013,1.6791,,,
+Energy [J],30.1155,0,,,
+Power [W],466.1234,0,,,
+Energy DRAM [J],17.7510,0,,,
+Power DRAM [W],274.7474,0,,,
+MFLOP/s,1632.5600,1568.1990,,,
+AVX MFLOP/s,1549.2743,1488.9840,,,
+Packed MUOPS/s,427.5643,410.5197,,,
+Scalar MUOPS/s,2.7942,2.6676,,,
+Memory read bandwidth [MBytes/s],3230.1939,0,,,
+Memory read data volume [GBytes],0.2087,0,,,
+Memory write bandwidth [MBytes/s],2253.8412,0,,,
+Memory write data volume [GBytes],0.1456,0,,,
+Memory bandwidth [MBytes/s],5484.0351,0,,,
+Memory data volume [GBytes],0.3543,0,,,
+Operational intensity,0.2977,0.3006,,,
+TABLE,Region K_Pst_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.1325,0.0646,0.0679,0.0663,
+Runtime unhalted [s] STAT,0.1522,0.0743,0.0779,0.0761,
+Clock [MHz] STAT,4400.0998,2200.0499,2200.0499,2200.0499,
+CPI STAT,3.2804,1.6013,1.6791,1.6402,
+Energy [J] STAT,30.1155,0,30.1155,15.0578,
+Power [W] STAT,466.1234,0,466.1234,233.0617,
+Energy DRAM [J] STAT,17.7510,0,17.7510,8.8755,
+Power DRAM [W] STAT,274.7474,0,274.7474,137.3737,
+MFLOP/s STAT,3200.7590,1568.1990,1632.5600,1600.3795,
+AVX MFLOP/s STAT,3038.2583,1488.9840,1549.2743,1519.1291,
+Packed MUOPS/s STAT,838.0840,410.5197,427.5643,419.0420,
+Scalar MUOPS/s STAT,5.4618,2.6676,2.7942,2.7309,
+Memory read bandwidth [MBytes/s] STAT,3230.1939,0,3230.1939,1615.0970,
+Memory read data volume [GBytes] STAT,0.2087,0,0.2087,0.1043,
+Memory write bandwidth [MBytes/s] STAT,2253.8412,0,2253.8412,1126.9206,
+Memory write data volume [GBytes] STAT,0.1456,0,0.1456,0.0728,
+Memory bandwidth [MBytes/s] STAT,5484.0351,0,5484.0351,2742.0176,
+Memory data volume [GBytes] STAT,0.3543,0,0.3543,0.1772,
+Operational intensity STAT,0.5983,0.2977,0.3006,0.2992,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region K_Tst_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.052277,0.050764,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,97595220,97602380,,
+CPU_CLK_UNHALTED_CORE,FIXC1,136784100,133134000,,
+CPU_CLK_UNHALTED_REF,FIXC2,136782400,133135600,,
+PWR_PKG_ENERGY,PWR0,29.4809,0,,
+PWR_DRAM_ENERGY,PWR3,16.9746,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,2799433,2804379,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,177110,176863,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,24568320,24252950,,
+CAS_COUNT_RD,MBOX0C0,384533,0,,
+CAS_COUNT_WR,MBOX0C1,285119,0,,
+CAS_COUNT_RD,MBOX1C0,321204,0,,
+CAS_COUNT_WR,MBOX1C1,221105,0,,
+CAS_COUNT_RD,MBOX2C0,309583,0,,
+CAS_COUNT_WR,MBOX2C1,208941,0,,
+CAS_COUNT_RD,MBOX3C0,309404,0,,
+CAS_COUNT_WR,MBOX3C1,209858,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region K_Tst_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,195197600,97595220,97602380,97598800
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,269918100,133134000,136784100,134959050
+CPU_CLK_UNHALTED_REF STAT,FIXC2,269918000,133135600,136782400,134959000
+PWR_PKG_ENERGY STAT,PWR0,29.4809,0,29.4809,14.7404
+PWR_DRAM_ENERGY STAT,PWR3,16.9746,0,16.9746,8.4873
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,5603812,2799433,2804379,2801906
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,353973,176863,177110,176986.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,48821270,24252950,24568320,24410635
+CAS_COUNT_RD STAT,MBOX0C0,384533,0,384533,192266.5000
+CAS_COUNT_WR STAT,MBOX0C1,285119,0,285119,142559.5000
+CAS_COUNT_RD STAT,MBOX1C0,321204,0,321204,160602
+CAS_COUNT_WR STAT,MBOX1C1,221105,0,221105,110552.5000
+CAS_COUNT_RD STAT,MBOX2C0,309583,0,309583,154791.5000
+CAS_COUNT_WR STAT,MBOX2C1,208941,0,208941,104470.5000
+CAS_COUNT_RD STAT,MBOX3C0,309404,0,309404,154702
+CAS_COUNT_WR STAT,MBOX3C1,209858,0,209858,104929
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region K_Tst_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0523,0.0508,,,
+Runtime unhalted [s],0.0622,0.0605,,,
+Clock [MHz],2200.0773,2200.0235,,,
+CPI,1.4015,1.3640,,,
+Energy [J],29.4809,0,,,
+Power [W],563.9320,0,,,
+Energy DRAM [J],16.9746,0,,,
+Power DRAM [W],324.7031,0,,,
+MFLOP/s,1990.3315,2025.0027,,,
+AVX MFLOP/s,1879.8443,1911.0320,,,
+Packed MUOPS/s,523.5107,533.0014,,,
+Scalar MUOPS/s,3.3879,3.4840,,,
+Memory read bandwidth [MBytes/s],1621.7795,0,,,
+Memory read data volume [GBytes],0.0848,0,,,
+Memory write bandwidth [MBytes/s],1132.4498,0,,,
+Memory write data volume [GBytes],0.0592,0,,,
+Memory bandwidth [MBytes/s],2754.2293,0,,,
+Memory data volume [GBytes],0.1440,0,,,
+Operational intensity,0.7226,0.7140,,,
+TABLE,Region K_Tst_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.1031,0.0508,0.0523,0.0515,
+Runtime unhalted [s] STAT,0.1227,0.0605,0.0622,0.0614,
+Clock [MHz] STAT,4400.1008,2200.0235,2200.0773,2200.0504,
+CPI STAT,2.7655,1.3640,1.4015,1.3828,
+Energy [J] STAT,29.4809,0,29.4809,14.7404,
+Power [W] STAT,563.9320,0,563.9320,281.9660,
+Energy DRAM [J] STAT,16.9746,0,16.9746,8.4873,
+Power DRAM [W] STAT,324.7031,0,324.7031,162.3516,
+MFLOP/s STAT,4015.3342,1990.3315,2025.0027,2007.6671,
+AVX MFLOP/s STAT,3790.8763,1879.8443,1911.0320,1895.4381,
+Packed MUOPS/s STAT,1056.5121,523.5107,533.0014,528.2560,
+Scalar MUOPS/s STAT,6.8719,3.3879,3.4840,3.4360,
+Memory read bandwidth [MBytes/s] STAT,1621.7795,0,1621.7795,810.8898,
+Memory read data volume [GBytes] STAT,0.0848,0,0.0848,0.0424,
+Memory write bandwidth [MBytes/s] STAT,1132.4498,0,1132.4498,566.2249,
+Memory write data volume [GBytes] STAT,0.0592,0,0.0592,0.0296,
+Memory bandwidth [MBytes/s] STAT,2754.2293,0,2754.2293,1377.1146,
+Memory data volume [GBytes] STAT,0.1440,0,0.1440,0.0720,
+Operational intensity STAT,1.4366,0.7140,0.7226,0.7183,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region Nap_Et2_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.077928,0.077789,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,129612100,129619300,,
+CPU_CLK_UNHALTED_CORE,FIXC1,192521000,192122700,,
+CPU_CLK_UNHALTED_REF,FIXC2,192521000,192126000,,
+PWR_PKG_ENERGY,PWR0,30.3580,0,,
+PWR_DRAM_ENERGY,PWR3,17.0843,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,4385781,4386593,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,235188,234400,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,34082820,34004850,,
+CAS_COUNT_RD,MBOX0C0,510562,0,,
+CAS_COUNT_WR,MBOX0C1,372501,0,,
+CAS_COUNT_RD,MBOX1C0,431742,0,,
+CAS_COUNT_WR,MBOX1C1,295816,0,,
+CAS_COUNT_RD,MBOX2C0,427844,0,,
+CAS_COUNT_WR,MBOX2C1,289115,0,,
+CAS_COUNT_RD,MBOX3C0,422707,0,,
+CAS_COUNT_WR,MBOX3C1,289439,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region Nap_Et2_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,259231400,129612100,129619300,129615700
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,384643700,192122700,192521000,192321850
+CPU_CLK_UNHALTED_REF STAT,FIXC2,384647000,192126000,192521000,192323500
+PWR_PKG_ENERGY STAT,PWR0,30.3580,0,30.3580,15.1790
+PWR_DRAM_ENERGY STAT,PWR3,17.0843,0,17.0843,8.5421
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,8772374,4385781,4386593,4386187
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,469588,234400,235188,234794
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,68087670,34004850,34082820,34043835
+CAS_COUNT_RD STAT,MBOX0C0,510562,0,510562,255281
+CAS_COUNT_WR STAT,MBOX0C1,372501,0,372501,186250.5000
+CAS_COUNT_RD STAT,MBOX1C0,431742,0,431742,215871
+CAS_COUNT_WR STAT,MBOX1C1,295816,0,295816,147908
+CAS_COUNT_RD STAT,MBOX2C0,427844,0,427844,213922
+CAS_COUNT_WR STAT,MBOX2C1,289115,0,289115,144557.5000
+CAS_COUNT_RD STAT,MBOX3C0,422707,0,422707,211353.5000
+CAS_COUNT_WR STAT,MBOX3C1,289439,0,289439,144719.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region Nap_Et2_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0779,0.0778,,,
+Runtime unhalted [s],0.0875,0.0873,,,
+Clock [MHz],2200.0499,2200.0122,,,
+CPI,1.4854,1.4822,,,
+Energy [J],30.3580,0,,,
+Power [W],389.5653,0,,,
+Energy DRAM [J],17.0843,0,,,
+Power DRAM [W],219.2323,0,,,
+MFLOP/s,1865.0342,1864.3670,,,
+AVX MFLOP/s,1749.4561,1748.5717,,,
+Packed MUOPS/s,493.6441,493.5339,,,
+Scalar MUOPS/s,3.0180,3.0133,,,
+Memory read bandwidth [MBytes/s],1472.4233,0,,,
+Memory read data volume [GBytes],0.1147,0,,,
+Memory write bandwidth [MBytes/s],1024.0214,0,,,
+Memory write data volume [GBytes],0.0798,0,,,
+Memory bandwidth [MBytes/s],2496.4446,0,,,
+Memory data volume [GBytes],0.1945,0,,,
+Operational intensity,0.7471,0.7455,,,
+TABLE,Region Nap_Et2_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.1557,0.0778,0.0779,0.0779,
+Runtime unhalted [s] STAT,0.1748,0.0873,0.0875,0.0874,
+Clock [MHz] STAT,4400.0621,2200.0122,2200.0499,2200.0311,
+CPI STAT,2.9676,1.4822,1.4854,1.4838,
+Energy [J] STAT,30.3580,0,30.3580,15.1790,
+Power [W] STAT,389.5653,0,389.5653,194.7826,
+Energy DRAM [J] STAT,17.0843,0,17.0843,8.5421,
+Power DRAM [W] STAT,219.2323,0,219.2323,109.6162,
+MFLOP/s STAT,3729.4012,1864.3670,1865.0342,1864.7006,
+AVX MFLOP/s STAT,3498.0278,1748.5717,1749.4561,1749.0139,
+Packed MUOPS/s STAT,987.1780,493.5339,493.6441,493.5890,
+Scalar MUOPS/s STAT,6.0313,3.0133,3.0180,3.0156,
+Memory read bandwidth [MBytes/s] STAT,1472.4233,0,1472.4233,736.2116,
+Memory read data volume [GBytes] STAT,0.1147,0,0.1147,0.0573,
+Memory write bandwidth [MBytes/s] STAT,1024.0214,0,1024.0214,512.0107,
+Memory write data volume [GBytes] STAT,0.0798,0,0.0798,0.0399,
+Memory bandwidth [MBytes/s] STAT,2496.4446,0,2496.4446,1248.2223,
+Memory data volume [GBytes] STAT,0.1945,0,0.1945,0.0973,
+Operational intensity STAT,1.4926,0.7455,0.7471,0.7463,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region NaTa_t_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.069227,0.069674,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,106101800,106109100,,
+CPU_CLK_UNHALTED_CORE,FIXC1,173952100,174215800,,
+CPU_CLK_UNHALTED_REF,FIXC2,173950600,174217100,,
+PWR_PKG_ENERGY,PWR0,30.0006,0,,
+PWR_DRAM_ENERGY,PWR3,16.4872,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,3990871,3991585,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,216966,217391,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,27065770,27070710,,
+CAS_COUNT_RD,MBOX0C0,422193,0,,
+CAS_COUNT_WR,MBOX0C1,336566,0,,
+CAS_COUNT_RD,MBOX1C0,345167,0,,
+CAS_COUNT_WR,MBOX1C1,259664,0,,
+CAS_COUNT_RD,MBOX2C0,350380,0,,
+CAS_COUNT_WR,MBOX2C1,258567,0,,
+CAS_COUNT_RD,MBOX3C0,344597,0,,
+CAS_COUNT_WR,MBOX3C1,253896,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region NaTa_t_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,212210900,106101800,106109100,106105450
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,348167900,173952100,174215800,174083950
+CPU_CLK_UNHALTED_REF STAT,FIXC2,348167700,173950600,174217100,174083850
+PWR_PKG_ENERGY STAT,PWR0,30.0006,0,30.0006,15.0003
+PWR_DRAM_ENERGY STAT,PWR3,16.4872,0,16.4872,8.2436
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,7982456,3990871,3991585,3991228
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,434357,216966,217391,217178.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,54136480,27065770,27070710,27068240
+CAS_COUNT_RD STAT,MBOX0C0,422193,0,422193,211096.5000
+CAS_COUNT_WR STAT,MBOX0C1,336566,0,336566,168283
+CAS_COUNT_RD STAT,MBOX1C0,345167,0,345167,172583.5000
+CAS_COUNT_WR STAT,MBOX1C1,259664,0,259664,129832
+CAS_COUNT_RD STAT,MBOX2C0,350380,0,350380,175190
+CAS_COUNT_WR STAT,MBOX2C1,258567,0,258567,129283.5000
+CAS_COUNT_RD STAT,MBOX3C0,344597,0,344597,172298.5000
+CAS_COUNT_WR STAT,MBOX3C1,253896,0,253896,126948
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region NaTa_t_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0692,0.0697,,,
+Runtime unhalted [s],0.0791,0.0792,,,
+Clock [MHz],2200.0689,2200.0335,,,
+CPI,1.6395,1.6419,,,
+Energy [J],30.0006,0,,,
+Power [W],433.3686,0,,,
+Energy DRAM [J],16.4872,0,,,
+Power DRAM [W],238.1628,0,,,
+MFLOP/s,1682.3274,1671.8370,,,
+AVX MFLOP/s,1563.8945,1554.1378,,,
+Packed MUOPS/s,448.6230,445.8240,,,
+Scalar MUOPS/s,3.1341,3.1201,,,
+Memory read bandwidth [MBytes/s],1351.9309,0,,,
+Memory read data volume [GBytes],0.0936,0,,,
+Memory write bandwidth [MBytes/s],1024.9870,0,,,
+Memory write data volume [GBytes],0.0710,0,,,
+Memory bandwidth [MBytes/s],2376.9179,0,,,
+Memory data volume [GBytes],0.1645,0,,,
+Operational intensity,0.7078,0.7079,,,
+TABLE,Region NaTa_t_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.1389,0.0692,0.0697,0.0694,
+Runtime unhalted [s] STAT,0.1583,0.0791,0.0792,0.0791,
+Clock [MHz] STAT,4400.1024,2200.0335,2200.0689,2200.0512,
+CPI STAT,3.2814,1.6395,1.6419,1.6407,
+Energy [J] STAT,30.0006,0,30.0006,15.0003,
+Power [W] STAT,433.3686,0,433.3686,216.6843,
+Energy DRAM [J] STAT,16.4872,0,16.4872,8.2436,
+Power DRAM [W] STAT,238.1628,0,238.1628,119.0814,
+MFLOP/s STAT,3354.1644,1671.8370,1682.3274,1677.0822,
+AVX MFLOP/s STAT,3118.0323,1554.1378,1563.8945,1559.0161,
+Packed MUOPS/s STAT,894.4470,445.8240,448.6230,447.2235,
+Scalar MUOPS/s STAT,6.2542,3.1201,3.1341,3.1271,
+Memory read bandwidth [MBytes/s] STAT,1351.9309,0,1351.9309,675.9655,
+Memory read data volume [GBytes] STAT,0.0936,0,0.0936,0.0468,
+Memory write bandwidth [MBytes/s] STAT,1024.9870,0,1024.9870,512.4935,
+Memory write data volume [GBytes] STAT,0.0710,0,0.0710,0.0355,
+Memory bandwidth [MBytes/s] STAT,2376.9179,0,2376.9179,1188.4589,
+Memory data volume [GBytes] STAT,0.1645,0,0.1645,0.0823,
+Operational intensity STAT,1.4157,0.7078,0.7079,0.7078,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region NaTs2_t_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],17.007830,16.989660,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,25229150000,25229160000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,37238600000,37263930000,,
+CPU_CLK_UNHALTED_REF,FIXC2,37238600000,37263920000,,
+PWR_PKG_ENERGY,PWR0,544.5092,0,,
+PWR_DRAM_ENERGY,PWR3,287.8245,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1040849000,1040842000,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,219519,220078,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,6999380000,6999256000,,
+CAS_COUNT_RD,MBOX0C0,195567700,0,,
+CAS_COUNT_WR,MBOX0C1,138512900,0,,
+CAS_COUNT_RD,MBOX1C0,189879500,0,,
+CAS_COUNT_WR,MBOX1C1,132984300,0,,
+CAS_COUNT_RD,MBOX2C0,189440000,0,,
+CAS_COUNT_WR,MBOX2C1,132549000,0,,
+CAS_COUNT_RD,MBOX3C0,189406100,0,,
+CAS_COUNT_WR,MBOX3C1,132753800,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region NaTs2_t_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,50458310000,25229150000,25229160000,25229155000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,74502530000,37238600000,37263930000,37251265000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,74502520000,37238600000,37263920000,37251260000
+PWR_PKG_ENERGY STAT,PWR0,544.5092,0,544.5092,272.2546
+PWR_DRAM_ENERGY STAT,PWR3,287.8245,0,287.8245,143.9123
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,2081691000,1040842000,1040849000,1040845500
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,439597,219519,220078,219798.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,13998636000,6999256000,6999380000,6999318000
+CAS_COUNT_RD STAT,MBOX0C0,195567700,0,195567700,97783850
+CAS_COUNT_WR STAT,MBOX0C1,138512900,0,138512900,69256450
+CAS_COUNT_RD STAT,MBOX1C0,189879500,0,189879500,94939750
+CAS_COUNT_WR STAT,MBOX1C1,132984300,0,132984300,66492150
+CAS_COUNT_RD STAT,MBOX2C0,189440000,0,189440000,94720000
+CAS_COUNT_WR STAT,MBOX2C1,132549000,0,132549000,66274500
+CAS_COUNT_RD STAT,MBOX3C0,189406100,0,189406100,94703050
+CAS_COUNT_WR STAT,MBOX3C1,132753800,0,132753800,66376900
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region NaTs2_t_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],17.0078,16.9897,,,
+Runtime unhalted [s],16.9263,16.9378,,,
+Clock [MHz],2200.0499,2200.0505,,,
+CPI,1.4760,1.4770,,,
+Energy [J],544.5092,0,,,
+Power [W],32.0152,0,,,
+Energy DRAM [J],287.8245,0,,,
+Power DRAM [W],16.9231,0,,,
+MFLOP/s,1768.5641,1770.4255,,,
+AVX MFLOP/s,1646.1547,1647.8861,,,
+Packed MUOPS/s,472.7369,473.2348,,,
+Scalar MUOPS/s,0.0129,0.0130,,,
+Memory read bandwidth [MBytes/s],2876.0148,0,,,
+Memory read data volume [GBytes],48.9148,0,,,
+Memory write bandwidth [MBytes/s],2019.9637,0,,,
+Memory write data volume [GBytes],34.3552,0,,,
+Memory bandwidth [MBytes/s],4895.9786,0,,,
+Memory data volume [GBytes],83.2700,0,,,
+Operational intensity,0.3612,0.3612,,,
+TABLE,Region NaTs2_t_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,33.9975,16.9897,17.0078,16.9988,
+Runtime unhalted [s] STAT,33.8641,16.9263,16.9378,16.9321,
+Clock [MHz] STAT,4400.1004,2200.0499,2200.0505,2200.0502,
+CPI STAT,2.9530,1.4760,1.4770,1.4765,
+Energy [J] STAT,544.5092,0,544.5092,272.2546,
+Power [W] STAT,32.0152,0,32.0152,16.0076,
+Energy DRAM [J] STAT,287.8245,0,287.8245,143.9123,
+Power DRAM [W] STAT,16.9231,0,16.9231,8.4616,
+MFLOP/s STAT,3538.9896,1768.5641,1770.4255,1769.4948,
+AVX MFLOP/s STAT,3294.0408,1646.1547,1647.8861,1647.0204,
+Packed MUOPS/s STAT,945.9717,472.7369,473.2348,472.9859,
+Scalar MUOPS/s STAT,0.0259,0.0129,0.0130,0.0129,
+Memory read bandwidth [MBytes/s] STAT,2876.0148,0,2876.0148,1438.0074,
+Memory read data volume [GBytes] STAT,48.9148,0,48.9148,24.4574,
+Memory write bandwidth [MBytes/s] STAT,2019.9637,0,2019.9637,1009.9819,
+Memory write data volume [GBytes] STAT,34.3552,0,34.3552,17.1776,
+Memory bandwidth [MBytes/s] STAT,4895.9786,0,4895.9786,2447.9893,
+Memory data volume [GBytes] STAT,83.2700,0,83.2700,41.6350,
+Operational intensity STAT,0.7224,0.3612,0.3612,0.3612,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region SK_E2_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],0.046353,0.048168,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,92623000,92630310,,
+CPU_CLK_UNHALTED_CORE,FIXC1,123763200,126915000,,
+CPU_CLK_UNHALTED_REF,FIXC2,123763400,126915400,,
+PWR_PKG_ENERGY,PWR0,28.8920,0,,
+PWR_DRAM_ENERGY,PWR3,15.8189,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,1198339,1198355,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,94077,93420,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,25740560,25747800,,
+CAS_COUNT_RD,MBOX0C0,418573,0,,
+CAS_COUNT_WR,MBOX0C1,358810,0,,
+CAS_COUNT_RD,MBOX1C0,351928,0,,
+CAS_COUNT_WR,MBOX1C1,294615,0,,
+CAS_COUNT_RD,MBOX2C0,355915,0,,
+CAS_COUNT_WR,MBOX2C1,293820,0,,
+CAS_COUNT_RD,MBOX3C0,353189,0,,
+CAS_COUNT_WR,MBOX3C1,290915,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region SK_E2_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,185253310,92623000,92630310,92626655
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,250678200,123763200,126915000,125339100
+CPU_CLK_UNHALTED_REF STAT,FIXC2,250678800,123763400,126915400,125339400
+PWR_PKG_ENERGY STAT,PWR0,28.8920,0,28.8920,14.4460
+PWR_DRAM_ENERGY STAT,PWR3,15.8189,0,15.8189,7.9094
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,2396694,1198339,1198355,1198347
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,187497,93420,94077,93748.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,51488360,25740560,25747800,25744180
+CAS_COUNT_RD STAT,MBOX0C0,418573,0,418573,209286.5000
+CAS_COUNT_WR STAT,MBOX0C1,358810,0,358810,179405
+CAS_COUNT_RD STAT,MBOX1C0,351928,0,351928,175964
+CAS_COUNT_WR STAT,MBOX1C1,294615,0,294615,147307.5000
+CAS_COUNT_RD STAT,MBOX2C0,355915,0,355915,177957.5000
+CAS_COUNT_WR STAT,MBOX2C1,293820,0,293820,146910
+CAS_COUNT_RD STAT,MBOX3C0,353189,0,353189,176594.5000
+CAS_COUNT_WR STAT,MBOX3C1,290915,0,290915,145457.5000
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region SK_E2_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],0.0464,0.0482,,,
+Runtime unhalted [s],0.0563,0.0577,,,
+Clock [MHz],2200.0464,2200.0430,,,
+CPI,1.3362,1.3701,,,
+Energy [J],28.8920,0,,,
+Power [W],623.2997,0,,,
+Energy DRAM [J],15.8189,0,,,
+Power DRAM [W],341.2683,0,,,
+MFLOP/s,2274.9826,2189.8596,,,
+AVX MFLOP/s,2221.2484,2138.1629,,,
+Packed MUOPS/s,581.1644,559.4193,,,
+Scalar MUOPS/s,2.0296,1.9395,,,
+Memory read bandwidth [MBytes/s],2042.8897,0,,,
+Memory read data volume [GBytes],0.0947,0,,,
+Memory write bandwidth [MBytes/s],1709.5267,0,,,
+Memory write data volume [GBytes],0.0792,0,,,
+Memory bandwidth [MBytes/s],3752.4164,0,,,
+Memory data volume [GBytes],0.1739,0,,,
+Operational intensity,0.6063,0.6064,,,
+TABLE,Region SK_E2_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,0.0946,0.0464,0.0482,0.0473,
+Runtime unhalted [s] STAT,0.1140,0.0563,0.0577,0.0570,
+Clock [MHz] STAT,4400.0894,2200.0430,2200.0464,2200.0447,
+CPI STAT,2.7063,1.3362,1.3701,1.3532,
+Energy [J] STAT,28.8920,0,28.8920,14.4460,
+Power [W] STAT,623.2997,0,623.2997,311.6499,
+Energy DRAM [J] STAT,15.8189,0,15.8189,7.9094,
+Power DRAM [W] STAT,341.2683,0,341.2683,170.6342,
+MFLOP/s STAT,4464.8422,2189.8596,2274.9826,2232.4211,
+AVX MFLOP/s STAT,4359.4113,2138.1629,2221.2484,2179.7056,
+Packed MUOPS/s STAT,1140.5837,559.4193,581.1644,570.2919,
+Scalar MUOPS/s STAT,3.9691,1.9395,2.0296,1.9846,
+Memory read bandwidth [MBytes/s] STAT,2042.8897,0,2042.8897,1021.4448,
+Memory read data volume [GBytes] STAT,0.0947,0,0.0947,0.0474,
+Memory write bandwidth [MBytes/s] STAT,1709.5267,0,1709.5267,854.7633,
+Memory write data volume [GBytes] STAT,0.0792,0,0.0792,0.0396,
+Memory bandwidth [MBytes/s] STAT,3752.4164,0,3752.4164,1876.2082,
+Memory data volume [GBytes] STAT,0.1739,0,0.1739,0.0869,
+Operational intensity STAT,1.2127,0.6063,0.6064,0.6063,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region SKv3_1_state,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],8.912891,8.917099,,,
+call count,800,800,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,16086250000,16086250000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,19527790000,19547940000,,
+CPU_CLK_UNHALTED_REF,FIXC2,19527780000,19547930000,,
+PWR_PKG_ENERGY,PWR0,300.1070,0,,
+PWR_DRAM_ENERGY,PWR3,155.8115,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,469911300,469911800,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,130335,129779,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,4080587000,4080424000,,
+CAS_COUNT_RD,MBOX0C0,101497000,0,,
+CAS_COUNT_WR,MBOX0C1,68398980,0,,
+CAS_COUNT_RD,MBOX1C0,98356970,0,,
+CAS_COUNT_WR,MBOX1C1,65819510,0,,
+CAS_COUNT_RD,MBOX2C0,98197550,0,,
+CAS_COUNT_WR,MBOX2C1,65402080,0,,
+CAS_COUNT_RD,MBOX3C0,98190430,0,,
+CAS_COUNT_WR,MBOX3C1,65021770,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region SKv3_1_state,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,32172500000,16086250000,16086250000,16086250000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,39075730000,19527790000,19547940000,19537865000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,39075710000,19527780000,19547930000,19537855000
+PWR_PKG_ENERGY STAT,PWR0,300.1070,0,300.1070,150.0535
+PWR_DRAM_ENERGY STAT,PWR3,155.8115,0,155.8115,77.9057
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,939823100,469911300,469911800,469911550
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,260114,129779,130335,130057
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,8161011000,4080424000,4080587000,4080505500
+CAS_COUNT_RD STAT,MBOX0C0,101497000,0,101497000,50748500
+CAS_COUNT_WR STAT,MBOX0C1,68398980,0,68398980,34199490
+CAS_COUNT_RD STAT,MBOX1C0,98356970,0,98356970,49178485
+CAS_COUNT_WR STAT,MBOX1C1,65819510,0,65819510,32909755
+CAS_COUNT_RD STAT,MBOX2C0,98197550,0,98197550,49098775
+CAS_COUNT_WR STAT,MBOX2C1,65402080,0,65402080,32701040
+CAS_COUNT_RD STAT,MBOX3C0,98190430,0,98190430,49095215
+CAS_COUNT_WR STAT,MBOX3C1,65021770,0,65021770,32510885
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region SKv3_1_state,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],8.9129,8.9171,,,
+Runtime unhalted [s],8.8761,8.8852,,,
+Clock [MHz],2200.0511,2200.0511,,,
+CPI,1.2139,1.2152,,,
+Energy [J],300.1070,0,,,
+Power [W],33.6711,0,,,
+Energy DRAM [J],155.8115,0,,,
+Power DRAM [W],17.4816,0,,,
+MFLOP/s,1936.7791,1935.7921,,,
+AVX MFLOP/s,1831.3192,1830.3818,,,
+Packed MUOPS/s,510.5524,510.2933,,,
+Scalar MUOPS/s,0.0146,0.0146,,,
+Memory read bandwidth [MBytes/s],2845.2592,0,,,
+Memory read data volume [GBytes],25.3595,0,,,
+Memory write bandwidth [MBytes/s],1900.2936,0,,,
+Memory write data volume [GBytes],16.9371,0,,,
+Memory bandwidth [MBytes/s],4745.5528,0,,,
+Memory data volume [GBytes],42.2966,0,,,
+Operational intensity,0.4081,0.4081,,,
+TABLE,Region SKv3_1_state,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,17.8300,8.9129,8.9171,8.9150,
+Runtime unhalted [s] STAT,17.7613,8.8761,8.8852,8.8806,
+Clock [MHz] STAT,4400.1022,2200.0511,2200.0511,2200.0511,
+CPI STAT,2.4291,1.2139,1.2152,1.2146,
+Energy [J] STAT,300.1070,0,300.1070,150.0535,
+Power [W] STAT,33.6711,0,33.6711,16.8356,
+Energy DRAM [J] STAT,155.8115,0,155.8115,77.9057,
+Power DRAM [W] STAT,17.4816,0,17.4816,8.7408,
+MFLOP/s STAT,3872.5712,1935.7921,1936.7791,1936.2856,
+AVX MFLOP/s STAT,3661.7010,1830.3818,1831.3192,1830.8505,
+Packed MUOPS/s STAT,1020.8457,510.2933,510.5524,510.4228,
+Scalar MUOPS/s STAT,0.0292,0.0146,0.0146,0.0146,
+Memory read bandwidth [MBytes/s] STAT,2845.2592,0,2845.2592,1422.6296,
+Memory read data volume [GBytes] STAT,25.3595,0,25.3595,12.6798,
+Memory write bandwidth [MBytes/s] STAT,1900.2936,0,1900.2936,950.1468,
+Memory write data volume [GBytes] STAT,16.9371,0,16.9371,8.4686,
+Memory bandwidth [MBytes/s] STAT,4745.5528,0,4745.5528,2372.7764,
+Memory data volume [GBytes] STAT,42.2966,0,42.2966,21.1483,
+Operational intensity STAT,0.8162,0.4081,0.4081,0.4081,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region enqueue_spikes_bin_event,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],3.413376,3.313361,,,
+call count,13976,13976,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,12206680000,12214740000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,6857249000,6460677000,,
+CPU_CLK_UNHALTED_REF,FIXC2,6857258000,6460702000,,
+PWR_PKG_ENERGY,PWR0,554.8228,0,,
+PWR_DRAM_ENERGY,PWR3,197.6492,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,239673500,226082000,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,0,0,,
+CAS_COUNT_RD,MBOX0C0,14956830,0,,
+CAS_COUNT_WR,MBOX0C1,8614390,0,,
+CAS_COUNT_RD,MBOX1C0,12264880,0,,
+CAS_COUNT_WR,MBOX1C1,6147509,0,,
+CAS_COUNT_RD,MBOX2C0,12341890,0,,
+CAS_COUNT_WR,MBOX2C1,6167421,0,,
+CAS_COUNT_RD,MBOX3C0,12268410,0,,
+CAS_COUNT_WR,MBOX3C1,6133352,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region enqueue_spikes_bin_event,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,24421420000,12206680000,12214740000,12210710000
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,13317926000,6460677000,6857249000,6658963000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,13317960000,6460702000,6857258000,6658980000
+PWR_PKG_ENERGY STAT,PWR0,554.8228,0,554.8228,277.4114
+PWR_DRAM_ENERGY STAT,PWR3,197.6492,0,197.6492,98.8246
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,465755500,226082000,239673500,232877750
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,0,0,0,0
+CAS_COUNT_RD STAT,MBOX0C0,14956830,0,14956830,7478415
+CAS_COUNT_WR STAT,MBOX0C1,8614390,0,8614390,4307195
+CAS_COUNT_RD STAT,MBOX1C0,12264880,0,12264880,6132440
+CAS_COUNT_WR STAT,MBOX1C1,6147509,0,6147509,3.073754e+06
+CAS_COUNT_RD STAT,MBOX2C0,12341890,0,12341890,6170945
+CAS_COUNT_WR STAT,MBOX2C1,6167421,0,6167421,3.083710e+06
+CAS_COUNT_RD STAT,MBOX3C0,12268410,0,12268410,6134205
+CAS_COUNT_WR STAT,MBOX3C1,6133352,0,6133352,3066676
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region enqueue_spikes_bin_event,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],3.4134,3.3134,,,
+Runtime unhalted [s],3.1169,2.9366,,,
+Clock [MHz],2200.0471,2200.0414,,,
+CPI,0.5618,0.5289,,,
+Energy [J],554.8228,0,,,
+Power [W],162.5437,0,,,
+Energy DRAM [J],197.6492,0,,,
+Power DRAM [W],57.9043,0,,,
+MFLOP/s,70.2160,68.2334,,,
+AVX MFLOP/s,0,0,,,
+Packed MUOPS/s,0,0,,,
+Scalar MUOPS/s,70.2160,68.2334,,,
+Memory read bandwidth [MBytes/s],971.8380,0,,,
+Memory read data volume [GBytes],3.3172,0,,,
+Memory write bandwidth [MBytes/s],507.4188,0,,,
+Memory write data volume [GBytes],1.7320,0,,,
+Memory bandwidth [MBytes/s],1479.2568,0,,,
+Memory data volume [GBytes],5.0493,0,,,
+Operational intensity,0.0475,0.0448,,,
+TABLE,Region enqueue_spikes_bin_event,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,6.7268,3.3134,3.4134,3.3634,
+Runtime unhalted [s] STAT,6.0535,2.9366,3.1169,3.0267,
+Clock [MHz] STAT,4400.0885,2200.0414,2200.0471,2200.0442,
+CPI STAT,1.0907,0.5289,0.5618,0.5454,
+Energy [J] STAT,554.8228,0,554.8228,277.4114,
+Power [W] STAT,162.5437,0,162.5437,81.2719,
+Energy DRAM [J] STAT,197.6492,0,197.6492,98.8246,
+Power DRAM [W] STAT,57.9043,0,57.9043,28.9521,
+MFLOP/s STAT,138.4494,68.2334,70.2160,69.2247,
+AVX MFLOP/s STAT,0,0,0,0,
+Packed MUOPS/s STAT,0,0,0,0,
+Scalar MUOPS/s STAT,138.4494,68.2334,70.2160,69.2247,
+Memory read bandwidth [MBytes/s] STAT,971.8380,0,971.8380,485.9190,
+Memory read data volume [GBytes] STAT,3.3172,0,3.3172,1.6586,
+Memory write bandwidth [MBytes/s] STAT,507.4188,0,507.4188,253.7094,
+Memory write data volume [GBytes] STAT,1.7320,0,1.7320,0.8660,
+Memory bandwidth [MBytes/s] STAT,1479.2568,0,1479.2568,739.6284,
+Memory data volume [GBytes] STAT,5.0493,0,5.0493,2.5246,
+Operational intensity STAT,0.0923,0.0448,0.0475,0.0461,
+STRUCT,Info,3,,,
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,,,,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,,,,
+CPU clock:,2.200049945 GHz,,,,
+TABLE,Region binq_delivery,Group 1 Raw,MEM_DP,24,
+Region Info,Core 0,Core 1,,,
+RDTSC Runtime [s],1.245157,1.271008,,,
+call count,170,170,,,
+Event,Counter,Core 0,Core 1,,
+INSTR_RETIRED_ANY,FIXC0,2877206000,2872271000,,
+CPU_CLK_UNHALTED_CORE,FIXC1,2474090000,2497736000,,
+CPU_CLK_UNHALTED_REF,FIXC2,2474085000,2497735000,,
+PWR_PKG_ENERGY,PWR0,45.5095,0,,
+PWR_DRAM_ENERGY,PWR3,25.7510,0,,
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE,PMC0,0,0,,
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE,PMC1,10423,10316,,
+SIMD_FP_256_PACKED_DOUBLE,PMC2,0,0,,
+CAS_COUNT_RD,MBOX0C0,41479330,0,,
+CAS_COUNT_WR,MBOX0C1,14345100,0,,
+CAS_COUNT_RD,MBOX1C0,40939690,0,,
+CAS_COUNT_WR,MBOX1C1,14027800,0,,
+CAS_COUNT_RD,MBOX2C0,40929790,0,,
+CAS_COUNT_WR,MBOX2C1,14028150,0,,
+CAS_COUNT_RD,MBOX3C0,40962750,0,,
+CAS_COUNT_WR,MBOX3C1,14027930,0,,
+CAS_COUNT_RD,MBOX4C0,0,0,,
+CAS_COUNT_WR,MBOX4C1,0,0,,
+CAS_COUNT_RD,MBOX5C0,0,0,,
+CAS_COUNT_WR,MBOX5C1,0,0,,
+CAS_COUNT_RD,MBOX6C0,0,0,,
+CAS_COUNT_WR,MBOX6C1,0,0,,
+CAS_COUNT_RD,MBOX7C0,0,0,,
+CAS_COUNT_WR,MBOX7C1,0,0,,
+TABLE,Region binq_delivery,Group 1 Raw STAT,MEM_DP,24,
+Event,Counter,Sum,Min,Max,Avg
+INSTR_RETIRED_ANY STAT,FIXC0,5749477000,2872271000,2877206000,2874738500
+CPU_CLK_UNHALTED_CORE STAT,FIXC1,4971826000,2474090000,2497736000,2485913000
+CPU_CLK_UNHALTED_REF STAT,FIXC2,4971820000,2474085000,2497735000,2485910000
+PWR_PKG_ENERGY STAT,PWR0,45.5095,0,45.5095,22.7548
+PWR_DRAM_ENERGY STAT,PWR3,25.7510,0,25.7510,12.8755
+FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE STAT,PMC0,0,0,0,0
+FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE STAT,PMC1,20739,10316,10423,10369.5000
+SIMD_FP_256_PACKED_DOUBLE STAT,PMC2,0,0,0,0
+CAS_COUNT_RD STAT,MBOX0C0,41479330,0,41479330,20739665
+CAS_COUNT_WR STAT,MBOX0C1,14345100,0,14345100,7172550
+CAS_COUNT_RD STAT,MBOX1C0,40939690,0,40939690,20469845
+CAS_COUNT_WR STAT,MBOX1C1,14027800,0,14027800,7013900
+CAS_COUNT_RD STAT,MBOX2C0,40929790,0,40929790,20464895
+CAS_COUNT_WR STAT,MBOX2C1,14028150,0,14028150,7014075
+CAS_COUNT_RD STAT,MBOX3C0,40962750,0,40962750,20481375
+CAS_COUNT_WR STAT,MBOX3C1,14027930,0,14027930,7013965
+CAS_COUNT_RD STAT,MBOX4C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX4C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX5C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX5C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX6C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX6C1,0,0,0,0
+CAS_COUNT_RD STAT,MBOX7C0,0,0,0,0
+CAS_COUNT_WR STAT,MBOX7C1,0,0,0,0
+TABLE,Region binq_delivery,Group 1 Metric,MEM_DP,19,
+Metric,Core 0,Core 1,,,
+Runtime (RDTSC) [s],1.2452,1.2710,,,
+Runtime unhalted [s],1.1246,1.1353,,,
+Clock [MHz],2200.0544,2200.0508,,,
+CPI,0.8599,0.8696,,,
+Energy [J],45.5095,0,,,
+Power [W],36.5492,0,,,
+Energy DRAM [J],25.7510,0,,,
+Power DRAM [W],20.6809,0,,,
+MFLOP/s,0.0084,0.0081,,,
+AVX MFLOP/s,0,0,,,
+Packed MUOPS/s,0,0,,,
+Scalar MUOPS/s,0.0084,0.0081,,,
+Memory read bandwidth [MBytes/s],8445.4730,0,,,
+Memory read data volume [GBytes],10.5159,0,,,
+Memory write bandwidth [MBytes/s],2900.4011,0,,,
+Memory write data volume [GBytes],3.6115,0,,,
+Memory bandwidth [MBytes/s],11345.8741,0,,,
+Memory data volume [GBytes],14.1274,0,,,
+Operational intensity,7.377864e-07,7.302125e-07,,,
+TABLE,Region binq_delivery,Group 1 Metric STAT,MEM_DP,19,
+Metric,Sum,Min,Max,Avg,
+Runtime (RDTSC) [s] STAT,2.5162,1.2452,1.2710,1.2581,
+Runtime unhalted [s] STAT,2.2599,1.1246,1.1353,1.1300,
+Clock [MHz] STAT,4400.1052,2200.0508,2200.0544,2200.0526,
+CPI STAT,1.7295,0.8599,0.8696,0.8648,
+Energy [J] STAT,45.5095,0,45.5095,22.7548,
+Power [W] STAT,36.5492,0,36.5492,18.2746,
+Energy DRAM [J] STAT,25.7510,0,25.7510,12.8755,
+Power DRAM [W] STAT,20.6809,0,20.6809,10.3405,
+MFLOP/s STAT,0.0165,0.0081,0.0084,0.0083,
+AVX MFLOP/s STAT,0,0,0,0,
+Packed MUOPS/s STAT,0,0,0,0,
+Scalar MUOPS/s STAT,0.0165,0.0081,0.0084,0.0083,
+Memory read bandwidth [MBytes/s] STAT,8445.4730,0,8445.4730,4222.7365,
+Memory read data volume [GBytes] STAT,10.5159,0,10.5159,5.2580,
+Memory write bandwidth [MBytes/s] STAT,2900.4011,0,2900.4011,1450.2006,
+Memory write data volume [GBytes] STAT,3.6115,0,3.6115,1.8057,
+Memory bandwidth [MBytes/s] STAT,11345.8741,0,11345.8741,5672.9371,
+Memory data volume [GBytes] STAT,14.1274,0,14.1274,7.0637,
+Operational intensity STAT,1.467999e-06,7.302125e-07,7.377864e-07,7.339994e-07,

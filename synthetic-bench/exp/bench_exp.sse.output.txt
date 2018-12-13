@@ -1,0 +1,69 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz
+CPU type:	Intel Xeon IvyBridge EN/EP/EX processor
+CPU clock:	2.20 GHz
+--------------------------------------------------------------------------------
+Finished! 1.087629
+Array Size: 500 Nrep: 100000 i.e. Tot Scalar Iterations: 50000000
+--------------------------------------------------------------------------------
+Region loop, Group 1: MEM_DP
++-------------------+----------+
+|    Region Info    |  Core 0  |
++-------------------+----------+
+| RDTSC Runtime [s] | 0.259740 |
+|     call count    |        1 |
++-------------------+----------+
+
++--------------------------------------+---------+------------+
+|                 Event                | Counter |   Core 0   |
++--------------------------------------+---------+------------+
+|           INSTR_RETIRED_ANY          |  FIXC0  | 1475407000 |
+|         CPU_CLK_UNHALTED_CORE        |  FIXC1  |  570335000 |
+|         CPU_CLK_UNHALTED_REF         |  FIXC2  |  570334700 |
+|            PWR_PKG_ENERGY            |   PWR0  |     6.6789 |
+|            PWR_DRAM_ENERGY           |   PWR3  |     2.3807 |
+| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE |   PMC0  |  475396600 |
+| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE |   PMC1  |         56 |
+|       SIMD_FP_256_PACKED_DOUBLE      |   PMC2  |          0 |
+|             CAS_COUNT_RD             | MBOX0C0 |        847 |
+|             CAS_COUNT_WR             | MBOX0C1 |        249 |
+|             CAS_COUNT_RD             | MBOX1C0 |        829 |
+|             CAS_COUNT_WR             | MBOX1C1 |        202 |
+|             CAS_COUNT_RD             | MBOX2C0 |     139397 |
+|             CAS_COUNT_WR             | MBOX2C1 |     138682 |
+|             CAS_COUNT_RD             | MBOX3C0 |       1690 |
+|             CAS_COUNT_WR             | MBOX3C1 |        353 |
+|             CAS_COUNT_RD             | MBOX4C0 |      -     |
+|             CAS_COUNT_WR             | MBOX4C1 |      -     |
+|             CAS_COUNT_RD             | MBOX5C0 |      -     |
+|             CAS_COUNT_WR             | MBOX5C1 |      -     |
+|             CAS_COUNT_RD             | MBOX6C0 |      -     |
+|             CAS_COUNT_WR             | MBOX6C1 |      -     |
+|             CAS_COUNT_RD             | MBOX7C0 |      -     |
+|             CAS_COUNT_WR             | MBOX7C1 |      -     |
++--------------------------------------+---------+------------+
+
++-----------------------------------+-----------+
+|               Metric              |   Core 0  |
++-----------------------------------+-----------+
+|        Runtime (RDTSC) [s]        |    0.2597 |
+|        Runtime unhalted [s]       |    0.2592 |
+|            Clock [MHz]            | 2199.9657 |
+|                CPI                |    0.3866 |
+|             Energy [J]            |    6.6789 |
+|             Power [W]             |   25.7137 |
+|          Energy DRAM [J]          |    2.3807 |
+|           Power DRAM [W]          |    9.1659 |
+|              MFLOP/s              | 3660.5591 |
+|            AVX MFLOP/s            |         0 |
+|           Packed MUOPS/s          | 1830.2794 |
+|           Scalar MUOPS/s          |    0.0002 |
+|  Memory read bandwidth [MBytes/s] |   35.1769 |
+|  Memory read data volume [GBytes] |    0.0091 |
+| Memory write bandwidth [MBytes/s] |   34.3694 |
+| Memory write data volume [GBytes] |    0.0089 |
+|    Memory bandwidth [MBytes/s]    |   69.5462 |
+|    Memory data volume [GBytes]    |    0.0181 |
+|       Operational intensity       |   52.6349 |
++-----------------------------------+-----------+
+
