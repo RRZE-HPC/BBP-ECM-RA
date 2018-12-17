@@ -10,7 +10,7 @@ You need to get my specially instrumented fork of the code
 
 $ git clone --recursive https://github.com/sharkovsky/CoreNeuron.git
 
-depending on which benchmark you will run, you can build the general version
+depending on which benchmark you will run, you can build the general version (also good for synthetic benchmarks)
 
 $ git checkout perf_eng_erlangen
 
@@ -28,9 +28,16 @@ $ CC=icc CXX=icpc cmake -DCMAKE_INSTALL_PREFIX=<PREFIX> -DADDITIONAL_MECHPATH=ap
 
 it will be a bit of a convoluted process, we need to build the app once, overwrite some files (that were automatically generated during the build process) and rebuild it
 
+#### 4.1
 $ make
 
+#### 4.2
 $ cp app-bench/src/instrumented_c_files/*.c <BUILD_DIR>/coreneuron/
 
+OR, if you're building a version for synthetic benchmarks
+
+$ for f in  app-bench/src/instrumented_c_files/*.synthetic_bench; do cp $f <BUILD_DIR>/coreneuron/${f/.synthetic_bench/.c}; done
+
+#### 4.3
 $ make && make install
 
