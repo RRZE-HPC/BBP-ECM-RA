@@ -1,0 +1,439 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz
+CPU type:	Intel Xeon IvyBridge EN/EP/EX processor
+CPU clock:	2.20 GHz
+--------------------------------------------------------------------------------
+ num_omp_thread=1
+
+ Memory (MBs) :            After MPI_Init : Max 14.1055, Min 14.1055, Avg 14.1055 
+ Memory (MBs) :             After mk_mech : Max 14.7188, Min 14.7188, Avg 14.7188 
+ Memory (MBs) :          Before nrn_setup : Max 14.7188, Min 14.7188, Avg 14.7188 
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_DetAMPANMDA_1cells_1cellspergroup_f0Hz_DRAM/1_1.dat
+Reading: /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_DetAMPANMDA_1cells_1cellspergroup_f0Hz_DRAM/1_2.dat
+index=3 nodecount=239 membfunc=capacitance
+index=4 nodecount=239 membfunc=pas
+index=31 nodecount=1500000 membfunc=DetAMPANMDA
+Point Process type: 31 index: 31 name: DetAMPANMDA count: 1500000 unpadded_size: 55500000 padded_size 55500000
+ncell=1 end=479 nmech=3
+ndata=55504560 nidata=0 nvdata=1500000
+nbyte so far 474041004
+n_presyn = 1 sz=64 nbyte=64
+n_input_presyn = 0 sz=24 nbyte=0
+n_pntproc=1500000 sz=8 nbyte=12000000
+n_netcon=1 sz=40 nbyte=40
+n_weight = 1
+0 thread 0 total bytes 486041116
+ncell=0 end=0 nmech=0
+ndata=0 nidata=0 nvdata=0
+nbyte so far 384
+n_presyn = 0 sz=64 nbyte=0
+n_input_presyn = 0 sz=24 nbyte=0
+n_pntproc=0 sz=8 nbyte=0
+n_netcon=0 sz=40 nbyte=0
+n_weight = 0
+0 thread 1 total bytes 384
+0 netcon pointers 1  nbyte=8
+nrnran123 size=36 cnt=0 nbyte=0
+0 total bytes 486041568
+ Nrn Setup Done (time: 6.8318)
+ Memory (MBs) :          After nrn_setup  : Max 518.5312, Min 518.5312, Avg 518.5312 
+
+--spikebuf = 100000      --spkcompress = 0        --prcellgid = -1
+--cell-permute = 1       --nwarp = 0              --ms-subintervals = 2
+--ms-phases = 2          --report = 0             --multiple = 1
+--extracon = 0           --pattern = not set      --datpath = /home/hpc/ihpc/ihpc029h/erlangen/coredat/bench_ECM_theoretical_L5_TTPC1_DetAMPANMDA_1cells_1cellspergroup_f0Hz_DRAM
+--filesdat = files.dat   --outpath = .            --write-config = not set
+--read-config = not set  --tstart = 0             --tstop = 5.0
+--dt = 0.025             --dt_io = 0.1            --voltage = -65
+--celsius = 34           --forwardskip = 0        --dt_report = 0.1
+--mindelay = 10          --help = not set         --threading = not set
+--gpu = not set          -mpi = not set           --show = not set
+--multisend = not set    --binqueue = set         --dumpthread = not set
+
+ Memory (MBs) :  After mk_spikevec_buffer : Max 518.5312, Min 518.5312, Avg 518.5312 
+ Memory (MBs) :     After nrn_finitialize : Max 518.6289, Min 518.6289, Avg 518.6289 
+ Completed 100.00, t = 5.000000
+Solver Time : 601.48
+
+
+ Simulation Statistics
+ Number of cells: 1
+ Number of compartments: 479
+ Number of presyns: 1
+ Number of input presyns: 0
+ Number of synapses: 1
+ Number of point processes: 1500000
+ Number of transfer (gap) targets: 0
+ Number of spikes: 0
+ Number of spikes with non negative gid-s: 0
+
+
+--------------------------------------------------------------------------------
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,
+CPU clock:,2.199969216 GHz,
+TABLE,Region DetAMPANMDA_EMS_current,Group 1 Raw,CACHES,53
+Region Info,Core 0,
+RDTSC Runtime [s],497.088100,
+call count,201,
+Event,Counter,Core 0
+INSTR_RETIRED_ANY,FIXC0,1748705000000
+CPU_CLK_UNHALTED_CORE,FIXC1,1088118000000
+CPU_CLK_UNHALTED_REF,FIXC2,1088117000000
+L1D_REPLACEMENT,PMC0,60811280000
+L1D_M_EVICT,PMC1,33912810000
+L2_LINES_IN_ALL,PMC2,59648320000
+L2_LINES_OUT_DIRTY_ALL,PMC3,33486650000
+LLC_LOOKUP_DATA_READ,CBOX0C0:STATE=0x3F,4416039000
+LLC_LOOKUP_DATA_READ,CBOX1C0:STATE=0x3F,4470303000
+LLC_LOOKUP_DATA_READ,CBOX2C0:STATE=0x3F,4409951000
+LLC_LOOKUP_DATA_READ,CBOX3C0:STATE=0x3F,4423054000
+LLC_LOOKUP_DATA_READ,CBOX4C0:STATE=0x3F,4405880000
+LLC_LOOKUP_DATA_READ,CBOX5C0:STATE=0x3F,4415712000
+LLC_LOOKUP_DATA_READ,CBOX6C0:STATE=0x3F,4418624000
+LLC_LOOKUP_DATA_READ,CBOX7C0:STATE=0x3F,4420169000
+LLC_LOOKUP_DATA_READ,CBOX8C0:STATE=0x3F,4085538000
+LLC_LOOKUP_DATA_READ,CBOX9C0:STATE=0x3F,4084505000
+LLC_LOOKUP_DATA_READ,CBOX10C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX11C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX12C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX13C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX14C0:STATE=0x3F,0
+LLC_VICTIMS_M_STATE,CBOX0C1,3444661000
+LLC_VICTIMS_M_STATE,CBOX1C1,3444647000
+LLC_VICTIMS_M_STATE,CBOX2C1,3444591000
+LLC_VICTIMS_M_STATE,CBOX3C1,3444643000
+LLC_VICTIMS_M_STATE,CBOX4C1,3444574000
+LLC_VICTIMS_M_STATE,CBOX5C1,3444658000
+LLC_VICTIMS_M_STATE,CBOX6C1,3444589000
+LLC_VICTIMS_M_STATE,CBOX7C1,3444704000
+LLC_VICTIMS_M_STATE,CBOX8C1,3179773000
+LLC_VICTIMS_M_STATE,CBOX9C1,3179760000
+LLC_VICTIMS_M_STATE,CBOX10C1,0
+LLC_VICTIMS_M_STATE,CBOX11C1,0
+LLC_VICTIMS_M_STATE,CBOX12C1,0
+LLC_VICTIMS_M_STATE,CBOX13C1,0
+LLC_VICTIMS_M_STATE,CBOX14C1,0
+CAS_COUNT_RD,MBOX0C0,15130400000
+CAS_COUNT_WR,MBOX0C1,8516325000
+CAS_COUNT_RD,MBOX1C0,15135920000
+CAS_COUNT_WR,MBOX1C1,8521020000
+CAS_COUNT_RD,MBOX2C0,15225180000
+CAS_COUNT_WR,MBOX2C1,8610577000
+CAS_COUNT_RD,MBOX3C0,15148720000
+CAS_COUNT_WR,MBOX3C1,8534714000
+CAS_COUNT_RD,MBOX4C0,0
+CAS_COUNT_WR,MBOX4C1,0
+CAS_COUNT_RD,MBOX5C0,0
+CAS_COUNT_WR,MBOX5C1,0
+CAS_COUNT_RD,MBOX6C0,0
+CAS_COUNT_WR,MBOX6C1,0
+CAS_COUNT_RD,MBOX7C0,0
+CAS_COUNT_WR,MBOX7C1,0
+TABLE,Region DetAMPANMDA_EMS_current,Group 1 Metric,CACHES,28
+Metric,Core 0,
+Runtime (RDTSC) [s],497.0881,
+Runtime unhalted [s],494.6060,
+Clock [MHz],2199.9712,
+CPI,0.6222,
+L2 to L1 load bandwidth [MBytes/s],7829.4409,
+L2 to L1 load data volume [GBytes],3891.9219,
+L1 to L2 evict bandwidth [MBytes/s],4366.2680,
+L1 to L2 evict data volume [GBytes],2170.4198,
+L1 to/from L2 bandwidth [MBytes/s],12195.7089,
+L1 to/from L2 data volume [GBytes],6062.3418,
+L3 to L2 load bandwidth [MBytes/s],7679.7101,
+L3 to L2 load data volume [GBytes],3817.4925,
+L2 to L3 evict bandwidth [MBytes/s],4311.3999,
+L2 to L3 evict data volume [GBytes],2143.1456,
+L2 to/from L3 bandwidth [MBytes/s],11991.1100,
+L2 to/from L3 data volume [GBytes],5960.6381,
+System to L3 bandwidth [MBytes/s],5607.0254,
+System to L3 data volume [GBytes],2787.1856,
+L3 to memory bandwidth [MBytes/s],4366.7559,
+L3 to memory data volume [GBytes],2170.6624,
+L3 to/from system bandwidth [MBytes/s],9973.7813,
+L3 to/from system data volume [GBytes],4957.8480,
+Memory read bandwidth [MBytes/s],7807.4170,
+Memory read data volume [GBytes],3880.9741,
+Memory write bandwidth [MBytes/s],4401.0080,
+Memory write data volume [GBytes],2187.6887,
+Memory bandwidth [MBytes/s],12208.4250,
+Memory data volume [GBytes],6068.6628,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,
+CPU clock:,2.199969216 GHz,
+TABLE,Region DetAMPANMDA_EMS_reduction_cur,Group 1 Raw,CACHES,53
+Region Info,Core 0,
+RDTSC Runtime [s],0.670019,
+call count,201,
+Event,Counter,Core 0
+INSTR_RETIRED_ANY,FIXC0,2754729000
+CPU_CLK_UNHALTED_CORE,FIXC1,1474821000
+CPU_CLK_UNHALTED_REF,FIXC2,1474821000
+L1D_REPLACEMENT,PMC0,95654480
+L1D_M_EVICT,PMC1,115651
+L2_LINES_IN_ALL,PMC2,94390330
+L2_LINES_OUT_DIRTY_ALL,PMC3,135532
+LLC_LOOKUP_DATA_READ,CBOX0C0:STATE=0x3F,9754064
+LLC_LOOKUP_DATA_READ,CBOX1C0:STATE=0x3F,9773407
+LLC_LOOKUP_DATA_READ,CBOX2C0:STATE=0x3F,9723522
+LLC_LOOKUP_DATA_READ,CBOX3C0:STATE=0x3F,9722805
+LLC_LOOKUP_DATA_READ,CBOX4C0:STATE=0x3F,9731879
+LLC_LOOKUP_DATA_READ,CBOX5C0:STATE=0x3F,9721738
+LLC_LOOKUP_DATA_READ,CBOX6C0:STATE=0x3F,9725431
+LLC_LOOKUP_DATA_READ,CBOX7C0:STATE=0x3F,9728571
+LLC_LOOKUP_DATA_READ,CBOX8C0:STATE=0x3F,8983796
+LLC_LOOKUP_DATA_READ,CBOX9C0:STATE=0x3F,8983027
+LLC_LOOKUP_DATA_READ,CBOX10C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX11C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX12C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX13C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX14C0:STATE=0x3F,0
+LLC_VICTIMS_M_STATE,CBOX0C1,4528045
+LLC_VICTIMS_M_STATE,CBOX1C1,4505810
+LLC_VICTIMS_M_STATE,CBOX2C1,4523471
+LLC_VICTIMS_M_STATE,CBOX3C1,4630401
+LLC_VICTIMS_M_STATE,CBOX4C1,4646563
+LLC_VICTIMS_M_STATE,CBOX5C1,4628215
+LLC_VICTIMS_M_STATE,CBOX6C1,4634281
+LLC_VICTIMS_M_STATE,CBOX7C1,4638598
+LLC_VICTIMS_M_STATE,CBOX8C1,4363882
+LLC_VICTIMS_M_STATE,CBOX9C1,4367485
+LLC_VICTIMS_M_STATE,CBOX10C1,0
+LLC_VICTIMS_M_STATE,CBOX11C1,0
+LLC_VICTIMS_M_STATE,CBOX12C1,0
+LLC_VICTIMS_M_STATE,CBOX13C1,0
+LLC_VICTIMS_M_STATE,CBOX14C1,0
+CAS_COUNT_RD,MBOX0C0,23258640
+CAS_COUNT_WR,MBOX0C1,11465020
+CAS_COUNT_RD,MBOX1C0,23250710
+CAS_COUNT_WR,MBOX1C1,11444750
+CAS_COUNT_RD,MBOX2C0,23380340
+CAS_COUNT_WR,MBOX2C1,11497370
+CAS_COUNT_RD,MBOX3C0,23266620
+CAS_COUNT_WR,MBOX3C1,11420460
+CAS_COUNT_RD,MBOX4C0,0
+CAS_COUNT_WR,MBOX4C1,0
+CAS_COUNT_RD,MBOX5C0,0
+CAS_COUNT_WR,MBOX5C1,0
+CAS_COUNT_RD,MBOX6C0,0
+CAS_COUNT_WR,MBOX6C1,0
+CAS_COUNT_RD,MBOX7C0,0
+CAS_COUNT_WR,MBOX7C1,0
+TABLE,Region DetAMPANMDA_EMS_reduction_cur,Group 1 Metric,CACHES,28
+Metric,Core 0,
+Runtime (RDTSC) [s],0.6700,
+Runtime unhalted [s],0.6704,
+Clock [MHz],2199.9692,
+CPI,0.5354,
+L2 to L1 load bandwidth [MBytes/s],9136.8893,
+L2 to L1 load data volume [GBytes],6.1219,
+L1 to L2 evict bandwidth [MBytes/s],11.0470,
+L1 to L2 evict data volume [GBytes],0.0074,
+L1 to/from L2 bandwidth [MBytes/s],9147.9363,
+L1 to/from L2 data volume [GBytes],6.1293,
+L3 to L2 load bandwidth [MBytes/s],9016.1381,
+L3 to L2 load data volume [GBytes],6.0410,
+L2 to L3 evict bandwidth [MBytes/s],12.9460,
+L2 to L3 evict data volume [GBytes],0.0087,
+L2 to/from L3 bandwidth [MBytes/s],9029.0841,
+L2 to/from L3 data volume [GBytes],6.0497,
+System to L3 bandwidth [MBytes/s],9155.3972,
+System to L3 data volume [GBytes],6.1343,
+L3 to memory bandwidth [MBytes/s],4342.9714,
+L3 to memory data volume [GBytes],2.9099,
+L3 to/from system bandwidth [MBytes/s],13498.3687,
+L3 to/from system data volume [GBytes],9.0442,
+Memory read bandwidth [MBytes/s],8898.2648,
+Memory read data volume [GBytes],5.9620,
+Memory write bandwidth [MBytes/s],4377.4396,
+Memory write data volume [GBytes],2.9330,
+Memory bandwidth [MBytes/s],13275.7045,
+Memory data volume [GBytes],8.8950,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,
+CPU clock:,2.199969216 GHz,
+TABLE,Region linalg,Group 1 Raw,CACHES,53
+Region Info,Core 0,
+RDTSC Runtime [s],0.001420,
+call count,400,
+Event,Counter,Core 0
+INSTR_RETIRED_ANY,FIXC0,9642712
+CPU_CLK_UNHALTED_CORE,FIXC1,15395890
+CPU_CLK_UNHALTED_REF,FIXC2,15397140
+L1D_REPLACEMENT,PMC0,271704
+L1D_M_EVICT,PMC1,87215
+L2_LINES_IN_ALL,PMC2,453515
+L2_LINES_OUT_DIRTY_ALL,PMC3,22045
+LLC_LOOKUP_DATA_READ,CBOX0C0:STATE=0x3F,48282
+LLC_LOOKUP_DATA_READ,CBOX1C0:STATE=0x3F,48013
+LLC_LOOKUP_DATA_READ,CBOX2C0:STATE=0x3F,39814
+LLC_LOOKUP_DATA_READ,CBOX3C0:STATE=0x3F,42327
+LLC_LOOKUP_DATA_READ,CBOX4C0:STATE=0x3F,44152
+LLC_LOOKUP_DATA_READ,CBOX5C0:STATE=0x3F,40232
+LLC_LOOKUP_DATA_READ,CBOX6C0:STATE=0x3F,45900
+LLC_LOOKUP_DATA_READ,CBOX7C0:STATE=0x3F,41592
+LLC_LOOKUP_DATA_READ,CBOX8C0:STATE=0x3F,39646
+LLC_LOOKUP_DATA_READ,CBOX9C0:STATE=0x3F,38203
+LLC_LOOKUP_DATA_READ,CBOX10C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX11C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX12C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX13C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX14C0:STATE=0x3F,0
+LLC_VICTIMS_M_STATE,CBOX0C1,1138
+LLC_VICTIMS_M_STATE,CBOX1C1,788
+LLC_VICTIMS_M_STATE,CBOX2C1,989
+LLC_VICTIMS_M_STATE,CBOX3C1,908
+LLC_VICTIMS_M_STATE,CBOX4C1,968
+LLC_VICTIMS_M_STATE,CBOX5C1,1359
+LLC_VICTIMS_M_STATE,CBOX6C1,918
+LLC_VICTIMS_M_STATE,CBOX7C1,1093
+LLC_VICTIMS_M_STATE,CBOX8C1,1307
+LLC_VICTIMS_M_STATE,CBOX9C1,1379
+LLC_VICTIMS_M_STATE,CBOX10C1,0
+LLC_VICTIMS_M_STATE,CBOX11C1,0
+LLC_VICTIMS_M_STATE,CBOX12C1,0
+LLC_VICTIMS_M_STATE,CBOX13C1,0
+LLC_VICTIMS_M_STATE,CBOX14C1,0
+CAS_COUNT_RD,MBOX0C0,11356
+CAS_COUNT_WR,MBOX0C1,3067
+CAS_COUNT_RD,MBOX1C0,13088
+CAS_COUNT_WR,MBOX1C1,4297
+CAS_COUNT_RD,MBOX2C0,37278
+CAS_COUNT_WR,MBOX2C1,28678
+CAS_COUNT_RD,MBOX3C0,16189
+CAS_COUNT_WR,MBOX3C1,7988
+CAS_COUNT_RD,MBOX4C0,0
+CAS_COUNT_WR,MBOX4C1,0
+CAS_COUNT_RD,MBOX5C0,0
+CAS_COUNT_WR,MBOX5C1,0
+CAS_COUNT_RD,MBOX6C0,0
+CAS_COUNT_WR,MBOX6C1,0
+CAS_COUNT_RD,MBOX7C0,0
+CAS_COUNT_WR,MBOX7C1,0
+TABLE,Region linalg,Group 1 Metric,CACHES,28
+Metric,Core 0,
+Runtime (RDTSC) [s],0.0014,
+Runtime unhalted [s],0.0070,
+Clock [MHz],2199.7906,
+CPI,1.5966,
+L2 to L1 load bandwidth [MBytes/s],12243.5292,
+L2 to L1 load data volume [GBytes],0.0174,
+L1 to L2 evict bandwidth [MBytes/s],3930.0835,
+L1 to L2 evict data volume [GBytes],0.0056,
+L1 to/from L2 bandwidth [MBytes/s],16173.6127,
+L1 to/from L2 data volume [GBytes],0.0230,
+L3 to L2 load bandwidth [MBytes/s],20436.2989,
+L3 to L2 load data volume [GBytes],0.0290,
+L2 to L3 evict bandwidth [MBytes/s],993.3921,
+L2 to L3 evict data volume [GBytes],0.0014,
+L2 to/from L3 bandwidth [MBytes/s],21429.6909,
+L2 to/from L3 data volume [GBytes],0.0304,
+System to L3 bandwidth [MBytes/s],19293.7966,
+System to L3 data volume [GBytes],0.0274,
+L3 to memory bandwidth [MBytes/s],488.7877,
+L3 to memory data volume [GBytes],0.0007,
+L3 to/from system bandwidth [MBytes/s],19782.5842,
+L3 to/from system data volume [GBytes],0.0281,
+Memory read bandwidth [MBytes/s],3510.8265,
+Memory read data volume [GBytes],0.0050,
+Memory write bandwidth [MBytes/s],1984.0804,
+Memory write data volume [GBytes],0.0028,
+Memory bandwidth [MBytes/s],5494.9069,
+Memory data volume [GBytes],0.0078,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz,
+CPU type:,Intel Xeon IvyBridge EN/EP/EX processor,
+CPU clock:,2.199969216 GHz,
+TABLE,Region DetAMPANMDA_EMS_state,Group 1 Raw,CACHES,53
+Region Info,Core 0,
+RDTSC Runtime [s],102.632900,
+call count,200,
+Event,Counter,Core 0
+INSTR_RETIRED_ANY,FIXC0,410253800000
+CPU_CLK_UNHALTED_CORE,FIXC1,225070800000
+CPU_CLK_UNHALTED_REF,FIXC2,225070900000
+L1D_REPLACEMENT,PMC0,3003985000
+L1D_M_EVICT,PMC1,1498106000
+L2_LINES_IN_ALL,PMC2,3004569000
+L2_LINES_OUT_DIRTY_ALL,PMC3,1490335000
+LLC_LOOKUP_DATA_READ,CBOX0C0:STATE=0x3F,308640800
+LLC_LOOKUP_DATA_READ,CBOX1C0:STATE=0x3F,309099000
+LLC_LOOKUP_DATA_READ,CBOX2C0:STATE=0x3F,308835000
+LLC_LOOKUP_DATA_READ,CBOX3C0:STATE=0x3F,308215200
+LLC_LOOKUP_DATA_READ,CBOX4C0:STATE=0x3F,308815800
+LLC_LOOKUP_DATA_READ,CBOX5C0:STATE=0x3F,307851500
+LLC_LOOKUP_DATA_READ,CBOX6C0:STATE=0x3F,308105600
+LLC_LOOKUP_DATA_READ,CBOX7C0:STATE=0x3F,308559800
+LLC_LOOKUP_DATA_READ,CBOX8C0:STATE=0x3F,284845900
+LLC_LOOKUP_DATA_READ,CBOX9C0:STATE=0x3F,285297900
+LLC_LOOKUP_DATA_READ,CBOX10C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX11C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX12C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX13C0:STATE=0x3F,0
+LLC_LOOKUP_DATA_READ,CBOX14C0:STATE=0x3F,0
+LLC_VICTIMS_M_STATE,CBOX0C1,148563100
+LLC_VICTIMS_M_STATE,CBOX1C1,148572100
+LLC_VICTIMS_M_STATE,CBOX2C1,148565200
+LLC_VICTIMS_M_STATE,CBOX3C1,148476100
+LLC_VICTIMS_M_STATE,CBOX4C1,148467500
+LLC_VICTIMS_M_STATE,CBOX5C1,148483800
+LLC_VICTIMS_M_STATE,CBOX6C1,148475500
+LLC_VICTIMS_M_STATE,CBOX7C1,148463100
+LLC_VICTIMS_M_STATE,CBOX8C1,136838900
+LLC_VICTIMS_M_STATE,CBOX9C1,136830900
+LLC_VICTIMS_M_STATE,CBOX10C1,0
+LLC_VICTIMS_M_STATE,CBOX11C1,0
+LLC_VICTIMS_M_STATE,CBOX12C1,0
+LLC_VICTIMS_M_STATE,CBOX13C1,0
+LLC_VICTIMS_M_STATE,CBOX14C1,0
+CAS_COUNT_RD,MBOX0C0,753453200
+CAS_COUNT_WR,MBOX0C1,367411700
+CAS_COUNT_RD,MBOX1C0,755072500
+CAS_COUNT_WR,MBOX1C1,368810500
+CAS_COUNT_RD,MBOX2C0,791553900
+CAS_COUNT_WR,MBOX2C1,405555700
+CAS_COUNT_RD,MBOX3C0,761290200
+CAS_COUNT_WR,MBOX3C1,374974900
+CAS_COUNT_RD,MBOX4C0,0
+CAS_COUNT_WR,MBOX4C1,0
+CAS_COUNT_RD,MBOX5C0,0
+CAS_COUNT_WR,MBOX5C1,0
+CAS_COUNT_RD,MBOX6C0,0
+CAS_COUNT_WR,MBOX6C1,0
+CAS_COUNT_RD,MBOX7C0,0
+CAS_COUNT_WR,MBOX7C1,0
+TABLE,Region DetAMPANMDA_EMS_state,Group 1 Metric,CACHES,28
+Metric,Core 0,
+Runtime (RDTSC) [s],102.6329,
+Runtime unhalted [s],102.3063,
+Clock [MHz],2199.9682,
+CPI,0.5486,
+L2 to L1 load bandwidth [MBytes/s],1873.2301,
+L2 to L1 load data volume [GBytes],192.2550,
+L1 to L2 evict bandwidth [MBytes/s],934.1915,
+L1 to L2 evict data volume [GBytes],95.8788,
+L1 to/from L2 bandwidth [MBytes/s],2807.4216,
+L1 to/from L2 data volume [GBytes],288.1338,
+L3 to L2 load bandwidth [MBytes/s],1873.5943,
+L3 to L2 load data volume [GBytes],192.2924,
+L2 to L3 evict bandwidth [MBytes/s],929.3457,
+L2 to L3 evict data volume [GBytes],95.3814,
+L2 to/from L3 bandwidth [MBytes/s],2802.9400,
+L2 to/from L3 data volume [GBytes],287.6739,
+System to L3 bandwidth [MBytes/s],1894.6074,
+System to L3 data volume [GBytes],194.4491,
+L3 to memory bandwidth [MBytes/s],911.5120,
+L3 to memory data volume [GBytes],93.5511,
+L3 to/from system bandwidth [MBytes/s],2806.1194,
+L3 to/from system data volume [GBytes],288.0002,
+Memory read bandwidth [MBytes/s],1909.0142,
+Memory read data volume [GBytes],195.9277,
+Memory write bandwidth [MBytes/s],945.8193,
+Memory write data volume [GBytes],97.0722,
+Memory bandwidth [MBytes/s],2854.8336,
+Memory data volume [GBytes],292.9998,
