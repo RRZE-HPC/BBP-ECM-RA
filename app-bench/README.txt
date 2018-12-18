@@ -22,9 +22,9 @@ $ python submit_all.py -d <PATH-TO>/app-bench/coredat/spk_del_L5_TTPC1_rndDendTr
 ## b. best-case:
 $ python submit_all.py -d <PATH-TO>/app-bench/coredat/spk_del_L5_TTPC1_bestCase_20000Hz_267syns_per_cells10000syns_active_per_step --binq --weak-scaling -v AVX
 
-# 4. To submit the synthetic benchmarks
+# 4. To submit the single-channel benchmarks
 
-## a. See the src/ folder on how to compile an executable for synthetic benchmarks
+## a. See the src/ folder on how to compile an executable for single-channel benchmarks
 
 ## b. specify correct data folder in script:
 $ python submit_all.py -d <PATH-TO>/app-bench/coredat/bench_ECM_theoretical_L5_TTPC1_DetAMPANMDA_1cells_1cellspergroup_f0Hz_L3 

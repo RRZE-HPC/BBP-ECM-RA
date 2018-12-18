@@ -10,7 +10,7 @@ You need to get my specially instrumented fork of the code
 
 $ git clone --recursive https://github.com/sharkovsky/CoreNeuron.git
 
-depending on which benchmark you will run, you can build the general version (also good for synthetic benchmarks)
+depending on which benchmark you will run, you can build the general version (also good for single-channel benchmarks)
 
 $ git checkout perf_eng_erlangen
 
@@ -34,7 +34,7 @@ $ make
 #### 4.2
 $ cp app-bench/src/instrumented_c_files/*.c <BUILD_DIR>/coreneuron/
 
-OR, if you're building a version for synthetic benchmarks
+OR, if you're building a version for single-channel benchmarks
 
 $ for f in  app-bench/src/instrumented_c_files/*.synthetic_bench; do cp $f <BUILD_DIR>/coreneuron/${f/.synthetic_bench/.c}; done
 
