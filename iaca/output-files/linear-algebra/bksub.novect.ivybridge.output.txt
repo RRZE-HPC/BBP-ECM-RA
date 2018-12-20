@@ -1,0 +1,41 @@
+Intel(R) Architecture Code Analyzer Version - 2.1
+Analyzed File - obj/bksub.novect.o
+Binary Format - 64Bit
+Architecture  - IVB
+Analysis Type - Throughput
+
+Throughput Analysis Report
+--------------------------
+Block Throughput: 14.00 Cycles       Throughput Bottleneck: Divider
+
+Port Binding In Cycles Per Iteration:
+-------------------------------------------------------------------------
+|  Port  |  0   -  DV  |  1   |  2   -  D   |  3   -  D   |  4   |  5   |
+-------------------------------------------------------------------------
+| Cycles | 2.0    14.0 | 1.0  | 3.5    2.5  | 3.5    2.5  | 2.0  | 2.0  |
+-------------------------------------------------------------------------
+
+N - port number or number of cycles resource conflict caused delay, DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3), CP - on a critical path
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion happened
+# - ESP Tracking sync uop was issued
+@ - SSE instruction followed an AVX256 instruction, dozens of cycles penalty is expected
+! - instruction not supported, was not accounted in Analysis
+
+| Num Of |                   Ports pressure in cycles                   |    |
+|  Uops  |  0   -  DV  |  1   |  2   -  D   |  3   -  D   |  4   |  5   |    |
+------------------------------------------------------------------------------
+|   1    |             |      | 0.5    0.5  | 0.5    0.5  |      |      |    | movsxd r9, dword ptr [rax+r8*4]
+|   1    |             |      | 0.5    0.5  | 0.5    0.5  |      |      |    | movsd xmm0, qword ptr [rsi+r8*8]
+|   1    |             |      | 0.5    0.5  | 0.5    0.5  |      |      |    | movsd xmm1, qword ptr [rdx+r8*8]
+|   2    | 1.0         |      | 0.5    0.5  | 0.5    0.5  |      |      |    | mulsd xmm0, qword ptr [rdx+r9*8]
+|   1    |             | 1.0  |             |             |      |      |    | subsd xmm1, xmm0
+|   2    |             |      | 0.5         | 0.5         | 1.0  |      |    | movsd qword ptr [rdx+r8*8], xmm1
+|   2    | 1.0    14.0 |      | 0.5    0.5  | 0.5    0.5  |      |      | CP | divsd xmm1, qword ptr [rcx+r8*8]
+|   2    |             |      | 0.5         | 0.5         | 1.0  |      |    | movsd qword ptr [rdx+r8*8], xmm1
+|   1    |             |      |             |             |      | 1.0  |    | inc r8
+|   1    |             |      |             |             |      | 1.0  |    | cmp r8, rdi
+|   0F   |             |      |             |             |      |      |    | jl 0xffffffffffffffc6
+Total Num Of Uops: 14

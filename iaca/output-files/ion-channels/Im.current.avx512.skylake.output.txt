@@ -1,0 +1,70 @@
+Intel(R) Architecture Code Analyzer Version -  v3.0-28-g1ba2cbb build date: 2017-10-23;16:42:45
+Analyzed File -  obj/Im.current.avx512.o
+Binary Format - 64Bit
+Architecture  -  SKX
+Analysis Type - Throughput
+
+Throughput Analysis Report
+--------------------------
+Block Throughput: 42.32 Cycles       Throughput Bottleneck: Backend
+Loop Count:  22
+Port Binding In Cycles Per Iteration:
+--------------------------------------------------------------------------------------------------
+|  Port  |   0   -  DV   |   1   |   2   -  D    |   3   -  D    |   4   |   5   |   6   |   7   |
+--------------------------------------------------------------------------------------------------
+| Cycles | 12.0     0.0  |  1.0  | 37.0    23.0  | 37.0    24.0  | 27.0  | 15.0  | 11.0  |  0.0  |
+--------------------------------------------------------------------------------------------------
+
+DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3)
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion occurred
+# - ESP Tracking sync uop was issued
+@ - SSE instruction followed an AVX256/AVX512 instruction, dozens of cycles penalty is expected
+X - instruction not supported, was not accounted in Analysis
+
+| Num Of   |                    Ports pressure in cycles                         |      |
+|  Uops    |  0  - DV    |  1   |  2  -  D    |  3  -  D    |  4   |  5   |  6   |  7   |
+-----------------------------------------------------------------------------------------
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | vmovdqu ymm0, ymmword ptr [rdx+rdi*4]
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | vmovdqu ymm1, ymmword ptr [rax+rdi*4]
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | vmovdqu ymm6, ymmword ptr [r14+rdi*4]
+|   1      | 1.0         |      |             |             |      |      |      |      | kxnorw k1, k1, k1
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k2, xmm0, xmm0
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k3, xmm0, xmm0
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k4, xmm0, xmm0
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k5, xmm0, xmm0
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k6, xmm0, xmm0
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k7, xmm0, xmm0
+|   1*     |             |      |             |             |      |      |      |      | vpxord zmm2, zmm2, zmm2
+|   1*     |             |      |             |             |      |      |      |      | vpxord zmm4, zmm4, zmm4
+|   1*     |             |      |             |             |      |      |      |      | vpxord zmm7, zmm7, zmm7
+|   1*     |             |      |             |             |      |      |      |      | vpxord zmm9, zmm9, zmm9
+|   1*     |             |      |             |             |      |      |      |      | vpxord zmm11, zmm11, zmm11
+|   5^     | 1.0         |      | 4.0     4.0 | 4.0     4.0 |      | 1.0  | 1.0  |      | vgatherdpd zmm2, k2, zmmword ptr [rsi+ymm1*8]
+|   5^     | 1.0         |      | 4.0     4.0 | 4.0     4.0 |      | 1.0  | 1.0  |      | vgatherdpd zmm4, k1, zmmword ptr [r13+ymm0*8]
+|   5^     | 1.0         |      | 4.0     4.0 | 4.0     4.0 |      | 1.0  | 1.0  |      | vgatherdpd zmm7, k3, zmmword ptr [rsi+ymm6*8]
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k1, xmm0, xmm0
+|   2      |             |      |             | 1.0         | 1.0  |      |      |      | vmovupd zmmword ptr [r9+rdi*8], zmm2
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | vmovups zmm3, zmmword ptr [r12+rdi*8]
+|   2      | 1.0         |      |             | 1.0     1.0 |      |      |      |      | vmulpd zmm10, zmm3, zmmword ptr [rcx+rdi*8]
+|   2      |             |      | 1.0         |             | 1.0  |      |      |      | vmovupd zmmword ptr [r8+rdi*8], zmm10
+|   2      | 1.0         |      |             | 1.0     1.0 |      |      |      |      | vsubpd zmm8, zmm4, zmmword ptr [r9+rdi*8]
+|   1      |             |      |             |             |      | 1.0  |      |      | vfmadd231pd zmm7, zmm8, zmm10
+|   1      | 1.0         |      |             |             |      |      |      |      | vmulpd zmm5, zmm10, zmm8
+|  19      | 1.0         |      | 4.0         | 4.0         | 8.0  |      | 2.0  |      | vscatterdpd zmmword ptr [rsi+ymm6*8], k4, zmm7
+|   2      |             |      | 1.0         |             | 1.0  |      |      |      | vmovupd zmmword ptr [r15+rdi*8], zmm5
+|   5^     | 1.0         |      | 4.0     4.0 | 4.0     4.0 |      | 1.0  | 1.0  |      | vgatherdpd zmm9, k5, zmmword ptr [r11+ymm0*8]
+|   1      |             |      |             |             |      | 1.0  |      |      | vfnmadd213pd zmm10, zmm8, zmm9
+|  19      | 1.0         |      | 4.0         | 4.0         | 8.0  |      | 2.0  |      | vscatterdpd zmmword ptr [r11+ymm0*8], k6, zmm10
+|   5^     | 1.0         |      | 4.0     4.0 | 4.0     4.0 |      | 1.0  | 1.0  |      | vgatherdpd zmm11, k7, zmmword ptr [r10+ymm0*8]
+|   2      |             |      |             | 1.0     1.0 |      | 1.0  |      |      | vaddpd zmm12, zmm11, zmmword ptr [r8+rdi*8]
+|   1      |             | 1.0  |             |             |      |      |      |      | add rdi, 0x8
+|  19      | 1.0         |      | 4.0         | 4.0         | 8.0  |      | 2.0  |      | vscatterdpd zmmword ptr [r10+ymm0*8], k1, zmm12
+|   1*     |             |      |             |             |      |      |      |      | cmp rdi, rbx
+|   0*F    |             |      |             |             |      |      |      |      | jb 0xffffffffffffff19
+Total Num Of Uops: 116
+Analysis Notes:
+Backend allocation was stalled due to unavailable allocation resources.
+There were bubbles in the frontend.

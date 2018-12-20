@@ -1,0 +1,115 @@
+Intel(R) Architecture Code Analyzer Version - 2.1
+Analyzed File - obj/SpikeDelivery.state.novect.o
+Binary Format - 64Bit
+Architecture  - IVB
+Analysis Type - Latency
+
+Latency Analysis Report
+---------------------------
+Latency: 79 Cycles
+
+N - port number or number of cycles resource conflict caused delay, DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3), CP - on a critical path
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion happened
+# - ESP Tracking sync uop was issued
+@ - Intel(R) AVX to Intel(R) SSE code switch, dozens of cycles penalty is expected
+! - instruction not supported, was not accounted in Analysis
+
+The Resource delay is counted since all the sources of the instructions are ready
+and until the needed resource becomes available
+
+| Inst |            Resource Delay In Cycles             |    |
+| Num  | 0  - DV | 1  | 2  - D  | 3  - D  | 4  | 5  | FE |    |
+---------------------------------------------------------------
+|  0   |         |    |         |         |    |    |    |    | mov r8, qword ptr [rsp+0x58]
+|  1   |         |    |         |         |    |    |    |    | mov r9, qword ptr [rsp+0x38]
+|  2   |         |    | 1       |         |    |    |    |    | mov r10, qword ptr [rsp+0x28]
+|  3   |         |    |         |         |    |    |    |    | movsd xmm0, qword ptr [r8+rbx*8]
+|  4   |         |    |         |         |    |    |    |    | movsd xmm1, qword ptr [r9+rbx*8]
+|  5   |         |    |         |         |    |    | 1  |    | movsd qword ptr [rsp+0x78], xmm0
+|  6   |         |    |         |         |    |    |    |    | mulsd xmm1, xmm0
+|  7   |         |    |         | 1       |    |    | 1  |    | movsd xmm0, qword ptr [rsp+0x68]
+|  8   |         |    |         |         |    |    | 2  |    | movsd qword ptr [rsp+0x70], xmm1
+|  9   |         |    | 1       |         |    |    | 2  |    | subsd xmm0, qword ptr [r12+rbx*8]
+| 10   |         |    |         | 1       |    |    | 2  |    | xorps xmm0, xmmword ptr [rip]
+| 11   |         |    |         |         |    |    |    |    | divsd xmm0, qword ptr [r10+rbx*8]
+| 12   |         |    |         |         |    |    | 3  |    | call 0x5
+| 13   |         |    |         |         |    |    |    |    | movaps xmm1, xmm0
+| 14   |         |    |         | 2       |    |    | 4  |    | mulsd xmm1, qword ptr [rbp+rbx*8]
+| 15   |         |    |         |         |    |    | 4  |    | movsd xmm0, qword ptr [rip]
+| 16   |         |    |         | 2       |    |    | 1  |    | mov r8, qword ptr [rsp+0x10]
+| 17   |         |    |         |         |    |    |    |    | subsd xmm0, xmm1
+| 18   |         |    |         |         |    |    |    |    | mulsd xmm0, qword ptr [r8+rbx*8]
+| 19   |         |    |         | 2       |    |    | 2  |    | mov r9, qword ptr [rsp+0x18]
+| 20   |         |    |         |         |    |    |    |    | addsd xmm1, xmm0
+| 21   |         |    | 1       |         |    |    | 2  |    | movsd xmm0, qword ptr [rsp+0x68]
+| 22   |         |    | 2       |         |    |    | 6  |    | movsd qword ptr [rbp+rbx*8], xmm1
+| 23   |         |    |         | 2       | 1  |    | 3  |    | movsd qword ptr [rsp+0x80], xmm1
+| 24   |         |    |         | 3       |    |    | 7  | CP | subsd xmm0, qword ptr [r12+rbx*8]
+| 25   |         |    | 1       |         |    |    | 8  | CP | xorps xmm0, xmmword ptr [rip]
+| 26   |      7  |    |         |         |    |    |    | CP | divsd xmm0, qword ptr [r9+rbx*8]
+| 27   |         |    | 1       |         |    |    | 4  |    | call 0x5
+| 28   |         |    |         |         |    |    |    | CP | movaps xmm1, xmm0
+| 29   |         |    | 2       |         |    |    | 9  |    | movsd xmm0, qword ptr [rip]
+| 30   |         |    |         | 2       |    |    | 9  |    | movsd xmm3, qword ptr [rip]
+| 31   |         |    | 3       |         |    |    | 1  |    | movsd xmm2, qword ptr [rsp+0x80]
+| 32   |         |    |         |         |    |    |    |    | movaps xmm10, xmm2
+| 33   |         |    |         | 2       |    |    | 10 |    | subsd xmm0, qword ptr [r15+rbx*8]
+| 34   |         |    |         |         |    |    |    | CP | mulsd xmm1, xmm0
+| 35   |         |    | 3       |         |    |    | 2  |    | mov r8, qword ptr [rsp+0x20]
+| 36   |         |    |         |         |    |    |    | CP | subsd xmm3, xmm1
+| 37   |         |    |         |         |    |    |    |    | mulsd xmm2, xmm3
+| 38   | 1       |    |         |         |    |    |    | CP | mulsd xmm10, xmm3
+| 39   |         |    |         |         |    |    |    |    | subsd xmm3, xmm2
+| 40   |         |    |         | 2       |    |    | 3  |    | movsd xmm4, qword ptr [rsp+0x68]
+| 41   |         |    |         |         |    |    |    |    | movsd qword ptr [r8+rbx*8], xmm10
+| 42   |         |    |         | 2       |    |    | 13 |    | movsd qword ptr [r15+rbx*8], xmm3
+| 43   |         |    | 2       |         |    |    | 13 |    | movsd qword ptr [r12+rbx*8], xmm4
+| 44   |         |    | 2       |         |    |    | 14 |    | movsd xmm5, qword ptr [r13+rbx*8]
+| 45   |         |    |         |         |    |    |    |    | mulsd xmm5, xmm10
+| 46   |         |    |         | 2       |    |    | 5  |    | movsd xmm6, qword ptr [rsp+0x78]
+| 47   |         |    |         |         |    |    |    |    | mulsd xmm5, xmm6
+| 48   |         |    | 2       |         |    |    | 6  |    | mov r9, qword ptr [rsp+0x48]
+| 49   |         |    |         | 2       |    |    | 6  |    | mov r10, qword ptr [rsp+0x30]
+| 50   |         |    | 3       |         |    |    | 6  |    | movsd xmm9, qword ptr [rsp+0x70]
+| 51   |         |    |         | 2       |    |    | 7  |    | mov r11, qword ptr [rsp+0x40]
+| 52   |         |    | 4       |         |    |    | 7  |    | mov r8, qword ptr [rsp+0x60]
+| 53   |         |    |         |         |    |    |    |    | addsd xmm5, qword ptr [r9+rbx*8]
+| 54   |         |    |         | 1       |    |    |    |    | movsd qword ptr [r9+rbx*8], xmm5
+| 55   |         |    | 4       |         |    |    | 17 |    | movsd xmm7, qword ptr [r13+rbx*8]
+| 56   | 1       |    |         |         |    |    |    |    | mulsd xmm7, xmm10
+| 57   |         |    |         |         |    |    |    |    | mulsd xmm7, xmm6
+| 58   |         |    |         | 2       |    |    |    |    | addsd xmm7, qword ptr [r10+rbx*8]
+| 59   |         |    |         |         |    |    |    |    | movsd qword ptr [r10+rbx*8], xmm7
+| 60   |         |    | 4       |         |    |    | 19 |    | movsd xmm8, qword ptr [r14+rbx*8]
+| 61   | 2       |    |         |         |    |    |    |    | mulsd xmm8, xmm10
+| 62   |         |    |         |         |    |    |    |    | mulsd xmm8, xmm9
+| 63   |         |    |         | 2       |    |    |    |    | addsd xmm8, qword ptr [r11+rbx*8]
+| 64   |         |    |         | 3       |    |    |    |    | movsd qword ptr [r11+rbx*8], xmm8
+| 65   | 3       |    | 3       |         |    |    | 21 | CP | mulsd xmm10, qword ptr [r14+rbx*8]
+| 66   |         |    |         |         |    |    |    | CP | mulsd xmm10, xmm9
+| 67   |         |    |         | 2       |    |    |    | CP | addsd xmm10, qword ptr [r8+rbx*8]
+| 68   |         |    |         |         |    |    |    | CP | movsd qword ptr [r8+rbx*8], xmm10
+| 69   |         |    |         |         |    |    | 22 |    | inc rbx
+| 70   |         |    | 3       |         |    |    | 14 |    | cmp rbx, qword ptr [rsp+0x50]
+| 71   |         |    |         |         |    |    |    |    | jb 0xfffffffffffffe6d
+
+Resource Conflict on Critical Paths: 
+-------------------------------------------------------
+|  Port  | 0  - DV | 1  | 2  - D  | 3  - D  | 4  | 5  |
+-------------------------------------------------------
+| Cycles | 4    7  | 0  | 0    0  | 3    0  | 0  | 0  |
+-------------------------------------------------------
+
+List Of Delays On Critical Paths
+-------------------------------
+16 --> 24 1 Cycles Delay On PORT3_AGU
+19 --> 24 1 Cycles Delay On PORT3_AGU
+23 --> 24 1 Cycles Delay On PORT3_AGU
+11 --> 26 7 Cycles Delay On Divider
+37 --> 38 1 Cycles Delay On Port0
+45 --> 65 1 Cycles Delay On Port0
+56 --> 65 1 Cycles Delay On Port0
+61 --> 65 1 Cycles Delay On Port0

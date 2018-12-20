@@ -1,0 +1,79 @@
+Intel(R) Architecture Code Analyzer Version - 2.1
+Analyzed File - obj/ProbGABAAB_EMS.current.sse.o
+Binary Format - 64Bit
+Architecture  - IVB
+Analysis Type - Throughput
+
+Throughput Analysis Report
+--------------------------
+Block Throughput: 18.05 Cycles       Throughput Bottleneck: PORT2_AGU, PORT3_AGU
+
+Port Binding In Cycles Per Iteration:
+-------------------------------------------------------------------------
+|  Port  |  0   -  DV  |  1   |  2   -  D   |  3   -  D   |  4   |  5   |
+-------------------------------------------------------------------------
+| Cycles | 7.0    14.0 | 7.0  | 18.0   14.0 | 18.0   14.0 | 8.0  | 4.0  |
+-------------------------------------------------------------------------
+
+N - port number or number of cycles resource conflict caused delay, DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3), CP - on a critical path
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion happened
+# - ESP Tracking sync uop was issued
+@ - SSE instruction followed an AVX256 instruction, dozens of cycles penalty is expected
+! - instruction not supported, was not accounted in Analysis
+
+| Num Of |                   Ports pressure in cycles                   |    |
+|  Uops  |  0   -  DV  |  1   |  2   -  D   |  3   -  D   |  4   |  5   |    |
+------------------------------------------------------------------------------
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movups xmm2, xmmword ptr [r12+r10*8]
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | mov rsi, qword ptr [rsp-0x28]
+|   0*   |             |      |             |             |      |      |    | movaps xmm11, xmm0
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movsxd r11, dword ptr [rdi+r10*4]
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | movsxd rax, dword ptr [rdi+r10*4+0x4]
+|   2    |             | 1.0  | 1.0    1.0  |             |      |      | CP | subpd xmm2, xmmword ptr [rsi+r10*8]
+|   1    | 1.0         |      |             |             |      |      |    | mulpd xmm2, xmm1
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | movsd xmm8, qword ptr [rcx+r11*8]
+|   2    |             |      | 1.0    1.0  |             |      | 1.0  | CP | movhpd xmm8, qword ptr [rcx+rax*8]
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | mov rax, qword ptr [rsp-0x18]
+|   0*   |             |      |             |             |      |      |    | movaps xmm5, xmm8
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | mov rsi, qword ptr [rsp-0x30]
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | mov r11, qword ptr [rsp-0x20]
+|   2    |             |      | 1.0         |             | 1.0  |      | CP | movups xmmword ptr [rax+r10*8], xmm2
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movups xmm3, xmmword ptr [r14+r10*8]
+|   2    |             | 1.0  |             | 1.0    1.0  |      |      | CP | subpd xmm3, xmmword ptr [r15+r10*8]
+|   1    | 1.0         |      |             |             |      |      |    | mulpd xmm3, xmm1
+|   2    |             |      |             | 1.0         | 1.0  |      | CP | movups xmmword ptr [rsi+r10*8], xmm3
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movups xmm4, xmmword ptr [rax+r10*8]
+|   1    |             | 1.0  |             |             |      |      |    | addpd xmm4, xmm3
+|   2    |             |      |             | 1.0         | 1.0  |      | CP | movups xmmword ptr [r11+r10*8], xmm4
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | mov r11, qword ptr [rsp-0x10]
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movups xmm6, xmmword ptr [rax+r10*8]
+|   2    |             | 1.0  |             | 1.0    1.0  |      |      | CP | subpd xmm5, xmmword ptr [r11+r10*8]
+|   1    | 1.0         |      |             |             |      |      |    | mulpd xmm6, xmm5
+|   2    |             |      | 1.0         |             | 1.0  |      | CP | movups xmmword ptr [r13+r10*8], xmm6
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movups xmm7, xmmword ptr [r9+r10*8]
+|   1    |             | 1.0  |             |             |      |      |    | subpd xmm8, xmm7
+|   2    | 1.0         |      |             | 1.0    1.0  |      |      | CP | mulpd xmm8, xmmword ptr [rsi+r10*8]
+|   2    |             |      | 1.0         |             | 1.0  |      | CP | movups xmmword ptr [r8+r10*8], xmm8
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movups xmm10, xmmword ptr [r13+r10*8]
+|   1    |             | 1.0  |             |             |      |      |    | addpd xmm10, xmm8
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | mov r11, qword ptr [rsp-0x58]
+|   2    |             |      |             | 1.0         | 1.0  |      | CP | movups xmmword ptr [r11+r10*8], xmm10
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movups xmm12, xmmword ptr [rax+r10*8]
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | movsxd rax, dword ptr [rbp+r10*4]
+|   2    |             | 1.0  | 1.0    1.0  |             |      |      | CP | addpd xmm12, xmmword ptr [rsi+r10*8]
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | movsxd rsi, dword ptr [rbp+r10*4+0x4]
+|   1    |             |      | 1.0    1.0  |             |      |      | CP | movsd xmm9, qword ptr [rdx+rax*8]
+|   1    |             |      |             | 1.0    1.0  |      |      | CP | mov rax, qword ptr [rsp-0x50]
+|   2    |             |      | 1.0    1.0  |             |      | 1.0  | CP | movhpd xmm9, qword ptr [rdx+rsi*8]
+|   1    | 1.0    14.0 |      |             |             |      |      |    | divpd xmm11, xmm9
+|   1    | 1.0         |      |             |             |      |      |    | mulpd xmm10, xmm11
+|   1    | 1.0         |      |             |             |      |      |    | mulpd xmm12, xmm11
+|   2    |             |      |             | 1.0         | 1.0  |      | CP | movups xmmword ptr [rax+r10*8], xmm10
+|   2    |             |      | 1.0         |             | 1.0  |      | CP | movups xmmword ptr [rbx+r10*8], xmm12
+|   1    |             |      |             |             |      | 1.0  |    | add r10, 0x2
+|   2^   |             |      |             | 1.0    1.0  |      | 1.0  | CP | cmp r10, qword ptr [rsp-0x8]
+|   0F   |             |      |             |             |      |      |    | jb 0xffffffffffffff05
+Total Num Of Uops: 62

@@ -1,0 +1,93 @@
+Intel(R) Architecture Code Analyzer Version - 2.1
+Analyzed File - obj/Ih.state.sse.o
+Binary Format - 64Bit
+Architecture  - IVB
+Analysis Type - Latency
+
+Latency Analysis Report
+---------------------------
+Latency: 150 Cycles
+
+N - port number or number of cycles resource conflict caused delay, DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3), CP - on a critical path
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion happened
+# - ESP Tracking sync uop was issued
+@ - Intel(R) AVX to Intel(R) SSE code switch, dozens of cycles penalty is expected
+! - instruction not supported, was not accounted in Analysis
+
+The Resource delay is counted since all the sources of the instructions are ready
+and until the needed resource becomes available
+
+| Inst |            Resource Delay In Cycles             |    |
+| Num  | 0  - DV | 1  | 2  - D  | 3  - D  | 4  | 5  | FE |    |
+---------------------------------------------------------------
+|  0   |         |    |         |         |    |    |    |    | movsxd rdx, dword ptr [rbp+r12*4]
+|  1   |         |    |         |         |    |    |    |    | movaps xmm15, xmm14
+|  2   |         |    |         |         |    |    |    |    | mov rcx, qword ptr [rsp+0x28]
+|  3   |         |    | 1       |         |    |    |    |    | movsxd rsi, dword ptr [rbp+r12*4+0x4]
+|  4   |         |    |         |         |    |    |    |    | movsd xmm8, qword ptr [rcx+rdx*8]
+|  5   |         |    |         |         |    |    |    |    | movhpd xmm8, qword ptr [rcx+rsi*8]
+|  6   |         |    |         |         |    |    |    |    | addpd xmm15, xmm8
+|  7   |         |    |         |         |    |    |    |    | movaps xmm0, xmm15
+|  8   |      10 |    |         |         |    |    | 2  |    | divpd xmm0, xmmword ptr [rip]
+|  9   |         |    |         | 1       |    |    | 4  |    | call qword ptr [rip]
+| 10   |         |    |         | 1       |    |    | 3  |    | mulpd xmm15, xmmword ptr [rip]
+| 11   |         |    |         |         |    |    |    |    | subpd xmm0, xmm13
+| 12   |         |    |         |         |    |    |    |    | divpd xmm8, xmm12
+| 13   |      5  |    |         |         |    |    |    |    | divpd xmm15, xmm0
+| 14   |         |    |         |         |    |    |    |    | movaps xmm0, xmm8
+| 15   |         |    |         |         |    |    | 4  |    | movups xmmword ptr [rbx+r12*8], xmm15
+| 16   |         |    | 1       | 1       |    |    | 9  |    | call qword ptr [rip]
+| 17   |         |    |         |         |    |    |    |    | mulpd xmm0, xmm10
+| 18   |         |    | 2       |         |    |    | 5  |    | movups xmmword ptr [r14+r12*8], xmm0
+| 19   |         |    |         | 1       |    |    | 6  |    | movups xmm8, xmmword ptr [rbx+r12*8]
+| 20   |         |    |         |         |    |    |    |    | addpd xmm0, xmm8
+| 21   | 1    26 |    |         |         |    |    |    |    | divpd xmm8, xmm0
+| 22   |         |    | 2       |         |    |    | 6  |    | movups xmmword ptr [r13+r12*8], xmm8
+| 23   |         |    |         |         |    |    | 7  |    | movaps xmm8, xmm13
+| 24   |         |    |         |         |    |    | 7  |    | movaps xmm0, xmm11
+| 25   |         |    | 2       |         |    |    | 7  | CP | movups xmm15, xmmword ptr [rbx+r12*8]
+| 26   |         |    |         |         |    |    | 8  | CP | addpd xmm15, xmmword ptr [r14+r12*8]
+| 27   | 1    22 |    |         |         |    |    |    | CP | divpd xmm8, xmm15
+| 28   |         |    |         |         |    |    | 8  |    | movaps xmm15, xmm9
+| 29   | 1    21 |    |         |         |    |    |    |    | divpd xmm15, xmm8
+| 30   |         |    |         |         |    |    |    |    | mulpd xmm0, xmm15
+| 31   |         |    |         |         |    |    |    |    | mov rdx, qword ptr [rsp+0x38]
+| 32   |         |    |         |         |    |    |    |    | movups xmmword ptr [rdx+r12*8], xmm8
+| 33   |         |    |         |         |    |    | 20 |    | call qword ptr [rip]
+| 34   |         |    | 2       |         |    |    | 10 |    | movups xmm1, xmmword ptr [r13+r12*8]
+| 35   | 2    34 |    |         |         |    |    |    | CP | divpd xmm1, xmm8
+| 36   |         |    |         |         |    |    | 11 | CP | xorps xmm1, xmmword ptr [rip]
+| 37   |         |    |         |         |    |    | 11 |    | movaps xmm2, xmm13
+| 38   |         |    |         |         |    |    |    | CP | divpd xmm1, xmm15
+| 39   |         |    | 1       |         |    |    | 12 |    | movups xmm3, xmmword ptr [r15+r12*8]
+| 40   |         |    |         |         |    |    |    |    | subpd xmm2, xmm0
+| 41   |         |    |         |         |    |    |    | CP | subpd xmm1, xmm3
+| 42   |         |    |         |         |    |    |    | CP | mulpd xmm2, xmm1
+| 43   |         |    |         |         |    |    |    | CP | addpd xmm3, xmm2
+| 44   |         |    |         |         |    |    | 13 | CP | movups xmmword ptr [r15+r12*8], xmm3
+| 45   |         |    |         |         |    |    | 13 |    | add r12, 0x2
+| 46   |         |    |         | 1       |    |    |    |    | cmp r12, qword ptr [rsp+0x30]
+| 47   |         |    |         |         |    |    |    |    | jb 0xffffffffffffff08
+
+Resource Conflict on Critical Paths: 
+-------------------------------------------------------
+|  Port  | 0  - DV | 1  | 2  - D  | 3  - D  | 4  | 5  |
+-------------------------------------------------------
+| Cycles | 3    56 | 0  | 2    0  | 0    0  | 0  | 0  |
+-------------------------------------------------------
+
+List Of Delays On Critical Paths
+-------------------------------
+18 --> 25 1 Cycles Delay On PORT2_AGU
+22 --> 25 1 Cycles Delay On PORT2_AGU
+12 --> 27 9 Cycles Delay On Divider
+8 --> 27 1 Cycles Delay On Port0
+8 --> 27 13 Cycles Delay On Divider
+13 --> 35 8 Cycles Delay On Divider
+21 --> 35 1 Cycles Delay On Port0
+21 --> 35 13 Cycles Delay On Divider
+29 --> 35 1 Cycles Delay On Port0
+29 --> 35 13 Cycles Delay On Divider

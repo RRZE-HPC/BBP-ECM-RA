@@ -1,0 +1,58 @@
+Intel(R) Architecture Code Analyzer Version - 2.1
+Analyzed File - obj/Ih.current.sse.o
+Binary Format - 64Bit
+Architecture  - IVB
+Analysis Type - Throughput
+
+Throughput Analysis Report
+--------------------------
+Block Throughput: 9.50 Cycles       Throughput Bottleneck: FrontEnd
+
+Port Binding In Cycles Per Iteration:
+-------------------------------------------------------------------------
+|  Port  |  0   -  DV  |  1   |  2   -  D   |  3   -  D   |  4   |  5   |
+-------------------------------------------------------------------------
+| Cycles | 4.5    0.0  | 4.5  | 8.0    5.0  | 8.0    5.0  | 6.0  | 6.0  |
+-------------------------------------------------------------------------
+
+N - port number or number of cycles resource conflict caused delay, DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3), CP - on a critical path
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion happened
+# - ESP Tracking sync uop was issued
+@ - SSE instruction followed an AVX256 instruction, dozens of cycles penalty is expected
+! - instruction not supported, was not accounted in Analysis
+
+| Num Of |              Ports pressure in cycles               |    |
+|  Uops  |  0  - DV  |  1  |  2  -  D  |  3  -  D  |  4  |  5  |    |
+---------------------------------------------------------------------
+|   1    |           |     | 1.0   1.0 |           |     |     |    | movq xmm1, qword ptr [r9+rbp*4]
+|   1    | 1.0       |     |           |           |     |     |    | movq r14, xmm1
+|   1    |           |     |           | 1.0   1.0 |     |     |    | movups xmm3, xmmword ptr [r12+rbp*8]
+|   1    | 0.5       | 0.5 |           |           |     |     |    | movsxd rdx, r14d
+|   1    | 1.0       |     |           |           |     |     |    | sar r14, 0x20
+|   2    | 1.0       |     | 1.0   1.0 |           |     |     |    | mulpd xmm3, xmmword ptr [r10+rbp*8]
+|   1    |           |     |           | 1.0   1.0 |     |     |    | movq xmm2, qword ptr [r13+rdx*8]
+|   2    |           |     | 1.0   1.0 |           |     | 1.0 |    | movhpd xmm2, qword ptr [r13+r14*8]
+|   1    |           | 1.0 |           |           |     |     |    | subpd xmm2, xmm0
+|   2    |           |     |           | 1.0       | 1.0 |     |    | movups xmmword ptr [rax+rbp*8], xmm3
+|   1    | 1.0       |     |           |           |     |     |    | mulpd xmm3, xmm2
+|   2    |           |     | 1.0       |           | 1.0 |     |    | movups xmmword ptr [rbx+rbp*8], xmm3
+|   1    |           |     |           | 1.0   1.0 |     |     |    | movq xmm4, qword ptr [r8+rdx*8]
+|   2    |           |     | 1.0   1.0 |           |     | 1.0 |    | movhpd xmm4, qword ptr [r8+r14*8]
+|   1    |           | 1.0 |           |           |     |     |    | subpd xmm4, xmm3
+|   1    |           |     |           | 1.0   1.0 |     |     |    | movups xmm6, xmmword ptr [rax+rbp*8]
+|   1    |           | 1.0 |           |           |     |     |    | add rbp, 0x2
+|   2    |           |     | 1.0       |           | 1.0 |     |    | movq qword ptr [r8+rdx*8], xmm4
+|   1    |           |     |           |           |     | 1.0 |    | unpckhpd xmm4, xmm4
+|   2    |           |     |           | 1.0       | 1.0 |     |    | movq qword ptr [r8+r14*8], xmm4
+|   1    |           |     | 1.0   1.0 |           |     |     |    | movq xmm5, qword ptr [rdi+rdx*8]
+|   2    |           |     |           | 1.0   1.0 |     | 1.0 |    | movhpd xmm5, qword ptr [rdi+r14*8]
+|   1    |           | 1.0 |           |           |     |     |    | addpd xmm6, xmm5
+|   2    |           |     | 1.0       |           | 1.0 |     |    | movq qword ptr [rdi+rdx*8], xmm6
+|   1    |           |     |           |           |     | 1.0 |    | unpckhpd xmm6, xmm6
+|   2    |           |     |           | 1.0       | 1.0 |     |    | movq qword ptr [rdi+r14*8], xmm6
+|   1    |           |     |           |           |     | 1.0 |    | cmp rbp, rcx
+|   0F   |           |     |           |           |     |     |    | jb 0xffffffffffffff74
+Total Num Of Uops: 37

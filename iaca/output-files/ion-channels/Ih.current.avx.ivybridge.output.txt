@@ -1,0 +1,86 @@
+Intel(R) Architecture Code Analyzer Version - 2.1
+Analyzed File - obj/Ih.current.avx.o
+Binary Format - 64Bit
+Architecture  - IVB
+Analysis Type - Throughput
+
+Throughput Analysis Report
+--------------------------
+Block Throughput: 18.80 Cycles       Throughput Bottleneck: FrontEnd
+
+Port Binding In Cycles Per Iteration:
+-------------------------------------------------------------------------
+|  Port  |  0   -  DV  |  1   |  2   -  D   |  3   -  D   |  4   |  5   |
+-------------------------------------------------------------------------
+| Cycles | 8.5    0.0  | 8.5  | 16.2   11.0 | 16.8   12.0 | 12.0 | 14.0 |
+-------------------------------------------------------------------------
+
+N - port number or number of cycles resource conflict caused delay, DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3), CP - on a critical path
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion happened
+# - ESP Tracking sync uop was issued
+@ - SSE instruction followed an AVX256 instruction, dozens of cycles penalty is expected
+! - instruction not supported, was not accounted in Analysis
+
+| Num Of |              Ports pressure in cycles               |    |
+|  Uops  |  0  - DV  |  1  |  2  -  D  |  3  -  D  |  4  |  5  |    |
+---------------------------------------------------------------------
+|   1    |           |     | 1.0   1.0 |           |     |     |    | movsxd rcx, dword ptr [r13+rbx*4]
+|   1    |           |     |           | 1.0   1.0 |     |     |    | vmovdqu xmm1, xmmword ptr [r13+rbx*4]
+|   1    |           |     | 1.0   1.0 |           |     |     |    | vmovupd xmm6, xmmword ptr [r14+rbx*8]
+|   1    |           |     |           | 1.0   1.0 |     |     |    | vmovupd xmm7, xmmword ptr [rdx+rbx*8]
+|   1    |           |     | 1.0   1.0 |           |     |     |    | movsxd r8, dword ptr [r13+rbx*4+0x8]
+|   1    |           |     |           | 1.0   1.0 |     |     |    | movsxd rsi, dword ptr [r13+rbx*4+0x4]
+|   1    |           |     | 1.0   1.0 |           |     |     |    | movsxd r15, dword ptr [r13+rbx*4+0xc]
+|   1    |           |     |           | 1.0   1.0 |     |     |    | vmovq xmm2, qword ptr [r11+rcx*8]
+|   1    |           |     | 1.0   1.0 |           |     |     |    | vmovq xmm3, qword ptr [r11+r8*8]
+|   1    |           | 1.0 |           |           |     |     |    | vpunpckhqdq xmm15, xmm1, xmm1
+|   2    |           |     |           | 1.0   1.0 |     | 1.0 |    | vmovhpd xmm4, xmm2, qword ptr [r11+rsi*8]
+|   1    | 1.0       |     |           |           |     |     |    | vmovq rsi, xmm1
+|   2    |           |     | 1.0   1.0 |           |     | 1.0 |    | vmovhpd xmm5, xmm3, qword ptr [r11+r15*8]
+|   1    | 1.0       |     |           |           |     |     |    | vmovq r15, xmm15
+|   1    |           | 1.0 |           |           |     |     |    | movsxd rcx, esi
+|   1    | 0.5       | 0.5 |           |           |     |     |    | movsxd r8, r15d
+|   1    | 1.0       |     |           |           |     |     |    | sar rsi, 0x20
+|   1    | 1.0       |     |           |           |     |     |    | sar r15, 0x20
+|   1    |           |     |           | 1.0   1.0 |     |     |    | vmovq xmm14, qword ptr [r12+rcx*8]
+|   1    |           |     | 1.0   1.0 |           |     |     |    | vmovq xmm1, qword ptr [r12+r8*8]
+|   2    |           |     |           | 1.0   1.0 |     | 1.0 |    | vmovhpd xmm14, xmm14, qword ptr [r12+rsi*8]
+|   2    |           |     | 1.0   1.0 |           |     | 1.0 |    | vmovhpd xmm15, xmm1, qword ptr [r12+r15*8]
+|   2    | 1.0       |     |           | 1.0   1.0 |     |     |    | vinsertf128 ymm8, ymm6, xmmword ptr [r14+rbx*8+0x10], 0x1
+|   2    | 1.0       |     | 1.0   1.0 |           |     |     |    | vinsertf128 ymm9, ymm7, xmmword ptr [rdx+rbx*8+0x10], 0x1
+|   1    | 1.0       |     |           |           |     |     |    | vmulpd ymm11, ymm8, ymm9
+|   2    |           |     | 0.2       | 0.8       | 2.0 |     |    | vmovupd ymmword ptr [rdi+rbx*8], ymm11
+|   1    |           |     |           |           |     | 1.0 |    | vinsertf128 ymm10, ymm4, xmm5, 0x1
+|   1    |           | 1.0 |           |           |     |     |    | vsubpd ymm12, ymm10, ymm0
+|   1    | 1.0       |     |           |           |     |     |    | vmulpd ymm13, ymm11, ymm12
+|   1    |           |     |           |           |     | 1.0 |    | vinsertf128 ymm2, ymm14, xmm15, 0x1
+|   1    |           | 1.0 |           |           |     |     |    | vsubpd ymm3, ymm2, ymm13
+|   2    |           |     | 0.2       | 0.8       | 1.0 |     |    | vmovupd xmmword ptr [rax+rbx*8], xmm13
+|   2    |           |     | 0.6       | 0.4       | 1.0 |     |    | vextractf128 xmmword ptr [rax+rbx*8+0x10], ymm13, 0x1
+|   1    |           |     |           |           |     | 1.0 |    | vextractf128 xmm5, ymm3, 0x1
+|   1    |           | 1.0 |           |           |     |     |    | vpunpckhqdq xmm4, xmm3, xmm3
+|   2    |           |     | 0.5       | 0.5       | 1.0 |     |    | vmovq qword ptr [r12+rcx*8], xmm3
+|   1    |           |     |           |           |     | 1.0 |    | vunpckhpd xmm6, xmm5, xmm5
+|   2    |           |     | 0.5       | 0.5       | 1.0 |     |    | vmovq qword ptr [r12+rsi*8], xmm4
+|   2    |           |     | 0.3       | 0.7       | 1.0 |     |    | vmovq qword ptr [r12+r8*8], xmm5
+|   2    |           |     | 0.7       | 0.3       | 1.0 |     |    | vmovq qword ptr [r12+r15*8], xmm6
+|   1    |           |     |           | 1.0   1.0 |     |     |    | vmovq xmm7, qword ptr [r10+rcx*8]
+|   1    |           |     | 1.0   1.0 |           |     |     |    | vmovq xmm8, qword ptr [r10+r8*8]
+|   2    |           |     |           | 1.0   1.0 |     | 1.0 |    | vmovhpd xmm9, xmm7, qword ptr [r10+rsi*8]
+|   2    |           |     | 1.0   1.0 |           |     | 1.0 |    | vmovhpd xmm10, xmm8, qword ptr [r10+r15*8]
+|   1    |           |     |           |           |     | 1.0 |    | vinsertf128 ymm11, ymm9, xmm10, 0x1
+|   2    |           | 1.0 |           | 1.0   2.0 |     |     |    | vaddpd ymm12, ymm11, ymmword ptr [rdi+rbx*8]
+|   1    |           | 1.0 |           |           |     |     |    | add rbx, 0x4
+|   1    |           |     |           |           |     | 1.0 |    | vextractf128 xmm2, ymm12, 0x1
+|   1    |           | 1.0 |           |           |     |     |    | vpunpckhqdq xmm1, xmm12, xmm12
+|   2    |           |     | 0.7       | 0.3       | 1.0 |     |    | vmovq qword ptr [r10+rcx*8], xmm12
+|   1    |           |     |           |           |     | 1.0 |    | vunpckhpd xmm3, xmm2, xmm2
+|   2    |           |     | 0.6       | 0.4       | 1.0 |     |    | vmovq qword ptr [r10+rsi*8], xmm1
+|   2    |           |     | 0.4       | 0.6       | 1.0 |     |    | vmovq qword ptr [r10+r8*8], xmm2
+|   2    |           |     | 0.6       | 0.4       | 1.0 |     |    | vmovq qword ptr [r10+r15*8], xmm3
+|   1    |           |     |           |           |     | 1.0 |    | cmp rbx, r9
+|   0F   |           |     |           |           |     |     |    | jb 0xfffffffffffffece
+Total Num Of Uops: 75

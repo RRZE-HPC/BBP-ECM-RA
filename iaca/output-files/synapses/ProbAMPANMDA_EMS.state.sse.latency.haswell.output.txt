@@ -1,0 +1,91 @@
+Intel(R) Architecture Code Analyzer Version - 2.1
+Analyzed File - obj/ProbAMPANMDA_EMS.state.sse.o
+Binary Format - 64Bit
+Architecture  - HSW
+Analysis Type - Latency
+
+Latency Analysis Report
+---------------------------
+Latency: 91 Cycles
+
+N - port number or number of cycles resource conflict caused delay, DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3), CP - on a critical path
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion happened
+# - ESP Tracking sync uop was issued
+@ - Intel(R) AVX to Intel(R) SSE code switch, dozens of cycles penalty is expected
+! - instruction not supported, was not accounted in Analysis
+
+The Resource delay is counted since all the sources of the instructions are ready
+and until the needed resource becomes available
+
+| Inst |                 Resource Delay In Cycles                  |    |
+| Num  | 0  - DV | 1  | 2  - D  | 3  - D  | 4  | 5  | 6  | 7  | FE |    |
+-------------------------------------------------------------------------
+|  0   |         |    |         |         |    |    |    |    |    |    | mov rax, qword ptr [rsp+0x10]
+|  1   |         |    |         |         |    |    |    |    |    |    | movaps xmm0, xmm8
+|  2   |         |    |         |         |    |    |    |    |    |    | movups xmm1, xmmword ptr [rax+r13*8]
+|  3   |      13 |    |         |         |    |    |    |    |    |    | divpd xmm0, xmm1
+|  4   |         |    |         |         |    |    |    |    |    |    | mulpd xmm0, xmm9
+|  5   |         |    |         |         |    |    |    |    | 2  |    | call qword ptr [rip]
+|  6   |         |    |         |         |    |    |    |    | 1  |    | movaps xmm1, xmm10
+|  7   |         |    |         |         |    |    |    |    |    |    | subpd xmm1, xmm0
+|  8   |         |    |         |         |    |    |    |    | 2  |    | movups xmm2, xmmword ptr [r15+r13*8]
+|  9   |         |    |         |         |    |    |    |    |    |    | mulpd xmm1, xmm2
+| 10   |         |    |         |         |    |    |    |    | 2  |    | xorps xmm1, xmmword ptr [rip]
+| 11   |         |    |         |         |    |    |    |    | 3  |    | movaps xmm0, xmm8
+| 12   |         |    |         |         |    |    |    |    |    |    | addpd xmm2, xmm1
+| 13   |         |    |         |         |    |    |    |    | 3  |    | movups xmmword ptr [r15+r13*8], xmm2
+| 14   |         |    |         |         |    |    |    |    | 4  |    | divpd xmm0, xmmword ptr [rbx+r13*8]
+| 15   |         |    |         |         |    |    |    |    |    |    | mulpd xmm0, xmm9
+| 16   |         |    |         |         |    |    |    |    | 9  |    | call qword ptr [rip]
+| 17   |         |    |         |         |    |    |    |    | 5  |    | movaps xmm1, xmm10
+| 18   |         |    |         |         |    |    |    |    |    |    | subpd xmm1, xmm0
+| 19   |         |    |         | 1       |    |    |    |    | 5  |    | movups xmm2, xmmword ptr [r14+r13*8]
+| 20   |         |    |         |         |    |    |    |    | 6  |    | movaps xmm0, xmm8
+| 21   |         |    |         |         |    |    |    |    |    |    | mulpd xmm1, xmm2
+| 22   |         |    |         |         |    |    |    |    | 6  |    | xorps xmm1, xmmword ptr [rip]
+| 23   |         | 1  |         |         |    |    |    |    |    |    | addpd xmm2, xmm1
+| 24   |         |    |         |         |    |    |    |    |    |    | mov rax, qword ptr [rsp+0x28]
+| 25   |         |    |         |         |    |    |    |    | 7  |    | movups xmmword ptr [r14+r13*8], xmm2
+| 26   |         |    |         |         |    |    |    |    |    |    | movups xmm3, xmmword ptr [rax+r13*8]
+| 27   | 2    16 |    |         |         |    |    |    |    |    |    | divpd xmm0, xmm3
+| 28   |         |    |         |         |    |    |    |    |    |    | mulpd xmm0, xmm9
+| 29   |         |    |         |         |    |    |    |    | 16 | CP | call qword ptr [rip]
+| 30   |         |    |         |         |    |    |    |    | 9  |    | movaps xmm1, xmm10
+| 31   |         |    |         |         |    |    |    |    |    |    | subpd xmm1, xmm0
+| 32   |         |    |         |         |    |    |    |    | 9  |    | movups xmm2, xmmword ptr [r12+r13*8]
+| 33   |         |    |         |         |    |    |    |    |    |    | mulpd xmm1, xmm2
+| 34   |         |    |         | 1       |    |    |    |    | 10 |    | xorps xmm1, xmmword ptr [rip]
+| 35   |         |    |         |         |    |    |    |    | 10 |    | movaps xmm0, xmm8
+| 36   |         |    |         |         |    |    |    |    |    |    | addpd xmm2, xmm1
+| 37   |         |    |         |         |    |    |    |    |    | CP | mov rax, qword ptr [rsp+0x20]
+| 38   |         |    |         | 1       |    |    |    |    | 11 |    | movups xmmword ptr [r12+r13*8], xmm2
+| 39   | 2    26 |    |         |         |    |    |    |    |    | CP | divpd xmm0, xmmword ptr [rax+r13*8]
+| 40   |         |    |         |         |    |    |    |    |    | CP | mulpd xmm0, xmm9
+| 41   |         |    |         |         |    |    |    |    | 24 |    | call qword ptr [rip]
+| 42   |         |    |         |         |    |    |    |    | 12 |    | movaps xmm1, xmm10
+| 43   |         |    |         |         |    |    |    |    |    | CP | subpd xmm1, xmm0
+| 44   |         |    |         |         |    |    |    |    | 13 |    | movups xmm2, xmmword ptr [rbp+r13*8]
+| 45   |         |    |         |         |    |    |    |    |    | CP | mulpd xmm1, xmm2
+| 46   |         |    |         |         |    |    |    |    | 13 | CP | xorps xmm1, xmmword ptr [rip]
+| 47   |         |    |         |         |    |    |    |    |    | CP | addpd xmm2, xmm1
+| 48   |         |    | 2       |         |    |    |    |    | 14 | CP | movups xmmword ptr [rbp+r13*8], xmm2
+| 49   |         |    |         |         |    |    |    |    | 14 |    | add r13, 0x2
+| 50   |         |    |         |         |    |    |    |    |    |    | cmp r13, qword ptr [rsp+0x18]
+| 51   |         |    |         |         |    |    |    |    |    |    | jb 0xffffffffffffff00
+
+Resource Conflict on Critical Paths: 
+-----------------------------------------------------------------
+|  Port  | 0  - DV | 1  | 2  - D  | 3  - D  | 4  | 5  | 6  | 7  |
+-----------------------------------------------------------------
+| Cycles | 2    26 | 0  | 0    0  | 0    0  | 0  | 0  | 0  | 0  |
+-----------------------------------------------------------------
+
+List Of Delays On Critical Paths
+-------------------------------
+3 --> 39 13 Cycles Delay On Divider
+21 --> 39 1 Cycles Delay On Port0
+27 --> 39 1 Cycles Delay On Port0
+27 --> 39 13 Cycles Delay On Divider

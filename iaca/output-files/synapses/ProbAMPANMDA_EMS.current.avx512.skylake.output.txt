@@ -1,0 +1,106 @@
+Intel(R) Architecture Code Analyzer Version -  v3.0-28-g1ba2cbb build date: 2017-10-23;16:42:45
+Analyzed File -  obj/ProbAMPANMDA_EMS.current.avx512.o
+Binary Format - 64Bit
+Architecture  -  SKX
+Analysis Type - Throughput
+
+Throughput Analysis Report
+--------------------------
+Block Throughput: 45.87 Cycles       Throughput Bottleneck: Backend
+Loop Count:  33
+Port Binding In Cycles Per Iteration:
+--------------------------------------------------------------------------------------------------
+|  Port  |   0   -  DV   |   1   |   2   -  D    |   3   -  D    |   4   |   5   |   6   |   7   |
+--------------------------------------------------------------------------------------------------
+| Cycles | 21.0     0.0  |  2.5  | 30.0    24.0  | 30.0    27.0  | 10.0  | 22.0  |  2.5  |  0.0  |
+--------------------------------------------------------------------------------------------------
+
+DV - Divider pipe (on port 0)
+D - Data fetch pipe (on ports 2 and 3)
+F - Macro Fusion with the previous instruction occurred
+* - instruction micro-ops not bound to a port
+^ - Micro Fusion occurred
+# - ESP Tracking sync uop was issued
+@ - SSE instruction followed an AVX256/AVX512 instruction, dozens of cycles penalty is expected
+X - instruction not supported, was not accounted in Analysis
+
+| Num Of   |                    Ports pressure in cycles                         |      |
+|  Uops    |  0  - DV    |  1   |  2  -  D    |  3  -  D    |  4   |  5   |  6   |  7   |
+-----------------------------------------------------------------------------------------
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | mov rax, qword ptr [rsp+0x88]
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k1, xmm0, xmm0
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | vmovdqu ymm1, ymmword ptr [rax+rsi*4]
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | mov rdx, qword ptr [rsp+0xa0]
+|   1*     |             |      |             |             |      |      |      |      | vpxord zmm16, zmm16, zmm16
+|   5^     | 1.0         |      | 4.0     4.0 | 4.0     4.0 |      | 1.0  | 1.0  |      | vgatherdpd zmm16, k1, zmmword ptr [rdx+ymm1*8]
+|   2^     | 0.5         |      |             | 1.0     1.0 |      | 0.5  |      |      | vxorpd zmm2, zmm16, qword ptr [rip]{1to8}
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vmulpd zmm0, zmm21, zmm2
+|   5^     |             |      | 1.0     1.0 | 1.0     1.0 | 1.0  |      |      |      | call qword ptr [rip]
+|   1#     |             | 1.0  | 1.0     1.0 |             |      |      |      |      | mov rax, qword ptr [rsp+0x68]
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | mov rdx, qword ptr [rsp+0x70]
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | mov r9, qword ptr [rsp+0x60]
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | mov r10, qword ptr [rsp+0x58]
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | mov r11, qword ptr [rsp+0x50]
+|   1*     |             |      |             |             |      |      |      |      | vpxord zmm23, zmm23, zmm23
+|   1*     |             |      |             |             |      |      |      |      | vmovaps zmm1, zmm0
+|   2      | 0.5         |      |             | 1.0     1.0 |      | 0.5  |      |      | vmulpd zmm0, zmm17, zmmword ptr [rax+rsi*8]
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vfmadd213pd zmm1, zmm0, zmm20
+|   1      |             |      |             |             |      | 1.0  |      |      | vpcmpeqb k2, xmm0, xmm0
+|   3      | 2.0         |      |             |             |      | 1.0  |      |      | vrcp14pd zmm3, zmm1
+|   2^     | 0.5         |      | 1.0     1.0 |             |      | 0.5  |      |      | vfnmadd213pd zmm1, zmm3, qword ptr [rip]{1to8}
+|   1      |             |      |             |             |      | 1.0  |      |      | vfpclasspd k0, zmm3, 0x1e
+|   1      | 1.0         |      |             |             |      |      |      |      | vmulpd zmm2, zmm1, zmm1
+|   1      | 1.0         |      |             |             |      |      |      |      | knotw k1, k0
+|   1      |             |      |             |             |      | 1.0  |      |      | vfmadd213pd zmm3{k1}, zmm1, zmm3
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vfmadd213pd zmm3{k1}, zmm2, zmm3
+|   2      |             |      |             | 1.0         | 1.0  |      |      |      | vmovupd zmmword ptr [rdi+rsi*8], zmm3
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | vmovups zmm4, zmmword ptr [rbx+rsi*8]
+|   2      | 0.5         |      |             | 1.0     1.0 |      | 0.5  |      |      | vsubpd zmm5, zmm4, zmmword ptr [rdx+rsi*8]
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vmulpd zmm6, zmm19, zmm5
+|   2      |             |      | 1.0         |             | 1.0  |      |      |      | vmovupd zmmword ptr [r12+rsi*8], zmm6
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | vmovups zmm7, zmmword ptr [r9+rsi*8]
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | vmovups zmm10, zmmword ptr [rdi+rsi*8]
+|   2      | 0.5         |      |             | 1.0     1.0 |      | 0.5  |      |      | vsubpd zmm8, zmm7, zmmword ptr [r10+rsi*8]
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vmulpd zmm11, zmm19, zmm8
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vmulpd zmm9, zmm11, zmm10
+|   2      |             |      | 1.0         |             | 1.0  |      |      |      | vmovupd zmmword ptr [r14+rsi*8], zmm9
+|   2      | 0.5         |      |             | 1.0     1.0 |      | 0.5  |      |      | vfmadd213pd zmm11, zmm10, zmmword ptr [r12+rsi*8]
+|   2      |             |      | 1.0         |             | 1.0  |      |      |      | vmovupd zmmword ptr [r11+rsi*8], zmm11
+|   2      | 0.5         |      |             | 1.0     1.0 |      | 0.5  |      |      | vsubpd zmm12, zmm16, zmmword ptr [r13+rsi*8]
+|   2      | 0.5         |      | 1.0     1.0 |             |      | 0.5  |      |      | vmulpd zmm13, zmm12, zmmword ptr [r12+rsi*8]
+|   2      |             |      |             | 1.0         | 1.0  |      |      |      | vmovupd zmmword ptr [r15+rsi*8], zmm13
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | vmovups zmm14, zmmword ptr [r14+rsi*8]
+|   2      | 0.5         |      |             | 1.0     1.0 |      | 0.5  |      |      | vsubpd zmm26, zmm16, zmmword ptr [r13+rsi*8]
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vmulpd zmm16, zmm14, zmm26
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | mov rax, qword ptr [rsp+0x48]
+|   2      |             |      |             | 1.0         | 1.0  |      |      |      | vmovupd zmmword ptr [rax+rsi*8], zmm16
+|   2      | 0.5         |      | 1.0     1.0 |             |      | 0.5  |      |      | vfmadd213pd zmm26, zmm14, zmmword ptr [r15+rsi*8]
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | mov rax, qword ptr [rsp+0x80]
+|   2      |             |      | 1.0         |             | 1.0  |      |      |      | vmovupd zmmword ptr [rax+rsi*8], zmm26
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | mov rax, qword ptr [rsp+0x38]
+|   1      |             |      | 1.0     1.0 |             |      |      |      |      | vmovups zmm15, zmmword ptr [r12+rsi*8]
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | vmovdqu32 ymm22, ymmword ptr [rax+rsi*4]
+|   2      | 0.5         |      | 1.0     1.0 |             |      | 0.5  |      |      | vaddpd zmm28, zmm15, zmmword ptr [r14+rsi*8]
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | mov rax, qword ptr [rsp+0x40]
+|   5^     | 1.0         |      | 4.0     4.0 | 4.0     4.0 |      | 1.0  | 1.0  |      | vgatherdpd zmm23, k2, zmmword ptr [rax+ymm22*8]
+|   3      | 2.0         |      |             |             |      | 1.0  |      |      | vrcp14pd zmm25, zmm23
+|   2^     |             |      | 1.0     1.0 |             |      | 1.0  |      |      | vfnmadd213pd zmm23, zmm25, qword ptr [rip]{1to8}
+|   1      |             |      |             |             |      | 1.0  |      |      | vfpclasspd k3, zmm25, 0x1e
+|   1      | 1.0         |      |             |             |      |      |      |      | vmulpd zmm24, zmm23, zmm23
+|   1      | 1.0         |      |             |             |      |      |      |      | knotw k4, k3
+|   1      |             |      |             |             |      | 1.0  |      |      | vfmadd213pd zmm25{k4}, zmm23, zmm25
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vfmadd213pd zmm25{k4}, zmm24, zmm25
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vmulpd zmm29, zmm18, zmm25
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vmulpd zmm27, zmm26, zmm29
+|   1      | 0.5         |      |             |             |      | 0.5  |      |      | vmulpd zmm30, zmm28, zmm29
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | mov rax, qword ptr [rsp+0x90]
+|   2      |             |      | 1.0         |             | 1.0  |      |      |      | vmovupd zmmword ptr [rax+rsi*8], zmm27
+|   1      |             |      |             | 1.0     1.0 |      |      |      |      | mov rax, qword ptr [rsp+0x98]
+|   2      |             |      | 1.0         |             | 1.0  |      |      |      | vmovupd zmmword ptr [rax+rsi*8], zmm30
+|   1      |             | 1.0  |             |             |      |      |      |      | add rsi, 0x8
+|   2^     |             | 0.5  |             | 1.0     1.0 |      |      | 0.5  |      | cmp rsi, qword ptr [rsp+0x78]
+|   0*F    |             |      |             |             |      |      |      |      | jb 0xfffffffffffffe24
+Total Num Of Uops: 110
+Analysis Notes:
+Backend allocation was stalled due to unavailable allocation resources.
+There were bubbles in the frontend.
