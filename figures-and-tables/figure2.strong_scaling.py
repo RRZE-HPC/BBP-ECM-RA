@@ -108,13 +108,11 @@ for datadir in os.listdir(args.path):
     ninstances = dict()
 
     for irun, run in enumerate(runs):
-        print(run)
         rundir = os.path.join(args.path, datadir, 'run' + str(run) )
         for th_idx, thread in enumerate(nthreads):
             if thread == 1:
                 continue
             expdir = os.path.join(rundir, str(thread) + 'n' )
-#            print( expdir )
             with open( os.path.join( expdir, 'caches.txt' ), 'r' ) as meas_f:
                 lines = meas_f.readlines()
 
@@ -123,7 +121,6 @@ for datadir in os.listdir(args.path):
             nmultiples = float( next( v for v in lines if 'multiple = ' in v).split('multiple = ')[1])
 
             for k_idx, k in enumerate(nrn.kernels):
-#                print( k[0]['name'] )
                 kname = k[0]['name'].split(' ')[0]
 
                 if kname == 'linear':
@@ -207,8 +204,8 @@ for datadir in os.listdir(args.path):
             for k_idx in range(measurements.shape[0]):
                 scaling[k_idx,ith,irun] = measurements[ k_idx, 0, irun ]/(th*measurements[ k_idx, ith, irun ])
 
-    for ith, th in enumerate(nthreads):
-        print( th, '::', tot_scaling[ith,:] )
+#    for ith, th in enumerate(nthreads):
+#        print( th, '::', tot_scaling[ith,:] )
 
     mean_pred = np.mean( measurements, axis=2)
     sd_pred = np.std( measurements, axis=2)
@@ -264,6 +261,4 @@ totax.grid(True, which='both')
 totax.set_ylabel('Scaling efficiency')
 totax.set_xlabel('Shared memory threads')
 totax.set_ylim(ymin=0.)
-totax.legend(loc='upper left', bbox_to_anchor=(1.01, 1.01))
-totfig.subplots_adjust( right=0.6, bottom=0.2 )
 totfig.savefig('figure2_scaling_total.pdf')

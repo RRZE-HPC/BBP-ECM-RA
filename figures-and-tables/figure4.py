@@ -68,7 +68,8 @@ for datadir in os.listdir(args.path):
     print( datadir )
 
     expdir = os.path.join(args.path, datadir )
-    runs = ['no-permute', 'with-permute']
+    #runs = ['no-permute', 'with-permute']
+    runs = ['with-permute']
     n_runs = len(runs)
 
     run = runs[0]

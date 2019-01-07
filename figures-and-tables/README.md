@@ -3,6 +3,13 @@
 simply execute the python script with the corresponding name.
 N.B. must use python 3
 
+### To reproduce figure 5
+By default, the script will process the data for the best-case scenario.
+To reproduce the figure for the worst-case scenario, execute the script by specifying the proper path parameter as such
+```
+$ python3 figure5.py -p ../results/spike-delivery/worst-case/
+```
+
 ### To reproduce tables 4,6
 
 Use the `extract-single-channel-measurements.sh` script.

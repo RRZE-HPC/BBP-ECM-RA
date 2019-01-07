@@ -314,3 +314,45 @@ for datadir in os.listdir(args.path):
         fig.subplots_adjust( right=0.6, bottom=0.2 )
         fig.savefig('validate-bench_'+ arch.name.replace(' ','_') +'_' + fct + '.pdf')
 
+
+font = { 'size'   : 18 }
+matplotlib.rc('font', **font)
+
+# Need to do a trick to invert order of IVB SSE and IVB AVX
+a = next( i for i,v in enumerate(architectures) if v.name == 'IVB SSE' )
+b = next( i for i,v in enumerate(architectures) if v.name == 'IVB AVX' )
+if a > b:
+    architectures[a], architectures[b] = architectures[b], architectures[a]
+    whole_neuron_times_singleth[a], whole_neuron_times_singleth[b] = whole_neuron_times_singleth[b], whole_neuron_times_singleth[a]
+    whole_neuron_times_maxth[a], whole_neuron_times_maxth[b] = whole_neuron_times_maxth[b], whole_neuron_times_maxth[a]
+
+fig,ax = plt.subplots(2,1, figsize=(4,8))
+colors = ['#547e2b' if 'IVB' in x.name else '#77000e' for x in architectures]
+ax[0].grid()
+ax[0].grid(which='major', axis='y')
+ax[0].set_axisbelow(True)
+ax[0].bar(range(len(architectures)), [y/arch.cpu_f*1e-9/nrn.dt*1e+3 for y, arch in zip(whole_neuron_times_singleth,architectures)], color=colors )
+ideal_time_peak_perf = whole_neuron_times_singleth[1]/architectures[0].cpu_f*1e-9/nrn.dt*1e+3*17.6/73.6
+ax[0].plot( [len(architectures)-1.4, len(architectures)-0.3], [ideal_time_peak_perf]*2, '--', color='#00b89a')
+single_thread_bw_factor=0.76
+ideal_time_bw = whole_neuron_times_singleth[1]/architectures[0].cpu_f*1e-9/nrn.dt*1e+3*single_thread_bw_factor
+ax[0].plot( [len(architectures)-1.4, len(architectures)-0.3], [ideal_time_bw]*2, '-.', color='#00b89a')
+ax[0].set_xticks( range(len(architectures)) )
+ax[0].set_xticklabels([])
+ax[0].set_ylabel( 'Runtime [s]' )
+#    ax[0].set_title( 'single thread' )
+ax[1].grid()
+ax[1].grid(which='major', axis='y')
+ax[1].set_axisbelow(True)
+ax[1].bar(range(len(architectures)), [y/arch.cpu_f*1e-9/nrn.dt*1e+3 for y, arch in zip(whole_neuron_times_maxth,architectures)], color=colors )
+ideal_time_peak_perf = whole_neuron_times_maxth[1]/architectures[0].cpu_f*1e-9/nrn.dt*1e+3*17.6/73.6
+ax[1].plot( [len(architectures)-1.4, len(architectures)-0.3], [ideal_time_peak_perf]*2, '--', color='#00b89a')
+ideal_time_bw = whole_neuron_times_maxth[1]/architectures[0].cpu_f*1e-9/nrn.dt*1e+3*40./90.
+ax[1].plot( [len(architectures)-1.4, len(architectures)-0.3], [ideal_time_bw]*2, '-.', color='#00b89a')
+ax[1].set_xticks( range(len(architectures)) )
+ax[1].set_xticklabels( [x.name for x in architectures], rotation=45, ha='right' )
+ax[1].set_ylabel( 'Runtime [s]' )
+#    ax[1].set_title( 'max thread' )
+fig.subplots_adjust(hspace=0.1)
+fig.savefig( 'measured-bench-bar.pdf', bbox_inches='tight')
+

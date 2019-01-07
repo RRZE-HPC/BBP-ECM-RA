@@ -23,13 +23,13 @@ def getNtimeIter(l):
     return [ x[2] for x in l ]
 
 parser = argparse.ArgumentParser(description='')
+parser.add_argument('--model', '-m', type=str,
+            default='ecm_figures_bbp.models.L5TTPC_all_channels',
+            help='name of neuron model (with full module import expansion)\
+                e.g. ecm_figures_bbp.models.L5TTPC_all_channels')
 parser.add_argument('--path', '-p', type=str,
         default='../results/states-and-kernels/',
         help='path to results root folder')
-parser.add_argument('--model', '-m', type=str,
-        default='ecm_figures_bbp.models.L5TTPC_all_channels',
-        help='name of neuron model (with full module import expansion)\
-        e.g. ecm_figures_bbp.models.L5TTPC_all_channels')
 
 args = parser.parse_args()
 
@@ -86,6 +86,7 @@ for datadir in os.listdir(args.path):
 
     run = runs[0]
     expdir = os.path.join(args.path, datadir, 'run' + str(run) )
+
     nthreads = list()
     for subdir in os.listdir( expdir ):
         if re.match( '^[0-9]*n', subdir ) is not None:
@@ -192,21 +193,33 @@ for datadir in os.listdir(args.path):
             label=arch.name, markersize=6)
 
 #---------------------------------------------------------------------
-percent_satur = np.zeros( shape=(len(archs), 18) )
+n_instances = getNinstances( nrn.kernels )
 for arch_idx, arch in enumerate(archs):
-    saturation = ecm_figures_bbp.ecm.predictions.saturation( arch, nrn )
+    numerator = np.zeros( shape=(len(archs), 18) )
+    denominator = np.zeros( shape=(len(archs), 18) )
+    mem_traffic = np.zeros( shape=(len(nrn.kernels) ,) )
     for nth in range(1,int(arch.max_nthreads)+1):
-        predictions = ecm_figures_bbp.ecm.predictions.runtime( arch, nrn, nth )['DRAM']*getNinstances( nrn.kernels )
-        tot_satur = 0.
+        predictions = ecm_figures_bbp.ecm.predictions.runtime( arch, nrn, nth )['DRAM']
+#        tot_runtime = np.sum( predictions )/arch.cpu_f # in ns
+        tot_runtime = 0.
         for i,k in enumerate(nrn.kernels):
-            if nth >= saturation.loc[k[0]['name']]['n']:
-                tot_satur += predictions[i]
-        tot_runtime = np.sum( predictions )
-        percent_satur[arch_idx,nth-1] = tot_satur/tot_runtime
-    ax.plot( range(1,int(arch.max_nthreads)+1), 100.*percent_satur[arch_idx,:int(arch.max_nthreads)],
+            if 'linear' in k[0]['name'] or 'delivery' in k[0]['name']:
+                continue
+            numerator[arch_idx,nth-1] += arch.TMem( k[0] )
+            denominator[arch_idx,nth-1] += predictions[i]
+    percent_mem_bw = 100.*numerator/denominator
+#            tot_runtime += predictions[i]
+#            mem_traffic[i] = ecm_figures_bbp.ecm.predictions.mem_traffic( k[0] )#*n_instances[i]*1e-3
+#            print( arch.name, k[0]['name'], mem_traffic[i]/predictions[i] )
+#        tot_runtime /= arch.cpu_f
+#        tot_traffic = np.sum( mem_traffic )
+#        percent_mem_bw[arch_idx,nth-1] += 100.*(tot_traffic/tot_runtime)/arch.mem_BW
+    ax.plot( range(1,int(arch.max_nthreads)+1), percent_mem_bw[arch_idx,:int(arch.max_nthreads)],
             '--', color=arch_color[arch_idx],
             label=arch.name, linewidth=1.0 )
 
+
+    print( percent_mem_bw[arch_idx,:] )
 ax.set_xticks(range(1,19)[::3])
 ax.set_xticklabels(range(1,19)[::3])
 ax.legend()
@@ -214,4 +227,4 @@ ax.legend()
 ax.set_ylabel('Percent of runtime in saturated regime')
 ax.set_xlabel('Number of shared memory threads')
 
-fig.savefig('percent-satur.pdf')
+fig.savefig('percent-bw.pdf')
