@@ -5,7 +5,7 @@ class base_skx():
     def __init__(self):
         self.L1L2_BW = 64. # B/cy
         self.L2L3_BW = 16. # B/cy
-        self.mem_BW   = 90. # GB/s
+        self.mem_BW   = 105. # GB/s
         self.L1_latency = 4. # cy per access, from https://www.7-cpu.com/cpu/Skylake.html
         self.L2_latency = 12. # cy per access, from https://www.7-cpu.com/cpu/Skylake.html
         self.L3_latency = 12. # cy per access, dummy number for now
