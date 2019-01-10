@@ -81,6 +81,7 @@ for datadir in os.listdir(args.path):
     nthreads = sorted( nthreads )
 
     measurements = np.zeros( shape=(1, len(nthreads), n_runs ) )
+    measurements_in_s = np.zeros( shape=(1, len(nthreads), n_runs ) )
     ninstances = dict()
 
     for irun, run in enumerate(runs):
@@ -104,17 +105,31 @@ for datadir in os.listdir(args.path):
 
                 idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'CPU_CLK_UNHALTED_CORE' in v)
                 measurements[ 0, th_idx, irun ] = float( lines[idx + idx_meas].split(',')[5] )/( n_instances*tstop/nrn.dt )
+
+                idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz] STAT' in v)
+                measurements_in_s[ 0, th_idx, irun ] = measurements[ 0, th_idx, irun ]/float( lines[idx + idx_meas].split(',')[4] )*1e-6
+                #print( 'linalg_triang', run, thread, 'threads', float( lines[idx + idx_meas].split(',')[4] ) )
+
                 meas_name = 'linalg_bksub'
                 idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Raw STAT,CACHES' in v)
 
                 idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'CPU_CLK_UNHALTED_CORE' in v)
                 measurements[ 0, th_idx, irun ] += float( lines[idx + idx_meas].split(',')[5] )/( n_instances*tstop/nrn.dt )
+
+                idx_freq = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz] STAT' in v)
+                measurements_in_s[ 0, th_idx, irun ] += float( lines[idx + idx_meas].split(',')[5] )/( n_instances*tstop/nrn.dt )/float( lines[idx + idx_freq].split(',')[4] )*1e-6
+                #print( 'linalg_bksub', run, thread, 'threads', float( lines[idx + idx_freq].split(',')[4] ) )
             except StopIteration:
                 meas_name = 'linalg'
                 idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Raw STAT,CACHES' in v)
 
                 idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'CPU_CLK_UNHALTED_CORE' in v)
                 measurements[ 0, th_idx, irun ] = float( lines[idx + idx_meas].split(',')[5] )/( n_instances*tstop/nrn.dt )
+
+                idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz] STAT' in v)
+                measurements_in_s[ 0, th_idx, irun ] = measurements[ 0, th_idx, irun ]/float( lines[idx + idx_meas].split(',')[4] )*1e-6
+
+                #print( 'linalg', run, thread, 'threads', float( lines[idx + idx_meas].split(',')[4] ) )
 
         # Handle the single thread separately
         with open( os.path.join( rundir, '1n', 'caches.txt' ), 'r' ) as meas_f:
@@ -127,17 +142,29 @@ for datadir in os.listdir(args.path):
 
                 idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'CPU_CLK_UNHALTED_CORE' in v)
                 measurements[ 0, 0, irun ] = float( lines[idx + idx_meas].split(',')[-1] )/( n_instances*tstop/nrn.dt )
+
+                idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz]' in v)
+                measurements_in_s[ 0, 0, irun ] = measurements[ 0, 0, irun ]/float( lines[idx + idx_meas].split(',')[1] )*1e-6
+
                 meas_name = 'linalg_bksub'
                 idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Raw,CACHES' in v)
 
                 idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'CPU_CLK_UNHALTED_CORE' in v)
                 measurements[ 0, 0, irun ] += float( lines[idx + idx_meas].split(',')[-1] )/( n_instances*tstop/nrn.dt )
+
+                idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz]' in v)
+                measurements_in_s[ 0, 0, irun ] += measurements[ 0, 0, irun ]/float( lines[idx + idx_meas].split(',')[1] )*1e-6
+
             except StopIteration:
                 meas_name = 'linalg'
                 idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Raw,CACHES' in v)
 
                 idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'CPU_CLK_UNHALTED_CORE' in v)
                 measurements[ 0, 0, irun ] = float( lines[idx + idx_meas].split(',')[-1] )/( n_instances*tstop/nrn.dt )
+
+                idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz]' in v)
+                measurements_in_s[ 0, 0, irun ] = measurements[ 0, 0, irun ]/float( lines[idx + idx_meas].split(',')[1] )*1e-6
+
 #                print( next( v for v in lines if 'Number of compartments' in v) )
 
 
@@ -170,7 +197,7 @@ for datadir in os.listdir(args.path):
             line_style = '-.' if run == 'no-permute' else '--'
             scaling_factor = arch.cpu_f
 
-            ax.plot( nthreads, scaling_factor/measurements[0,:,irun], marker, fillstyle = fill_style, markersize=10, color=color )
+            ax.plot( nthreads, 1e-9/measurements_in_s[0,:,irun], marker, fillstyle = fill_style, markersize=10, color=color )
             #print( run )
             #print( predictions[i,:] )
             ax.plot( nthreads, scaling_factor/predictions[i,:], line_style, color=color, linewidth=2.5, markersize=6, fillstyle=fill_style, label=arch.name.split()[0] + ' ' + run)
@@ -188,7 +215,11 @@ ax.set_ylabel('Performance [Billion instances per second]')
 ax.set_xlabel('Shared memory threads')
 
 ax.set_ylim([0.,1.2])
-ax.set_xlim([0.,17.])
+ax.set_xlim([0.,18.])
+
+nthreads = list(range(1,18))
+ax.set_xticks( nthreads[1::2] )
+ax.set_xticklabels( [str(int(x)) for x in nthreads[1::2]] )
 
 fig.subplots_adjust( right=0.6, bottom=0.2 )
 fig.savefig('validate-bench_linalg.pdf')

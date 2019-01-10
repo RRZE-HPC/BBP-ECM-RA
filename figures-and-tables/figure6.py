@@ -48,6 +48,7 @@ arch_color.extend( ['#77000e']*3 )
 
 fig, ax = plt.subplots(figsize=(8,5))
 
+theor_max_BW = list()
 for datadir in os.listdir(args.path):
     if 'tds' in datadir:
         if 'SSE' in datadir:
@@ -93,7 +94,8 @@ for datadir in os.listdir(args.path):
             nthreads.append( int( subdir.split('n')[0] ) )
     nthreads = sorted( nthreads )
 
-    measurements = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) )
+    data_volumes = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) )
+    frequencies = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) ) # in Hz
     times = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) )
 
     for irun, run in enumerate(runs):
@@ -111,7 +113,7 @@ for datadir in os.listdir(args.path):
                 kname = k[0]['name'].split(' ')[0]
 
                 if kname == 'linear':
-                    meas_name = 'linalg'
+                    continue
                 elif  'spike delivery' in k[0]['name']:
                     meas_name = names2meas(k[0]['name'])
                 else:
@@ -130,18 +132,23 @@ for datadir in os.listdir(args.path):
 
                 #pos_in_line = 5 # for average
                 pos_in_line = 4 # for max
-                times[ k_idx, th_idx, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )*1e-6
+                times[ k_idx, th_idx, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )
+
+                idx_freq = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz] STAT' in v)
+                pos_in_line = 4 # for avg
+                frequencies[ k_idx, th_idx, irun ] = float( lines[idx + idx_freq].split(',')[pos_in_line] )*1e+6
+                times[ k_idx, th_idx, irun ] /= frequencies[ k_idx, th_idx, irun ]
 
                 idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Metric STAT,CACHES' in v)
 
-                idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Memory bandwidth' in v)
+                idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Memory data volume' in v)
                 #### DEBUG
                 #if 'ivb' in datadir and 'SSE' in datadir and th_idx == 1 and k[0]['name'] == 'Ih current':
                 #    print( float( lines[idx + idx_meas].split(',')[5] ) )
 
                 #pos_in_line = 5 # for average
                 pos_in_line = 1 # for sum
-                measurements[ k_idx, th_idx, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )*1e-3
+                data_volumes[ k_idx, th_idx, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )
 
         # Handle the single thread separately
         with open( os.path.join( rundir, '1n', 'caches.txt' ), 'r' ) as meas_f:
@@ -151,7 +158,7 @@ for datadir in os.listdir(args.path):
             kname = k[0]['name'].split(' ')[0]
 
             if kname == 'linear':
-                meas_name = 'linalg'
+                continue
             elif  'spike delivery' in k[0]['name']:
                 meas_name = names2meas(k[0]['name'])
             else:
@@ -165,27 +172,51 @@ for datadir in os.listdir(args.path):
 
             idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'CPU_CLK_UNHALTED_CORE' in v)
             pos_in_line = 2
-            times[ k_idx, 0, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )*1e-6
+            times[ k_idx, 0, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )
+            idx_freq = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz]' in v)
+            pos_in_line = 1
+            frequencies[ k_idx, 0, irun ] = float( lines[idx + idx_freq].split(',')[pos_in_line] )*1e+6
+            times[ k_idx, 0, irun ] /= frequencies[ k_idx, 0, irun ]
 
             idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Metric,CACHES' in v)
 
-            idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Memory bandwidth' in v)
+            idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'Memory data volume' in v)
             #### DEBUG
             #if 'ivb' in datadir and 'SSE' in datadir and th_idx == 1 and k[0]['name'] == 'Ih current':
-            #    print( float( lines[idx + idx_meas].split(',')[5] ) )
+            #    print( float( lines[idx + idx_meas].split(',')[pos_in_line] ) )
 
             pos_in_line = 1
-            measurements[ k_idx, 0, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )*1e-3
+            data_volumes[ k_idx, 0, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )
 
-    tot_times = np.sum( times, axis=0 )
-    measurements *= times/tot_times
-    measurements = 100.*measurements/arch.mem_BW
-    median_tot_meas = np.sum(np.median(measurements, axis=2), axis=0)
+    if arch.name == 'SKX AVX512':
+        for k_idx, k in enumerate(nrn.kernels):
+            if 'linear algebra' in k[0]['name']:
+                continue
+            print( k[0]['name'],
+                    100.*np.median(data_volumes[k_idx, 0, : ]/times[k_idx, 0, : ] )/arch.mem_BW )
+    tot_times = np.sum( times, axis=0 ) # in s
+    tot_volumes = np.sum( data_volumes, axis=0) # in GB
+    measurements = tot_volumes/tot_times # in GB/s
+#    measurements *= arch.cpu_f # in GB/s
+    frequencies = np.mean(np.median( frequencies, axis=2 ), axis=1 )
+    avg_frequency = np.sum(frequencies*np.mean(np.median(times, axis=2 ), axis=1 ))/np.sum( np.mean(np.median(times, axis=2 ), axis=1 ) )
+    theor_max_BW.append( arch.mem_BW*avg_frequency/arch.cpu_f*1e-9 )
+
+#    print( arch.name, 'frequencies', frequencies )
+#    print( arch.name, 'times', np.mean(np.median(times, axis=2 ), axis=1 ) )
+#    print( arch.name, avg_frequency, arch.cpu_f )
+#    print( arch.name, 'theor_max_BW', theor_max_BW, arch.mem_BW )
+
+    measurements = 100.*measurements/theor_max_BW[-1]
+    median_tot_meas = np.median(measurements, axis=1)
+
+    print( '**',arch.name,  median_tot_meas, '**')
+
     q25 = np.abs(
-            np.sum(np.quantile(measurements, 0.25, axis=2), axis=0) -
+            np.quantile(measurements, 0.25, axis=1) -
             median_tot_meas )
     q75 = np.abs(
-            np.sum(np.quantile(measurements, 0.75, axis=2), axis=0) -
+            np.quantile(measurements, 0.75, axis=1) -
             median_tot_meas )
     ax.errorbar( nthreads, median_tot_meas,
             yerr=np.vstack((q25,q75)),
@@ -197,6 +228,7 @@ n_instances = getNinstances( nrn.kernels )
 for arch_idx, arch in enumerate(archs):
     numerator = np.zeros( shape=(len(archs), 18) )
     denominator = np.zeros( shape=(len(archs), 18) )
+    percent_mem_bw = np.zeros_like( numerator )
     mem_traffic = np.zeros( shape=(len(nrn.kernels) ,) )
     for nth in range(1,int(arch.max_nthreads)+1):
         predictions = ecm_figures_bbp.ecm.predictions.runtime( arch, nrn, nth )['DRAM']
@@ -205,15 +237,18 @@ for arch_idx, arch in enumerate(archs):
         for i,k in enumerate(nrn.kernels):
             if 'linear' in k[0]['name'] or 'delivery' in k[0]['name']:
                 continue
-            numerator[arch_idx,nth-1] += arch.TMem( k[0] )
-            denominator[arch_idx,nth-1] += predictions[i]
-    percent_mem_bw = 100.*numerator/denominator
-#            tot_runtime += predictions[i]
-#            mem_traffic[i] = ecm_figures_bbp.ecm.predictions.mem_traffic( k[0] )#*n_instances[i]*1e-3
-#            print( arch.name, k[0]['name'], mem_traffic[i]/predictions[i] )
-#        tot_runtime /= arch.cpu_f
-#        tot_traffic = np.sum( mem_traffic )
-#        percent_mem_bw[arch_idx,nth-1] += 100.*(tot_traffic/tot_runtime)/arch.mem_BW
+#            numerator[arch_idx,nth-1] += arch.TMem( k[0] )
+#            denominator[arch_idx,nth-1] += predictions[i]
+#    percent_mem_bw = 100.*numerator/denominator
+
+            tot_runtime += predictions[i]
+            mem_traffic[i] = ecm_figures_bbp.ecm.predictions.mem_traffic( k[0] )#*n_instances[i]*1e-3
+            if arch.name == 'SKX AVX512' and nth==1:
+                print( 'prediction', arch.name, k[0]['name'], 100.*(mem_traffic[i]/predictions[i])/theor_max_BW[arch_idx]*frequencies[i] )
+        tot_runtime /= frequencies[i]*1e-9
+        tot_traffic = np.sum( mem_traffic )
+        percent_mem_bw[arch_idx,nth-1] += 100.*(tot_traffic/tot_runtime)/theor_max_BW[arch_idx]
+
     ax.plot( range(1,int(arch.max_nthreads)+1), percent_mem_bw[arch_idx,:int(arch.max_nthreads)],
             '--', color=arch_color[arch_idx],
             label=arch.name, linewidth=1.0 )
@@ -222,6 +257,7 @@ for arch_idx, arch in enumerate(archs):
     print( percent_mem_bw[arch_idx,:] )
 ax.set_xticks(range(1,19)[::3])
 ax.set_xticklabels(range(1,19)[::3])
+ax.set_ylim( [0., 101.] )
 ax.legend()
 
 ax.set_ylabel('Percent of runtime in saturated regime')

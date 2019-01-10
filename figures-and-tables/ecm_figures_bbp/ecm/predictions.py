@@ -81,6 +81,8 @@ def contributions(arch, nrn, nthread=1.):
 
     return pd.DataFrame.from_dict(contributions, orient='index').reset_index().set_index('index').rename_axis('kernel')
 
+def mem_traffic( kernel ):
+    return 8.*( kernel['reads'] + 2.*kernel['writes'])
 
 
 

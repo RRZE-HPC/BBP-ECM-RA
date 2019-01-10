@@ -93,7 +93,9 @@ for datadir in os.listdir(args.path):
             nthreads.append( int( subdir.split('n')[0] ) )
     nthreads = sorted( nthreads )
 
-    measurements = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) )
+    measurements_in_cy = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) )
+    measurements_in_s = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) )
+    frequencies = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) ) # in Hz
     ninstances = dict()
 
     for irun, run in enumerate(runs):
@@ -147,7 +149,12 @@ for datadir in os.listdir(args.path):
 
                 #pos_in_line = 5 # for average
                 pos_in_line = 4 # for max
-                measurements[ k_idx, th_idx, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )/( n_instances*tstop/nrn.dt )
+                measurements_in_cy[ k_idx, th_idx, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )/( n_instances*tstop/nrn.dt )
+
+                idx_freq = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz] STAT' in v)
+                pos_in_line = 4 # for avg
+                frequencies[ k_idx, th_idx, irun ] = float( lines[idx + idx_freq].split(',')[pos_in_line] )*1e+6
+                measurements_in_s[ k_idx, th_idx, irun ] = measurements_in_cy[ k_idx, th_idx, irun ]/frequencies[ k_idx, th_idx, irun ]
 
         # Handle the single thread separately
         with open( os.path.join( rundir, '1n', 'caches.txt' ), 'r' ) as meas_f:
@@ -183,7 +190,14 @@ for datadir in os.listdir(args.path):
             idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Raw,CACHES' in v)
 
             idx_meas = next(i for i,v in enumerate(lines[idx:]) if 'CPU_CLK_UNHALTED_CORE' in v)
-            measurements[ k_idx, 0, irun ] = float( lines[idx + idx_meas].split(',')[2] )/( n_instances*tstop/(nrn.dt) )
+            measurements_in_cy[ k_idx, 0, irun ] = float( lines[idx + idx_meas].split(',')[2] )/( n_instances*tstop/(nrn.dt) )
+
+
+            idx_freq = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz]' in v)
+            pos_in_line = 1
+            frequencies[ k_idx, 0, irun ] = float( lines[idx + idx_freq].split(',')[pos_in_line] )*1e+6
+            measurements_in_s[ k_idx, 0, irun ] = measurements_in_cy[ k_idx, 0, irun ]/frequencies[ k_idx, 0, irun ]
+
 #            if meas_name == 'linalg':
 #                print('-- 1 threads -- run', run)
 #                print( k[0]['name'], n_instances,
@@ -194,15 +208,24 @@ for datadir in os.listdir(args.path):
     #if 'ivb' in datadir and 'SSE' in datadir:
     #    print( runs )
     #    for k_idx, k in enumerate(nrn.kernels):
-    #        print( k[0]['name'], measurements[k_idx,1,:] )
+    #        print( k[0]['name'], measurements_in_cy[k_idx,1,:] )
 
-    median_meas = np.median( measurements, axis=2)
+    median_meas = np.median( measurements_in_cy, axis=2)
 #    print(median_meas)
-    iqr_meas = np.quantile( measurements, 0.75, axis=2) - np.quantile( measurements, 0.25, axis=2)
-    iqr_perf = np.quantile( 1./measurements, 0.75, axis=2) - np.quantile( 1./measurements, 0.25, axis=2)
-    q25_perf = np.quantile( 1./measurements, 0.25, axis=2)
-    q75_perf = np.quantile( 1./measurements, 0.75, axis=2)
+    iqr_meas = np.quantile( measurements_in_cy, 0.75, axis=2) - np.quantile( measurements_in_cy, 0.25, axis=2)
+    #iqr_perf = np.quantile( 1./measurements_in_cy, 0.75, axis=2) - np.quantile( 1./measurements_in_cy, 0.25, axis=2)
+    #q25_perf = np.quantile( 1./measurements_in_cy, 0.25, axis=2)
+    #q75_perf = np.quantile( 1./measurements_in_cy, 0.75, axis=2)
 #    print(iqr_meas)
+    median_meas = np.median( measurements_in_cy, axis=2)
+#    print(median_meas)
+
+    median_frequencies = np.median( frequencies, axis=2 )
+
+    iqr_perf = np.quantile( 1./measurements_in_s, 0.75, axis=2) - np.quantile( 1./measurements_in_s, 0.25, axis=2)
+    q25_perf = np.quantile( 1./measurements_in_s, 0.25, axis=2)
+    q75_perf = np.quantile( 1./measurements_in_s, 0.75, axis=2)
+    median_meas_in_s = np.median( measurements_in_s, axis=2)
 
     predictions = np.zeros( shape=(len(nrn.kernels), len(nthreads) ) )
     for th_idx, thread in enumerate(nthreads):
@@ -231,7 +254,6 @@ for datadir in os.listdir(args.path):
             'error (\%)']#,
 #            'score' ]
     whole_neuron_row = [0.]*7
-    whole_neuron_row[0] = 'whole neuron'
     for i in range(predictions.shape[0]):
         row = list()
         row.append( nrn.kernels[i][0]['name'].replace('_','\_') )
@@ -252,15 +274,8 @@ for datadir in os.listdir(args.path):
 
         tabular_data.append( row )
 
-        whole_neuron_row[1] += predictions[i,0]*nrn.kernels[i][1]
-        whole_neuron_row[2] += median_meas[i,0]*nrn.kernels[i][1]
-        whole_neuron_row[4] += predictions[i,-1]*nrn.kernels[i][1]
-        whole_neuron_row[5] += median_meas[i,-1]*nrn.kernels[i][1]
-
-    whole_neuron_row[3] = int( (whole_neuron_row[1]-whole_neuron_row[2])/whole_neuron_row[2]*100. )
-    whole_neuron_row[6] = int( (whole_neuron_row[4]-whole_neuron_row[5])/whole_neuron_row[5]*100. )
-
-    tabular_data.append( whole_neuron_row )
+        whole_neuron_row[2] += median_meas_in_s[i,0]*nrn.kernels[i][1]
+        whole_neuron_row[5] += median_meas_in_s[i,-1]*nrn.kernels[i][1]
 
     whole_neuron_times_singleth.append(  whole_neuron_row[2] )
     whole_neuron_times_maxth.append(  whole_neuron_row[5] )
@@ -286,17 +301,16 @@ for datadir in os.listdir(args.path):
                 continue
             if fct in nrn.kernels[i][0]['name']:
 
-                scaling_factor = arch.cpu_f
-                p = ax.errorbar( nthreads, scaling_factor/median_meas[i,:],
+                p = ax.errorbar( nthreads, 1e-9/median_meas_in_s[i,:],
                         yerr = np.vstack(
-                        (scaling_factor*np.abs( 1./median_meas[i,:] - q25_perf[i,:]),
-                        scaling_factor*np.abs( 1./median_meas[i,:] - q75_perf[i,:]))),
+                        (np.abs( 1e-9/median_meas_in_s[i,:] - 1e-9*q25_perf[i,:]),
+                         np.abs( 1e-9/median_meas_in_s[i,:] - 1e-9*q75_perf[i,:]))),
                         label=nrn.kernels[i][0]['name'],
                         fmt='o', markersize=8 )
                 if fct == 'state':
-                    ax.plot( nthreads, scaling_factor/predictions[i,:], '--', linewidth=3. )
+                    ax.plot( nthreads, 1e-9*median_frequencies[i,:]/predictions[i,:], '--', linewidth=3. )
                 else:
-                    ax.plot( nthreads, scaling_factor/predictions[i,:], '--', linewidth=3. )
+                    ax.plot( nthreads, 1e-9*median_frequencies[i,:]/predictions[i,:], '--', linewidth=3. )
         ax.grid(which='both')
         ax.grid(which='both')
         ax.set_title(nrn.name + ' ' + arch.name + ' ' + fct)
@@ -314,7 +328,6 @@ for datadir in os.listdir(args.path):
         fig.subplots_adjust( right=0.6, bottom=0.2 )
         fig.savefig('validate-bench_'+ arch.name.replace(' ','_') +'_' + fct + '.pdf')
 
-
 font = { 'size'   : 18 }
 matplotlib.rc('font', **font)
 
@@ -331,11 +344,18 @@ colors = ['#547e2b' if 'IVB' in x.name else '#77000e' for x in architectures]
 ax[0].grid()
 ax[0].grid(which='major', axis='y')
 ax[0].set_axisbelow(True)
-ax[0].bar(range(len(architectures)), [y/arch.cpu_f*1e-9/nrn.dt*1e+3 for y, arch in zip(whole_neuron_times_singleth,architectures)], color=colors )
-ideal_time_peak_perf = whole_neuron_times_singleth[1]/architectures[0].cpu_f*1e-9/nrn.dt*1e+3*17.6/73.6
+ax[0].bar(range(len(architectures)), [y/nrn.dt*1e+3 for y, arch in zip(whole_neuron_times_singleth,architectures)], color=colors )
+
+peak_perf_ivb_single_th = 17.6
+peak_perf_skx_single_th = 73.6
+peak_perf_single_th_ratio = peak_perf_ivb_single_th/peak_perf_skx_single_th
+ideal_time_peak_perf = whole_neuron_times_singleth[1]/nrn.dt*1e+3*peak_perf_single_th_ratio
 ax[0].plot( [len(architectures)-1.4, len(architectures)-0.3], [ideal_time_peak_perf]*2, '--', color='#00b89a')
-single_thread_bw_factor=0.76
-ideal_time_bw = whole_neuron_times_singleth[1]/architectures[0].cpu_f*1e-9/nrn.dt*1e+3*single_thread_bw_factor
+
+peak_bw_ivb = 14.3 # measured max single thread BW
+peak_bw_skx = 19.8 # measured max single thread BW
+ideal_time_bw = whole_neuron_times_singleth[1]/nrn.dt*1e+3*peak_bw_ivb/peak_bw_skx
+
 ax[0].plot( [len(architectures)-1.4, len(architectures)-0.3], [ideal_time_bw]*2, '-.', color='#00b89a')
 ax[0].set_xticks( range(len(architectures)) )
 ax[0].set_xticklabels([])
@@ -344,11 +364,20 @@ ax[0].set_ylabel( 'Runtime [s]' )
 ax[1].grid()
 ax[1].grid(which='major', axis='y')
 ax[1].set_axisbelow(True)
-ax[1].bar(range(len(architectures)), [y/arch.cpu_f*1e-9/nrn.dt*1e+3 for y, arch in zip(whole_neuron_times_maxth,architectures)], color=colors )
-ideal_time_peak_perf = whole_neuron_times_maxth[1]/architectures[0].cpu_f*1e-9/nrn.dt*1e+3*17.6/73.6
+ax[1].bar(range(len(architectures)), [y/nrn.dt*1e+3 for y, arch in zip(whole_neuron_times_maxth,architectures)], color=colors )
+
+
+peak_perf_ivb_max_th = 176.
+peak_perf_skx_max_th = 1324.8
+peak_perf_max_th_ratio = peak_perf_ivb_max_th/peak_perf_skx_max_th
+ideal_time_peak_perf = whole_neuron_times_maxth[1]/nrn.dt*1e+3*peak_perf_max_th_ratio
 ax[1].plot( [len(architectures)-1.4, len(architectures)-0.3], [ideal_time_peak_perf]*2, '--', color='#00b89a')
-ideal_time_bw = whole_neuron_times_maxth[1]/architectures[0].cpu_f*1e-9/nrn.dt*1e+3*40./90.
+
+peak_bw_ivb = ecm_figures_bbp.ecm.IVB.SSE.socket().mem_BW
+peak_bw_skx = ecm_figures_bbp.ecm.SKX.SSE.socket().mem_BW
+ideal_time_bw = whole_neuron_times_maxth[1]/nrn.dt*1e+3*peak_bw_ivb/peak_bw_skx
 ax[1].plot( [len(architectures)-1.4, len(architectures)-0.3], [ideal_time_bw]*2, '-.', color='#00b89a')
+
 ax[1].set_xticks( range(len(architectures)) )
 ax[1].set_xticklabels( [x.name for x in architectures], rotation=45, ha='right' )
 ax[1].set_ylabel( 'Runtime [s]' )
