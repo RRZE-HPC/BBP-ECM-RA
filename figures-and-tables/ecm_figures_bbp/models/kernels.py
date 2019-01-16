@@ -302,7 +302,6 @@ class linalg():
     n_state_vars =  3.5 + 1 #matrix elements, parent index, node area
     n_params =  0
     def __init__(self):
-        print('[W] linear algebra requires better cache model!')
         self.name = 'linear algebra'
         self.solve = dict(
                 name = 'linear algebra',
