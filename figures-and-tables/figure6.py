@@ -35,20 +35,24 @@ args = parser.parse_args()
 
 exec( 'nrn = ' + args.model + '()' )
 
-archs = [
-        ecm_figures_bbp.ecm.IVB.SSE.socket(),
-        ecm_figures_bbp.ecm.IVB.AVX.socket(),
-        ecm_figures_bbp.ecm.SKX.SSE.socket(),
-        ecm_figures_bbp.ecm.SKX.AVX.socket(),
-        ecm_figures_bbp.ecm.SKX.AVX512.socket()
-        ]
-arch_marker_style = [ '^', 'v', 'D', 's', 'p']
-arch_color = ['#547e2b']*2
-arch_color.extend( ['#77000e']*3 )
+arch_marker_style = {
+        'IVB SSE':'^',
+        'IVB AVX':'v',
+        'SKX SSE':'D',
+        'SKX AVX':'s',
+        'SKX AVX512':'p'}
+arch_color = {
+        'IVB SSE':'#547e2b',
+        'IVB AVX':'#547e2b',
+        'SKX SSE':'#77000e',
+        'SKX AVX':'#77000e',
+        'SKX AVX512':'#77000e'}
 
 fig, ax = plt.subplots(figsize=(8,5))
 
 theor_max_BW = list()
+archs = list()
+frequencies = dict()
 for datadir in os.listdir(args.path):
     if 'tds' in datadir:
         if 'SSE' in datadir:
@@ -76,6 +80,7 @@ for datadir in os.listdir(args.path):
     else:
         print( 'Unrecognised architecture', datadir)
         continue
+    archs.append( arch )
 
     expdir = os.path.join(args.path, datadir )
     runs = list()
@@ -95,7 +100,7 @@ for datadir in os.listdir(args.path):
     nthreads = sorted( nthreads )
 
     data_volumes = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) )
-    frequencies = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) ) # in Hz
+    frequencies[arch.name] = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) ) # in Hz
     times = np.zeros( shape=(len(nrn.kernels), len(nthreads), n_runs ) )
 
     for irun, run in enumerate(runs):
@@ -136,8 +141,8 @@ for datadir in os.listdir(args.path):
 
                 idx_freq = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz] STAT' in v)
                 pos_in_line = 4 # for avg
-                frequencies[ k_idx, th_idx, irun ] = float( lines[idx + idx_freq].split(',')[pos_in_line] )*1e+6
-                times[ k_idx, th_idx, irun ] /= frequencies[ k_idx, th_idx, irun ]
+                frequencies[arch.name][ k_idx, th_idx, irun ] = float( lines[idx + idx_freq].split(',')[pos_in_line] )*1e+6
+                times[ k_idx, th_idx, irun ] /= frequencies[arch.name][ k_idx, th_idx, irun ]
 
                 idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Metric STAT,CACHES' in v)
 
@@ -175,8 +180,8 @@ for datadir in os.listdir(args.path):
             times[ k_idx, 0, irun ] = float( lines[idx + idx_meas].split(',')[pos_in_line] )
             idx_freq = next(i for i,v in enumerate(lines[idx:]) if 'Clock [MHz]' in v)
             pos_in_line = 1
-            frequencies[ k_idx, 0, irun ] = float( lines[idx + idx_freq].split(',')[pos_in_line] )*1e+6
-            times[ k_idx, 0, irun ] /= frequencies[ k_idx, 0, irun ]
+            frequencies[arch.name][ k_idx, 0, irun ] = float( lines[idx + idx_freq].split(',')[pos_in_line] )*1e+6
+            times[ k_idx, 0, irun ] /= frequencies[arch.name][ k_idx, 0, irun ]
 
             idx = next(i for i,v in enumerate(lines) if 'TABLE,Region ' + meas_name in v and 'Metric,CACHES' in v)
 
@@ -192,17 +197,17 @@ for datadir in os.listdir(args.path):
         for k_idx, k in enumerate(nrn.kernels):
             if 'linear algebra' in k[0]['name']:
                 continue
-            print( k[0]['name'],
-                    100.*np.median(data_volumes[k_idx, 0, : ]/times[k_idx, 0, : ] )/arch.mem_BW )
+            #print( k[0]['name'],
+            #        100.*np.median(data_volumes[k_idx, 0, : ]/times[k_idx, 0, : ] )/arch.mem_BW )
     tot_times = np.sum( times, axis=0 ) # in s
     tot_volumes = np.sum( data_volumes, axis=0) # in GB
     measurements = tot_volumes/tot_times # in GB/s
 #    measurements *= arch.cpu_f # in GB/s
-    frequencies = np.mean(np.median( frequencies, axis=2 ), axis=1 )
-    avg_frequency = np.sum(frequencies*np.mean(np.median(times, axis=2 ), axis=1 ))/np.sum( np.mean(np.median(times, axis=2 ), axis=1 ) )
+    frequencies[arch.name] = np.mean(np.median( frequencies[arch.name], axis=2 ), axis=1 )
+    avg_frequency = np.sum(frequencies[arch.name]*np.mean(np.median(times, axis=2 ), axis=1 ))/np.sum( np.mean(np.median(times, axis=2 ), axis=1 ) )
     theor_max_BW.append( arch.mem_BW*avg_frequency/arch.cpu_f*1e-9 )
 
-#    print( arch.name, 'frequencies', frequencies )
+#    print( arch.name, 'frequencies[arch.name]', frequencies[arch.name] )
 #    print( arch.name, 'times', np.mean(np.median(times, axis=2 ), axis=1 ) )
 #    print( arch.name, avg_frequency, arch.cpu_f )
 #    print( arch.name, 'theor_max_BW', theor_max_BW, arch.mem_BW )
@@ -220,7 +225,7 @@ for datadir in os.listdir(args.path):
             median_tot_meas )
     ax.errorbar( nthreads, median_tot_meas,
             yerr=np.vstack((q25,q75)),
-            fmt=arch_marker_style[arch_idx], color=arch_color[arch_idx],
+            fmt=arch_marker_style[arch.name], color=arch_color[arch.name],
             label=arch.name, markersize=6)
 
 #---------------------------------------------------------------------
@@ -241,20 +246,25 @@ for arch_idx, arch in enumerate(archs):
 #            denominator[arch_idx,nth-1] += predictions[i]
 #    percent_mem_bw = 100.*numerator/denominator
 
-            tot_runtime += predictions[i]
-            mem_traffic[i] = ecm_figures_bbp.ecm.predictions.mem_traffic( k[0] )#*n_instances[i]*1e-3
-            if arch.name == 'SKX AVX512' and nth==1:
-                print( 'prediction', arch.name, k[0]['name'], 100.*(mem_traffic[i]/predictions[i])/theor_max_BW[arch_idx]*frequencies[i] )
-        tot_runtime /= frequencies[i]*1e-9
+            tot_runtime += predictions[i]*n_instances[i]/frequencies[arch.name][i]*1e+9
+            mem_traffic[i] = ecm_figures_bbp.ecm.predictions.mem_traffic( k[0] )*n_instances[i]#*1e-3
+#            if arch.name == 'SKX SSE' and nth==18:
+#                print( predictions )
+#                print( mem_traffic )
+#                print( theor_max_BW[arch_idx] )
+#                print( frequencies[arch.name] )
+#                print( 'prediction', arch.name, k[0]['name'], 100.*(mem_traffic[i]/predictions[i])/theor_max_BW[arch_idx]*frequencies[arch.name][i] )
+                #assert False
+        #tot_runtime /= frequencies[arch.name][i]*1e-9
         tot_traffic = np.sum( mem_traffic )
         percent_mem_bw[arch_idx,nth-1] += 100.*(tot_traffic/tot_runtime)/theor_max_BW[arch_idx]
 
     ax.plot( range(1,int(arch.max_nthreads)+1), percent_mem_bw[arch_idx,:int(arch.max_nthreads)],
-            '--', color=arch_color[arch_idx],
+            '--', color=arch_color[arch.name],
             label=arch.name, linewidth=1.0 )
 
 
-    print( percent_mem_bw[arch_idx,:] )
+#    print( percent_mem_bw[arch_idx,:] )
 ax.set_xticks(range(1,19)[::3])
 ax.set_xticklabels(range(1,19)[::3])
 ax.set_ylim( [0., 101.] )
